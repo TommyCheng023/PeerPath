@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import {
   fetchCurrentUser,
   loginUser,
@@ -7,16 +7,24 @@ import {
 } from "./api/authApi";
 import { fetchHistory } from "./api/historyApi";
 import { fetchMatches } from "./api/matchApi";
-import { TAG_CATEGORIES } from "./data";
+import { fetchProfile, updateProfile } from "./api/profileApi";
+import {
+  PROFILE_COMFORT_LEVEL_OPTIONS,
+  PROFILE_HELP_TOPIC_OPTIONS,
+  PROFILE_YEAR_OPTIONS,
+  TAG_CATEGORIES,
+} from "./data";
 import type {
   ApiPeerResult,
   AuthUser,
   HistoryEntry,
   MatchCard,
+  UserProfile,
 } from "./types";
 
 type Phase = "form" | "loading" | "results";
 type AuthMode = "login" | "register";
+type Page = "home" | "how-it-works" | "our-story";
 
 const LOADING_MICRO_MESSAGES = [
   "Checking who has actually been through something close to this.",
@@ -39,6 +47,13 @@ const FEATURE_PANELS = [
     body: "Every match comes with context and a suggested opening message so reaching out feels possible.",
   },
 ];
+
+const NAV_PAGES: Array<{ id: Page; label: string }> = [
+  { id: "how-it-works", label: "How it works" },
+  { id: "our-story", label: "Our Story" },
+];
+
+const PROFILE_TAG_OPTIONS = TAG_CATEGORIES.flatMap((category) => category.tags);
 
 function classNames(...values: Array<string | false | null | undefined>) {
   return values.filter(Boolean).join(" ");
@@ -69,6 +84,8 @@ function mapPeerToCard(peer: ApiPeerResult, selectedTags: string[]): MatchCard {
     name: peer.name,
     major: peer.major,
     year: peer.year,
+    contactPhone: peer.contact_phone,
+    contactEmail: peer.contact_email,
     tags: peer.tags,
     matchedTags,
     scorePercent: scoreToPercent(peer.final_score),
@@ -173,6 +190,7 @@ function Starfield() {
 }
 
 export default function App() {
+  const [activePage, setActivePage] = useState<Page>("home");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [description, setDescription] = useState("");
   const [phase, setPhase] = useState<Phase>("form");
@@ -195,6 +213,22 @@ export default function App() {
   const [historyEntries, setHistoryEntries] = useState<HistoryEntry[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
   const [historyError, setHistoryError] = useState("");
+  const [profileOpen, setProfileOpen] = useState(false);
+  const [profileLoading, setProfileLoading] = useState(false);
+  const [profileSaving, setProfileSaving] = useState(false);
+  const [profileError, setProfileError] = useState("");
+  const [currentProfile, setCurrentProfile] = useState<UserProfile | null>(null);
+  const [profileForm, setProfileForm] = useState({
+    major: "",
+    year: "",
+    tags: [] as string[],
+    helpTopics: [] as string[],
+    comfortLevel: "",
+    contactPhone: "",
+    contactEmail: "",
+    pastChallenge: "",
+    searchable: true,
+  });
 
   useEffect(() => {
     fetchCurrentUser()
@@ -295,6 +329,7 @@ export default function App() {
   };
 
   const handleReset = () => {
+    setActivePage("home");
     setSelectedTags([]);
     setDescription("");
     setPhase("form");
@@ -337,6 +372,7 @@ export default function App() {
 
   const handleLogout = async () => {
     await logoutUser();
+    setActivePage("home");
     setCurrentUser(null);
     setHistoryEntries([]);
     setHistoryOpen(false);
@@ -346,6 +382,92 @@ export default function App() {
   const openHistory = async () => {
     setHistoryOpen(true);
     await loadHistory();
+  };
+
+  const openProfile = async () => {
+    setProfileOpen(true);
+    setProfileLoading(true);
+    setProfileError("");
+
+    try {
+      const result = await fetchProfile();
+      const profile = result.profile;
+      setCurrentProfile(profile);
+      setProfileForm({
+        major: profile?.major ?? "",
+        year: profile?.year ?? "",
+        tags: profile?.tags ?? [],
+        helpTopics: profile?.help_topics ?? [],
+        comfortLevel: profile?.comfort_level ?? "",
+        contactPhone: profile?.contact_phone ?? "",
+        contactEmail: profile?.contact_email ?? currentUser?.email ?? "",
+        pastChallenge: profile?.past_challenges?.[0]?.raw ?? "",
+        searchable: profile?.searchable ?? true,
+      });
+    } catch (requestError) {
+      setCurrentProfile(null);
+      setProfileForm({
+        major: "",
+        year: "",
+        tags: [],
+        helpTopics: [],
+        comfortLevel: "",
+        contactPhone: "",
+        contactEmail: currentUser?.email ?? "",
+        pastChallenge: "",
+        searchable: true,
+      });
+      if (requestError instanceof Error) {
+        if (requestError.message !== "Request failed with status 404") {
+          setProfileError(requestError.message);
+        }
+      } else {
+        setProfileError("Could not load your profile.");
+      }
+    } finally {
+      setProfileLoading(false);
+    }
+  };
+
+  const handleProfileSave = async () => {
+    setProfileSaving(true);
+    setProfileError("");
+
+    try {
+      const payload = {
+        major: profileForm.major.trim(),
+        year: profileForm.year.trim(),
+        tags: profileForm.tags,
+        help_topics: profileForm.helpTopics,
+        comfort_level: profileForm.comfortLevel.trim(),
+        contact_phone: profileForm.contactPhone.trim(),
+        contact_email: profileForm.contactEmail.trim(),
+        past_challenge: profileForm.pastChallenge.trim(),
+        searchable: profileForm.searchable,
+      };
+
+      const result = await updateProfile(payload);
+      setCurrentProfile(result.profile);
+      setProfileOpen(false);
+    } catch (requestError) {
+      setProfileError(
+        requestError instanceof Error ? requestError.message : "Could not save your profile."
+      );
+    } finally {
+      setProfileSaving(false);
+    }
+  };
+
+  const toggleProfileMultiValue = (
+    field: "tags" | "helpTopics",
+    value: string
+  ) => {
+    setProfileForm((current) => ({
+      ...current,
+      [field]: current[field].includes(value)
+        ? current[field].filter((item) => item !== value)
+        : [...current[field], value],
+    }));
   };
 
   const showInlineError = phase === "form" && error;
@@ -375,11 +497,28 @@ export default function App() {
           </div>
 
           <div className="hidden items-center gap-7 text-sm text-parchment/45 md:flex">
-            <span>How it works</span>
-            <span>For advisors</span>
-            <span>Stories</span>
+            {NAV_PAGES.map((page) => (
+              <button
+                key={page.id}
+                type="button"
+                onClick={() => setActivePage(page.id)}
+                className={classNames(
+                  "transition hover:text-parchment/80",
+                  activePage === page.id ? "text-parchment" : "text-parchment/45"
+                )}
+              >
+                {page.label}
+              </button>
+            ))}
             {currentUser ? (
               <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={openProfile}
+                  className="rounded-full border border-white/10 px-4 py-2 text-parchment/80 transition hover:border-maize/25 hover:text-parchment"
+                >
+                  Profile
+                </button>
                 <button
                   type="button"
                   onClick={openHistory}
@@ -408,7 +547,51 @@ export default function App() {
           </div>
         </nav>
 
-        {currentUser ? (
+        {activePage === "how-it-works" ? (
+          <StaticPage
+            eyebrow="How PeerPath Works"
+            title="A gentler path from stress to support"
+            intro="PeerPath is designed for the moments when a student does not need another generic resource list. They need to feel understood, quickly, and be connected to someone who has lived through something close."
+            sections={[
+              {
+                title: "1. Students describe what they are going through",
+                body: "The experience starts with tags and a short written description. That gives students a low-pressure way to explain both the topic and the emotional texture of what is happening, whether that is transfer adjustment, social isolation, burnout, housing stress, or something else deeply personal.",
+              },
+              {
+                title: "2. PeerPath narrows the field with structured matching",
+                body: "Behind the scenes, PeerPath first filters for relevant tags, then compares the student’s situation to peers who have already shared their own lived experiences. The system looks beyond a single keyword and tries to understand context, struggle type, emotional signal, and what kind of support might actually help.",
+              },
+              {
+                title: "3. AI helps rank the most relevant peers",
+                body: "Once the strongest candidates are identified, PeerPath uses AI to refine which peers feel genuinely helpful rather than superficially similar. The goal is not just to say who overlaps on paper, but who is most likely to offer empathy, perspective, and practical next steps.",
+              },
+              {
+                title: "4. Students receive action-ready matches",
+                body: "Instead of a cold directory, students see a ranked list with explanations, contact details, and a suggested opening message. That turns a vulnerable moment into something actionable, reducing the friction of reaching out and making human connection feel more possible.",
+              },
+            ]}
+          />
+        ) : activePage === "our-story" ? (
+          <StaticPage
+            eyebrow="Our Story"
+            title="Built by students who wanted campus support to feel human"
+            intro="We’re a team of four data science students who built PeerPath after thinking about a simple problem we kept noticing on campus: when students struggle, they usually get sent to resources — but what they often really need is someone who has actually been through the same thing."
+            sections={[
+              {
+                title: "Where the idea came from",
+                body: "The idea came to us while participating in Campus AI and the MDC competition. As we talked about student life, we realized that many campus challenges are deeply personal: adjusting as a transfer student, finding friends, choosing a major, dealing with academic stress, or just feeling lost. In those moments, generic advice can feel distant. What helps most is hearing from a real peer who understands.",
+              },
+              {
+                title: "Why we built PeerPath",
+                body: "That is why we created PeerPath — an AI-powered peer matching platform that connects students with others who have already faced similar experiences and found a way through. Instead of only giving information, PeerPath helps students find empathy, practical advice, and a starting point for real human connection.",
+              },
+              {
+                title: "What we believe",
+                body: "We believe support on campus should feel more personal, more relatable, and more human.",
+              },
+            ]}
+          />
+        ) : currentUser ? (
           <>
             <header className="mx-auto max-w-4xl px-6 pb-12 pt-16 text-center">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-maize/25 bg-maize/10 px-4 py-2 text-[11px] uppercase tracking-[0.25em] text-maize">
@@ -664,6 +847,30 @@ export default function App() {
                               Why they&apos;re a great match
                             </div>
                             <p className="text-sm leading-7 text-parchment/80">{card.explanation}</p>
+
+                            <div className="my-6 border-t border-white/10" />
+
+                            <div className="mb-3 text-[11px] uppercase tracking-[0.18em] text-parchment/35">
+                              Contact
+                            </div>
+                            <div className="grid gap-3 text-sm text-parchment/75 md:grid-cols-2">
+                              <div className="rounded-2xl border border-white/10 bg-[#0b2745] px-4 py-3">
+                                <div className="text-[11px] uppercase tracking-[0.18em] text-parchment/35">
+                                  Phone
+                                </div>
+                                <div className="mt-2 break-all">
+                                  {card.contactPhone || "Not provided"}
+                                </div>
+                              </div>
+                              <div className="rounded-2xl border border-white/10 bg-[#0b2745] px-4 py-3">
+                                <div className="text-[11px] uppercase tracking-[0.18em] text-parchment/35">
+                                  Email
+                                </div>
+                                <div className="mt-2 break-all">
+                                  {card.contactEmail || "Not provided"}
+                                </div>
+                              </div>
+                            </div>
 
                             <div className="my-6 border-t border-white/10" />
 
@@ -945,6 +1152,237 @@ export default function App() {
         </div>
       )}
 
+      {profileOpen && currentUser && (
+        <div className="fixed inset-0 z-20 flex items-center justify-center bg-navy/70 px-6 py-8">
+          <div className="max-h-full w-full max-w-3xl overflow-y-auto rounded-3xl border border-maize/20 bg-[#0a2747] p-6 shadow-2xl">
+            <div className="mb-6 flex items-start justify-between gap-4">
+              <div>
+                <div className="text-[11px] uppercase tracking-[0.18em] text-maize/80">
+                  Your profile
+                </div>
+                <h2 className="mt-2 font-serif text-4xl text-parchment">
+                  Become discoverable to other students
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm leading-7 text-parchment/45">
+                  Fill out the experience and contact details you want PeerPath to use when deciding
+                  whether to surface you as a helpful match.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setProfileOpen(false)}
+                className="text-xl text-parchment/45"
+              >
+                ×
+              </button>
+            </div>
+
+            {profileLoading ? (
+              <div className="rounded-3xl border border-white/10 bg-white/5 px-5 py-6 text-sm text-parchment/50">
+                Loading your profile...
+              </div>
+            ) : (
+              <>
+                <div className="mb-5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-parchment/60">
+                  Signed in as <span className="text-parchment">{currentUser.email}</span>
+                  {currentProfile ? " · existing profile loaded" : " · no profile saved yet"}
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                  <Field label="Major">
+                    <input
+                      value={profileForm.major}
+                      onChange={(event) =>
+                        setProfileForm((current) => ({ ...current, major: event.target.value }))
+                      }
+                      className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-parchment outline-none focus:border-maize/40"
+                      placeholder="Computer Science"
+                    />
+                  </Field>
+
+                  <Field label="Year">
+                    <select
+                      value={profileForm.year}
+                      onChange={(event) =>
+                        setProfileForm((current) => ({ ...current, year: event.target.value }))
+                      }
+                      className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-parchment outline-none focus:border-maize/40"
+                    >
+                      <option value="">Select your year</option>
+                      {PROFILE_YEAR_OPTIONS.map((option) => (
+                        <option key={option} value={option} className="bg-[#0a2747]">
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </Field>
+
+                  <Field label="Comfort Level">
+                    <select
+                      value={profileForm.comfortLevel}
+                      onChange={(event) =>
+                        setProfileForm((current) => ({
+                          ...current,
+                          comfortLevel: event.target.value,
+                        }))
+                      }
+                      className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-parchment outline-none focus:border-maize/40"
+                    >
+                      <option value="">Select a comfort level</option>
+                      {PROFILE_COMFORT_LEVEL_OPTIONS.map((option) => (
+                        <option key={option} value={option} className="bg-[#0a2747]">
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </Field>
+
+                  <Field label="Phone">
+                    <input
+                      value={profileForm.contactPhone}
+                      onChange={(event) =>
+                        setProfileForm((current) => ({
+                          ...current,
+                          contactPhone: event.target.value,
+                        }))
+                      }
+                      className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-parchment outline-none focus:border-maize/40"
+                      placeholder="+1-734-555-0182"
+                    />
+                  </Field>
+
+                  <div className="md:col-span-2">
+                    <Field label="Tags">
+                      <div className="flex flex-wrap gap-2 rounded-2xl border border-white/10 bg-white/5 p-4">
+                        {PROFILE_TAG_OPTIONS.map((tag) => {
+                          const selected = profileForm.tags.includes(tag);
+                          return (
+                            <button
+                              key={tag}
+                              type="button"
+                              onClick={() => toggleProfileMultiValue("tags", tag)}
+                              className={classNames(
+                                "rounded-full border px-3 py-2 text-xs transition",
+                                selected
+                                  ? "border-maize bg-maize/10 text-maize"
+                                  : "border-white/10 text-parchment/55 hover:border-maize/25 hover:text-parchment/85"
+                              )}
+                            >
+                              {tag}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </Field>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <Field label="Help Topics">
+                      <div className="flex flex-wrap gap-2 rounded-2xl border border-white/10 bg-white/5 p-4">
+                        {PROFILE_HELP_TOPIC_OPTIONS.map((topic) => {
+                          const selected = profileForm.helpTopics.includes(topic);
+                          return (
+                            <button
+                              key={topic}
+                              type="button"
+                              onClick={() => toggleProfileMultiValue("helpTopics", topic)}
+                              className={classNames(
+                                "rounded-full border px-3 py-2 text-xs transition",
+                                selected
+                                  ? "border-maize bg-maize/10 text-maize"
+                                  : "border-white/10 text-parchment/55 hover:border-maize/25 hover:text-parchment/85"
+                              )}
+                            >
+                              {topic}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </Field>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <Field label="Email">
+                      <input
+                        type="email"
+                        value={profileForm.contactEmail}
+                        onChange={(event) =>
+                          setProfileForm((current) => ({
+                            ...current,
+                            contactEmail: event.target.value,
+                          }))
+                        }
+                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-parchment outline-none focus:border-maize/40"
+                        placeholder="you@umich.edu"
+                      />
+                    </Field>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <Field label="A past challenge you have actually lived through">
+                      <textarea
+                        value={profileForm.pastChallenge}
+                        onChange={(event) =>
+                          setProfileForm((current) => ({
+                            ...current,
+                            pastChallenge: event.target.value,
+                          }))
+                        }
+                        rows={6}
+                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-parchment outline-none focus:border-maize/40"
+                        placeholder="Describe a challenge you faced on campus, what it felt like, and what kind of help or resolution got you through it."
+                      />
+                    </Field>
+                  </div>
+                </div>
+
+                <label className="mt-5 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-parchment/65">
+                  <input
+                    type="checkbox"
+                    checked={profileForm.searchable}
+                    onChange={(event) =>
+                      setProfileForm((current) => ({
+                        ...current,
+                        searchable: event.target.checked,
+                      }))
+                    }
+                    className="mt-1 h-4 w-4 rounded border-white/20 bg-transparent text-maize focus:ring-maize"
+                  />
+                  <span>
+                    Let PeerPath include me in other students&apos; match results when my lived
+                    experience seems relevant.
+                  </span>
+                </label>
+
+                {profileError && (
+                  <div className="mt-4 rounded-2xl border border-red-400/20 bg-red-400/10 px-4 py-3 text-sm text-red-200">
+                    {profileError}
+                  </div>
+                )}
+
+                <div className="mt-6 flex flex-wrap justify-end gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setProfileOpen(false)}
+                    className="rounded-full border border-white/10 px-5 py-3 text-sm text-parchment/75 transition hover:border-maize/25"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleProfileSave}
+                    disabled={profileSaving}
+                    className="rounded-full bg-maize px-5 py-3 text-sm font-medium text-navy disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    {profileSaving ? "Saving..." : "Save profile"}
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
       {historyOpen && currentUser && (
         <div className="fixed inset-0 z-20 flex justify-end bg-navy/50">
           <div className="h-full w-full max-w-xl overflow-y-auto border-l border-maize/15 bg-[#081f39] p-6 shadow-2xl">
@@ -1034,6 +1472,20 @@ export default function App() {
                               {match.reason}
                             </p>
                           )}
+                          <div className="mt-4 grid gap-2 text-xs text-parchment/55 md:grid-cols-2">
+                            <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+                              <span className="text-parchment/35">Phone: </span>
+                              <span className="break-all">
+                                {match.contact_phone || "Not provided"}
+                              </span>
+                            </div>
+                            <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+                              <span className="text-parchment/35">Email: </span>
+                              <span className="break-all">
+                                {match.contact_email || "Not provided"}
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -1065,5 +1517,65 @@ function CopyButton({ text }: { text: string }) {
     >
       {copied ? "✓ Copied!" : "Copy"}
     </button>
+  );
+}
+
+function StaticPage({
+  eyebrow,
+  title,
+  intro,
+  sections,
+}: {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  sections: Array<{ title: string; body: string }>;
+}) {
+  return (
+    <>
+      <header className="mx-auto max-w-5xl px-6 pb-10 pt-16 text-center">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-maize/25 bg-maize/10 px-4 py-2 text-[11px] uppercase tracking-[0.25em] text-maize">
+          <span className="h-1.5 w-1.5 rounded-full bg-maize" />
+          {eyebrow}
+        </div>
+        <h1 className="font-serif text-5xl leading-tight tracking-tight text-parchment md:text-7xl">
+          {title}
+        </h1>
+        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-parchment/55">{intro}</p>
+      </header>
+
+      <main className="mx-auto max-w-5xl px-6 pb-24">
+        <div className="grid gap-5">
+          {sections.map((section) => (
+            <article
+              key={section.title}
+              className="rounded-3xl border border-maize/15 bg-white/5 p-7 md:p-8"
+            >
+              <h2 className="font-serif text-3xl leading-tight text-parchment">
+                {section.title}
+              </h2>
+              <p className="mt-4 max-w-4xl text-base leading-8 text-parchment/60">
+                {section.body}
+              </p>
+            </article>
+          ))}
+        </div>
+      </main>
+    </>
+  );
+}
+
+function Field({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="block">
+      <div className="mb-2 block text-sm text-parchment/55">{label}</div>
+      {children}
+    </div>
   );
 }

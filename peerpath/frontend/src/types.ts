@@ -10,6 +10,8 @@ export interface ApiPeerResult {
   name: string;
   major: string;
   year: string;
+  contact_phone: string;
+  contact_email: string;
   tags: string[];
   tag_overlap: number;
   field_score: number;
@@ -30,6 +32,8 @@ export interface MatchCard {
   name: string;
   major: string;
   year: string;
+  contactPhone: string;
+  contactEmail: string;
   tags: string[];
   matchedTags: string[];
   scorePercent: number;
@@ -57,6 +61,8 @@ export interface HistoryMatch {
   name: string;
   major: string;
   year: string;
+  contact_phone: string;
+  contact_email: string;
   tags: string[];
   tag_overlap: number;
   field_score: number;
@@ -78,4 +84,26 @@ export interface HistoryEntry {
 export interface HistoryResponse {
   user_id: string;
   entries: HistoryEntry[];
+}
+
+export interface UserProfile {
+  id: string;
+  name: string;
+  major: string;
+  year: string;
+  tags: string[];
+  past_challenges: Array<{
+    raw: string;
+    parsed: {
+      context: string;
+      struggle_type: string;
+      emotional_signal: string;
+      resolution_type: string;
+    };
+  }>;
+  help_topics: string[];
+  comfort_level: string;
+  contact_phone: string;
+  contact_email: string;
+  searchable: boolean;
 }
