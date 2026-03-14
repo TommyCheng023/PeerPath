@@ -9,7 +9,7 @@
     "match_score": 95.0,
     "match_reason": "The peer's experience of academic stress and catching up in classes aligns well with the student's situation.",
     "created_at": "2026-03-14T21:29:00.007647+00:00",
-    "last_message_at": "2026-03-14T22:18:44.000000+00:00",
+    "last_message_at": "2026-03-14T22:05:04.596714+00:00",
     "unread_count": 0,
     "messages": [
       {
@@ -60,6 +60,13 @@
         "content": "I'll try both this week. Going to EECS office hours on Thursday. Thank you so much - this was genuinely really helpful, I feel a lot less alone about it.",
         "timestamp": "2026-03-14T22:18:44.000000+00:00",
         "is_opener": false
+      },
+      {
+        "message_id": "9e0a3808-ba88-4036-8bba-a36de3d65e08",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "Thank you!",
+        "timestamp": "2026-03-14T22:05:04.596714+00:00",
+        "is_opener": false
       }
     ]
   },
@@ -74,7 +81,7 @@
     "match_reason": "Uma's experience of hitting a wall sophomore year and finding her way back through tutoring resources closely mirrors the student's current struggle.",
     "created_at": "2026-03-14T21:35:00.000000+00:00",
     "last_message_at": "2026-03-14T23:02:17.000000+00:00",
-    "unread_count": 1,
+    "unread_count": 0,
     "messages": [
       {
         "message_id": "bb000002-0002-0002-0002-000000000001",

@@ -43,3 +43,4 @@ dist/
 .venv/
 __pycache__/
 peerpath/backend/.env
+.claude/
