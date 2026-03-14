@@ -1,10 +1,18 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import {
   fetchCurrentUser,
   loginUser,
   logoutUser,
   registerUser,
 } from "./api/authApi";
+import {
+  createOrGetThread,
+  fetchThread,
+  fetchThreads,
+  fetchUnreadCount,
+  markRead,
+  sendMessage,
+} from "./api/chatApi";
 import { fetchHistory } from "./api/historyApi";
 import { fetchMatches } from "./api/matchApi";
 import { fetchProfile, updateProfile } from "./api/profileApi";
@@ -17,6 +25,7 @@ import {
 import type {
   ApiPeerResult,
   AuthUser,
+  ChatThread,
   HistoryEntry,
   MatchCard,
   UserProfile,
@@ -230,6 +239,18 @@ export default function App() {
     searchable: true,
   });
 
+  // ── Chat state ──────────────────────────────────────────────────────────────
+  const [chatOpen, setChatOpen] = useState(false);
+  const [threads, setThreads] = useState<ChatThread[]>([]);
+  const [activeThreadId, setActiveThreadId] = useState<string | null>(null);
+  const [chatInput, setChatInput] = useState("");
+  const [chatSending, setChatSending] = useState(false);
+  const [chatLoading, setChatLoading] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+  // openerCardId tracks which match card has the "use opener" section expanded
+  const [openerCardId, setOpenerCardId] = useState<string | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     fetchCurrentUser()
       .then((user) => setCurrentUser(user))
@@ -339,6 +360,107 @@ export default function App() {
     setCandidateCount(null);
   };
 
+  // ── Chat handlers ────────────────────────────────────────────────────────────
+  const activeThread = threads.find((t) => t.thread_id === activeThreadId) ?? null;
+
+  const loadThreads = useCallback(async () => {
+    if (!currentUser) return;
+    setChatLoading(true);
+    try {
+      const result = await fetchThreads();
+      setThreads(result.threads);
+    } finally {
+      setChatLoading(false);
+    }
+  }, [currentUser]);
+
+  const pollUnread = useCallback(async () => {
+    if (!currentUser) return;
+    try {
+      const count = await fetchUnreadCount();
+      setUnreadCount(count);
+    } catch {
+      // silent
+    }
+  }, [currentUser]);
+
+  useEffect(() => {
+    if (!currentUser) {
+      setUnreadCount(0);
+      return;
+    }
+    void pollUnread();
+    const interval = window.setInterval(() => void pollUnread(), 30_000);
+    return () => window.clearInterval(interval);
+  }, [currentUser, pollUnread]);
+
+  const openChat = async () => {
+    setChatOpen(true);
+    await loadThreads();
+  };
+
+  const selectThread = async (threadId: string) => {
+    setActiveThreadId(threadId);
+    await markRead(threadId);
+    setThreads((prev) =>
+      prev.map((t) => (t.thread_id === threadId ? { ...t, unread_count: 0 } : t))
+    );
+    setUnreadCount((prev) => Math.max(0, prev - (threads.find((t) => t.thread_id === threadId)?.unread_count ?? 0)));
+    // Refresh the active thread messages
+    try {
+      const result = await fetchThread(threadId);
+      setThreads((prev) => prev.map((t) => (t.thread_id === threadId ? result.thread : t)));
+    } catch {
+      // silent
+    }
+  };
+
+  // Called from match card "Message" button (with optional opener pre-fill)
+  const openChatWithPeer = async (
+    card: MatchCard,
+    initialMessage?: string,
+    isOpener?: boolean,
+  ) => {
+    if (!currentUser) return;
+    setOpenerCardId(null);
+    const result = await createOrGetThread({
+      peer_id: card.id,
+      peer_name: card.name,
+      peer_major: card.major,
+      peer_year: card.year,
+      match_score: card.scorePercent,
+      match_reason: card.explanation,
+      initial_message: initialMessage,
+      is_opener: isOpener,
+    });
+    const thread = result.thread;
+    await loadThreads();
+    setChatOpen(true);
+    setActiveThreadId(thread.thread_id);
+    await markRead(thread.thread_id);
+  };
+
+  const handleSendMessage = async () => {
+    if (!activeThreadId || !chatInput.trim() || chatSending) return;
+    const content = chatInput.trim();
+    setChatInput("");
+    setChatSending(true);
+    try {
+      await sendMessage(activeThreadId, content);
+      const result = await fetchThread(activeThreadId);
+      setThreads((prev) =>
+        prev.map((t) => (t.thread_id === activeThreadId ? result.thread : t))
+      );
+    } finally {
+      setChatSending(false);
+    }
+  };
+
+  // Scroll to bottom of message list when active thread messages change
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [activeThread?.messages.length]);
+
   const handleAuthSubmit = async () => {
     setAuthError("");
     setAuthLoading(true);
@@ -376,6 +498,10 @@ export default function App() {
     setCurrentUser(null);
     setHistoryEntries([]);
     setHistoryOpen(false);
+    setChatOpen(false);
+    setThreads([]);
+    setActiveThreadId(null);
+    setUnreadCount(0);
     handleReset();
   };
 
@@ -525,6 +651,18 @@ export default function App() {
                   className="rounded-full border border-white/10 px-4 py-2 text-parchment/80 transition hover:border-maize/25 hover:text-parchment"
                 >
                   History
+                </button>
+                <button
+                  type="button"
+                  onClick={openChat}
+                  className="relative rounded-full border border-white/10 px-4 py-2 text-parchment/80 transition hover:border-maize/25 hover:text-parchment"
+                >
+                  Messages
+                  {unreadCount > 0 && (
+                    <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-maize text-[10px] font-bold text-navy">
+                      {unreadCount > 9 ? "9+" : unreadCount}
+                    </span>
+                  )}
                 </button>
                 <span className="text-parchment/70">{currentUser.full_name}</span>
                 <button
@@ -883,6 +1021,53 @@ export default function App() {
                                 {card.conversationStarter}
                               </p>
                             </div>
+
+                            <div className="mt-5 flex flex-wrap gap-3">
+                              <button
+                                type="button"
+                                onClick={() => void openChatWithPeer(card, card.conversationStarter, true)}
+                                className="rounded-full bg-maize px-5 py-2.5 text-sm font-medium text-navy transition hover:-translate-y-0.5 hover:shadow-glow"
+                              >
+                                Send opener to {card.name} →
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  setOpenerCardId(openerCardId === card.id ? null : card.id)
+                                }
+                                className="rounded-full border border-white/10 px-5 py-2.5 text-sm text-parchment/70 transition hover:border-maize/25 hover:text-parchment"
+                              >
+                                Write my own message
+                              </button>
+                            </div>
+
+                            {openerCardId === card.id && (
+                              <div className="mt-4 flex gap-2">
+                                <input
+                                  type="text"
+                                  autoFocus
+                                  placeholder={`Message ${card.name}…`}
+                                  className="flex-1 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-parchment outline-none focus:border-maize/40"
+                                  onKeyDown={(e) => {
+                                    if (e.key === "Enter" && e.currentTarget.value.trim()) {
+                                      void openChatWithPeer(card, e.currentTarget.value.trim(), false);
+                                    }
+                                  }}
+                                />
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    const input = (e.currentTarget.previousElementSibling as HTMLInputElement);
+                                    if (input.value.trim()) {
+                                      void openChatWithPeer(card, input.value.trim(), false);
+                                    }
+                                  }}
+                                  className="rounded-2xl bg-maize px-4 py-3 text-sm font-medium text-navy transition hover:opacity-90"
+                                >
+                                  Send
+                                </button>
+                              </div>
+                            )}
                           </article>
                         );
                       })}
@@ -1378,6 +1563,209 @@ export default function App() {
                   </button>
                 </div>
               </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {chatOpen && currentUser && (
+        <div className="fixed inset-0 z-20 flex bg-navy/60">
+          {/* Thread list */}
+          <div className="flex h-full w-72 shrink-0 flex-col border-r border-maize/15 bg-[#081f39]">
+            <div className="flex items-center justify-between border-b border-maize/15 px-5 py-4">
+              <div>
+                <div className="text-[11px] uppercase tracking-[0.18em] text-maize/80">Messages</div>
+                <div className="mt-1 font-serif text-2xl text-parchment">Conversations</div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setChatOpen(false)}
+                className="text-xl text-parchment/45 hover:text-parchment"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto py-3">
+              {chatLoading ? (
+                <div className="px-5 py-6 text-sm text-parchment/45">Loading…</div>
+              ) : threads.length === 0 ? (
+                <div className="px-5 py-6 text-sm leading-7 text-parchment/45">
+                  No conversations yet. Find a match and send them a message to get started.
+                </div>
+              ) : (
+                threads.map((thread) => (
+                  <button
+                    key={thread.thread_id}
+                    type="button"
+                    onClick={() => void selectThread(thread.thread_id)}
+                    className={classNames(
+                      "w-full px-5 py-4 text-left transition hover:bg-white/5",
+                      activeThreadId === thread.thread_id ? "bg-maize/10" : ""
+                    )}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-maize/80 font-serif text-base text-navy">
+                        {thread.peer_name.charAt(0)}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="truncate text-sm font-medium text-parchment">
+                            {thread.peer_name}
+                          </span>
+                          {thread.unread_count > 0 && (
+                            <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-maize text-[10px] font-bold text-navy">
+                              {thread.unread_count}
+                            </span>
+                          )}
+                        </div>
+                        <div className="mt-0.5 truncate text-xs text-parchment/40">
+                          {thread.messages.length > 0
+                            ? thread.messages[thread.messages.length - 1].content
+                            : "No messages yet"}
+                        </div>
+                        <div className="mt-1 text-[10px] text-parchment/30">
+                          {formatTimestamp(thread.last_message_at)}
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                ))
+              )}
+            </div>
+          </div>
+
+          {/* Message area */}
+          <div className="flex flex-1 flex-col bg-[#07203c]">
+            {activeThread ? (
+              <>
+                {/* Thread header */}
+                <div className="flex items-center gap-4 border-b border-maize/15 px-6 py-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-maize/80 font-serif text-lg text-navy">
+                    {activeThread.peer_name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="font-serif text-xl text-parchment">{activeThread.peer_name}</div>
+                    <div className="text-xs text-parchment/40">
+                      {activeThread.peer_major} · {activeThread.peer_year}
+                      {activeThread.match_score > 0 &&
+                        ` · ${Math.round(activeThread.match_score)}% match`}
+                    </div>
+                  </div>
+                  {activeThread.match_reason && (
+                    <div className="ml-auto max-w-sm rounded-2xl border border-maize/15 bg-maize/5 px-4 py-2 text-xs leading-5 text-maize/70">
+                      {activeThread.match_reason}
+                    </div>
+                  )}
+                </div>
+
+                {/* Messages */}
+                <div className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
+                  {activeThread.messages.length === 0 ? (
+                    <div className="pt-10 text-center text-sm text-parchment/35">
+                      No messages yet. Say something!
+                    </div>
+                  ) : (
+                    (() => {
+                      const grouped: Array<{ date: string; messages: typeof activeThread.messages }> = [];
+                      for (const msg of activeThread.messages) {
+                        const label = new Intl.DateTimeFormat("en-US", {
+                          month: "short",
+                          day: "numeric",
+                        }).format(new Date(msg.timestamp));
+                        const last = grouped[grouped.length - 1];
+                        if (last?.date === label) {
+                          last.messages.push(msg);
+                        } else {
+                          grouped.push({ date: label, messages: [msg] });
+                        }
+                      }
+                      return grouped.map((group) => (
+                        <div key={group.date}>
+                          <div className="mb-4 flex items-center gap-3 text-xs text-parchment/30">
+                            <div className="h-px flex-1 bg-white/10" />
+                            {group.date}
+                            <div className="h-px flex-1 bg-white/10" />
+                          </div>
+                          <div className="space-y-3">
+                            {group.messages.map((msg) => {
+                              const isMe = msg.sender_id === currentUser.id;
+                              return (
+                                <div
+                                  key={msg.message_id}
+                                  className={classNames(
+                                    "flex",
+                                    isMe ? "justify-end" : "justify-start"
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      "max-w-[70%] rounded-2xl px-4 py-3 text-sm leading-6",
+                                      isMe
+                                        ? "rounded-br-sm bg-maize text-navy"
+                                        : "rounded-bl-sm border border-white/10 bg-white/5 text-parchment/85"
+                                    )}
+                                  >
+                                    {msg.is_opener && (
+                                      <div className="mb-1 text-[10px] uppercase tracking-widest opacity-60">
+                                        AI Suggested Opener
+                                      </div>
+                                    )}
+                                    {msg.content}
+                                    <div
+                                      className={classNames(
+                                        "mt-1 text-[10px]",
+                                        isMe ? "text-navy/50" : "text-parchment/30"
+                                      )}
+                                    >
+                                      {new Intl.DateTimeFormat("en-US", {
+                                        hour: "numeric",
+                                        minute: "2-digit",
+                                      }).format(new Date(msg.timestamp))}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ));
+                    })()
+                  )}
+                  <div ref={messagesEndRef} />
+                </div>
+
+                {/* Input area */}
+                <div className="border-t border-maize/15 px-6 py-4">
+                  <div className="flex gap-3">
+                    <input
+                      type="text"
+                      value={chatInput}
+                      onChange={(e) => setChatInput(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" && !e.shiftKey) {
+                          e.preventDefault();
+                          void handleSendMessage();
+                        }
+                      }}
+                      placeholder={`Message ${activeThread.peer_name}…`}
+                      className="flex-1 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-parchment outline-none focus:border-maize/40"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => void handleSendMessage()}
+                      disabled={chatSending || !chatInput.trim()}
+                      className="rounded-2xl bg-maize px-5 py-3 text-sm font-medium text-navy disabled:cursor-not-allowed disabled:opacity-50 transition hover:opacity-90"
+                    >
+                      {chatSending ? "…" : "Send"}
+                    </button>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div className="flex flex-1 items-center justify-center text-sm text-parchment/35">
+                Select a conversation to start reading
+              </div>
             )}
           </div>
         </div>

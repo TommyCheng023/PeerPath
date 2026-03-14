@@ -12,7 +12,12 @@
       "Bash(wsl --exec bash -c \"ls /home/lucyliuu/Hackathon/peerpath/backend/.env 2>/dev/null && echo ''exists'' || echo ''missing''\")",
       "Bash(wsl --exec bash -c \"mkdir -p /home/lucyliuu/Hackathon/peerpath/backend/prompts && echo done\")",
       "Bash(wsl --exec bash -c \"pip install anthropic python-dotenv -q && echo ''installed''\")",
-      "Bash(wsl --exec bash -c \"pip install anthropic python-dotenv -q --break-system-packages && echo ''installed''\")"
+      "Bash(wsl --exec bash -c \"pip install anthropic python-dotenv -q --break-system-packages && echo ''installed''\")",
+      "Read(//mnt/**)",
+      "Bash(wsl -d Ubuntu-24.04 -- mkdir -p /home/zedo/Hackathon/peerpath/backend/data/conversations)",
+      "Bash(wsl -d Ubuntu-24.04 -- bash -c \"cd /home/zedo/Hackathon/peerpath/frontend && npx tsc --noEmit 2>&1 | head -60\")",
+      "Bash(wsl -d Ubuntu-24.04 -- bash -c \"cd /home/zedo/Hackathon/peerpath/frontend && ./node_modules/.bin/tsc --noEmit 2>&1 | head -60\")",
+      "Bash(wsl -d Ubuntu-24.04 -- bash -c \"cd /home/zedo/Hackathon/peerpath/frontend && node_modules/.bin/vite build 2>&1 | tail -30\")"
     ]
   }
 }

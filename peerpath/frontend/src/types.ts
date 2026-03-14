@@ -86,6 +86,33 @@ export interface HistoryResponse {
   entries: HistoryEntry[];
 }
 
+export interface ChatMessage {
+  message_id: string;
+  sender_id: string;
+  content: string;
+  timestamp: string;
+  is_opener: boolean;
+}
+
+export interface ChatThread {
+  thread_id: string;
+  peer_id: string;
+  peer_name: string;
+  peer_major: string;
+  peer_year: string;
+  created_from_match: boolean;
+  match_score: number;
+  match_reason: string;
+  created_at: string;
+  last_message_at: string;
+  unread_count: number;
+  messages: ChatMessage[];
+}
+
+export interface ThreadsResponse {
+  threads: ChatThread[];
+}
+
 export interface UserProfile {
   id: string;
   name: string;
