@@ -1,0 +1,40 @@
+You are analyzing a university student's challenge description.
+
+Extract the following fields. You MUST choose values ONLY from the provided options.
+Return ONLY a JSON object, no explanation, no markdown, no backticks.
+
+"context": the main situation the student is in
+  Options: ["transfer adjustment", "freshman adjustment", "academic stress",
+            "course registration", "campus navigation", "social life",
+            "dating", "internship search", "research decisions",
+            "housing", "international student adjustment", "changing majors"]
+
+"struggle_type": the nature of their difficulty
+  Options: ["social isolation", "procedural confusion", "academic difficulty",
+            "anxiety", "burnout", "lack of information", "difficulty adapting",
+            "relationship confusion", "time management", "financial stress"]
+
+"emotional_signal": the dominant emotional tone
+  Options: ["lonely", "overwhelmed", "frustrated", "uncertain",
+            "anxious", "lost", "stressed", "hopeful", "confused"]
+
+"help_needed": what kind of support would help most
+  Options: ["reassurance", "step-by-step advice", "peer experience",
+            "practical tips", "emotional support", "introductions to people",
+            "information about resources"]
+
+Rules:
+- Pick ONLY from the options listed above
+- Pick the single best match for each field
+- If nothing fits well, pick the closest option
+
+Student input:
+"{user_description}"
+
+Return format:
+{{
+  "context": "...",
+  "struggle_type": "...",
+  "emotional_signal": "...",
+  "help_needed": "..."
+}}
