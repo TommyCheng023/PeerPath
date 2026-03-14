@@ -1,7 +1,7 @@
 import json
 import os
 
-import anthropic
+from openai import AzureOpenAI
 from dotenv import load_dotenv
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
@@ -34,15 +34,20 @@ def _generate_conversation_starter(user_description: str, peer_raw: str, reason:
             reason=reason,
         )
 
-        client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-        response = client.messages.create(
-            model="claude-sonnet-4-5",
+        client = AzureOpenAI(
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+            api_version="2024-02-01",
+        )
+        response = client.chat.completions.create(
+            model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
             max_tokens=256,
-            temperature=0.7,
+            temperature=0,
             messages=[{"role": "user", "content": prompt}],
         )
+        raw_text = response.choices[0].message.content.strip()
 
-        return response.content[0].text.strip()
+        return raw_text
 
     except Exception as e:
         print(f"[ranker] conversation_starter generation failed: {e}")
