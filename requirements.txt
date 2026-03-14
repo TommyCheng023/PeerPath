@@ -1,0 +1,8 @@
+flask
+python-dotenv
+pydantic
+requests
+numpy
+scikit-learn
+openai
+azure-identity
