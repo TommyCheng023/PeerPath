@@ -1,0 +1,36 @@
+{
+  "id": "peer_061",
+  "name": "Taylor",
+  "major": "Environmental Science",
+  "year": "Graduate",
+  "tags": [
+    "dating",
+    "international student adjustment",
+    "freshman adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Navigating dating while managing coursework and friendships was genuinely hard. I had to learn to communicate directly about what I wanted, which was uncomfortable at first.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "lack of information",
+        "emotional_signal": "stressed",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "burnout",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating",
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

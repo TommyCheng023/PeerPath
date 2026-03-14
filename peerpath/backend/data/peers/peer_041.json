@@ -1,0 +1,25 @@
+{
+  "id": "peer_041",
+  "name": "Sage",
+  "major": "Communications",
+  "year": "Senior",
+  "tags": [
+    "social life",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "time management",
+        "emotional_signal": "frustrated",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

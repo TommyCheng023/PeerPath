@@ -1,0 +1,27 @@
+{
+  "id": "peer_058",
+  "name": "Jules",
+  "major": "Electrical Engineering",
+  "year": "Graduate",
+  "tags": [
+    "freshman adjustment",
+    "social life",
+    "research decisions",
+    "dating"
+  ],
+  "past_challenges": [
+    {
+      "raw": "As a freshman, I was so anxious about everything — classes, making friends, navigating the dining hall alone. I called home a lot. Slowly things got better as I found my routine.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "social isolation",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

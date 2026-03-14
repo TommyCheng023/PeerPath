@@ -1,0 +1,25 @@
+{
+  "id": "peer_165",
+  "name": "Drew",
+  "major": "English Literature",
+  "year": "Junior",
+  "tags": [
+    "changing majors",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "uncertain",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors"
+  ],
+  "comfort_level": "prefers intro message"
+}

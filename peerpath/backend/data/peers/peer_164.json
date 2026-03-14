@@ -1,0 +1,36 @@
+{
+  "id": "peer_164",
+  "name": "Peyton",
+  "major": "Biology",
+  "year": "Junior",
+  "tags": [
+    "internship search",
+    "changing majors",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had no idea how to network. LinkedIn felt fake and cold emails felt awkward. A career counselor helped me reframe networking as just having genuine conversations.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lost",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search",
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

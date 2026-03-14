@@ -1,0 +1,36 @@
+{
+  "id": "peer_051",
+  "name": "Cleo",
+  "major": "Economics",
+  "year": "Sophomore",
+  "tags": [
+    "changing majors",
+    "social anxiety",
+    "campus navigation"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I spent a year in a major my parents chose before admitting I was miserable. The conversation with my family was hard but necessary. I found a double-major path that worked for both of us.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "My social life in high school was very different. Here everything felt performative and exhausting at first. I learned to be more selective about where I spent my energy.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "hopeful",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

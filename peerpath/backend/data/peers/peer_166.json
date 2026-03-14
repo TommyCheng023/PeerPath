@@ -1,0 +1,25 @@
+{
+  "id": "peer_166",
+  "name": "Reese",
+  "major": "Political Science",
+  "year": "Senior",
+  "tags": [
+    "dating",
+    "mental health"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I got into a situationship that left me confused for months. Talking to older students who had been through it helped me understand what I actually wanted.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "stressed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating"
+  ],
+  "comfort_level": "prefers intro message"
+}

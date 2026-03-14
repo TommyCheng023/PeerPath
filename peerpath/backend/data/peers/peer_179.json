@@ -1,0 +1,36 @@
+{
+  "id": "peer_179",
+  "name": "Lane",
+  "major": "Public Health",
+  "year": "Sophomore",
+  "tags": [
+    "freshman adjustment",
+    "joining clubs",
+    "time management"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My first semester was rough. I thought college would feel like the movies but instead I was overwhelmed by the independence and had no idea how to manage my time or talk to professors.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "stressed",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Nobody told me about the hidden study spots, the free printing in the library basement, or which dining halls have late hours. It all took months to discover by accident.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "anxiety",
+        "emotional_signal": "lonely",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment",
+    "campus navigation"
+  ],
+  "comfort_level": "prefers intro message"
+}

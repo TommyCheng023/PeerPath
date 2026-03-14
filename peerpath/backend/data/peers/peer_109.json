@@ -1,0 +1,37 @@
+{
+  "id": "peer_109",
+  "name": "Taylor",
+  "major": "Finance",
+  "year": "Senior",
+  "tags": [
+    "changing majors",
+    "time management",
+    "transfer student",
+    "academic stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "anxious",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "When I transferred as a junior, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "confused",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

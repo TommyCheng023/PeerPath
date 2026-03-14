@@ -1,0 +1,37 @@
+{
+  "id": "peer_115",
+  "name": "Skylar",
+  "major": "Public Health",
+  "year": "Sophomore",
+  "tags": [
+    "freshman adjustment",
+    "burnout",
+    "time management",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't sleep well for the first two months. Every small thing stressed me out. Joining a study group made a huge difference because I realized everyone else was struggling too.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "burnout",
+        "emotional_signal": "stressed",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "Off-campus housing was way more expensive than I expected and the landlord market here is chaotic. I ended up in a bad living situation for a semester before finding something stable.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment",
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

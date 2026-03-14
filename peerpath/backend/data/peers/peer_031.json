@@ -1,0 +1,25 @@
+{
+  "id": "peer_031",
+  "name": "Hayden",
+  "major": "Sociology",
+  "year": "Sophomore",
+  "tags": [
+    "campus navigation",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding campus resources took way longer than it should have. The counseling center, food pantry, tutoring — they exist but they're buried on the website.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation"
+  ],
+  "comfort_level": "prefers intro message"
+}

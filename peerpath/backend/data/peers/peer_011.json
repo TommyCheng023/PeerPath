@@ -1,0 +1,25 @@
+{
+  "id": "peer_011",
+  "name": "Alex",
+  "major": "Biology",
+  "year": "Graduate",
+  "tags": [
+    "international student adjustment",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "frustrated",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

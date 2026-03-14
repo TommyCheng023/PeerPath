@@ -1,0 +1,37 @@
+{
+  "id": "peer_078",
+  "name": "Glen",
+  "major": "Philosophy",
+  "year": "Freshman",
+  "tags": [
+    "transfer student",
+    "joining clubs",
+    "housing",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I transferred in sophomore and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through an org fair.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "lack of information",
+        "emotional_signal": "confused",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment",
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

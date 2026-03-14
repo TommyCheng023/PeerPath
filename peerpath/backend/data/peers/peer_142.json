@@ -1,0 +1,25 @@
+{
+  "id": "peer_142",
+  "name": "Xen",
+  "major": "Public Health",
+  "year": "Sophomore",
+  "tags": [
+    "international student adjustment",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "anxious",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

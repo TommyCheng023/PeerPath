@@ -1,0 +1,26 @@
+{
+  "id": "peer_082",
+  "name": "Kendall",
+  "major": "Public Health",
+  "year": "Graduate",
+  "tags": [
+    "research decisions",
+    "international student adjustment",
+    "freshman adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I joined a research lab sophomore year and quickly realized it wasn't what I expected. Knowing when to leave and what to do next took a lot of reflection and conversation.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "lack of information",
+        "emotional_signal": "anxious",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

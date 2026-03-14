@@ -1,0 +1,36 @@
+{
+  "id": "peer_014",
+  "name": "Morgan",
+  "major": "Business Administration",
+  "year": "Sophomore",
+  "tags": [
+    "international student adjustment",
+    "time management",
+    "burnout"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "financial stress",
+        "emotional_signal": "uncertain",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "I wandered around for 20 minutes trying to find my first class. The campus map app was useless. I ended up just asking random students and everyone was surprisingly helpful.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "campus navigation"
+  ],
+  "comfort_level": "prefers intro message"
+}

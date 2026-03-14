@@ -1,0 +1,36 @@
+{
+  "id": "peer_068",
+  "name": "Peyton",
+  "major": "Data Science",
+  "year": "Graduate",
+  "tags": [
+    "social life",
+    "mental health",
+    "campus navigation"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Greek life dominated the social scene here and I had no interest in rushing. It felt isolating until I found the people who also wanted a quieter version of college social life.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "social isolation",
+        "emotional_signal": "uncertain",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "Navigating dating while managing coursework and friendships was genuinely hard. I had to learn to communicate directly about what I wanted, which was uncomfortable at first.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "financial stress",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life",
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

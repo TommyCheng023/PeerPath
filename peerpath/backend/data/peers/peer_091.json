@@ -1,0 +1,27 @@
+{
+  "id": "peer_091",
+  "name": "Uma",
+  "major": "Finance",
+  "year": "Junior",
+  "tags": [
+    "course registration",
+    "study skills",
+    "internship search",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I wasted a semester in a class I didn't need because I misread the major requirements. The registrar's office actually has office hours — I wish I had gone sooner.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "hopeful",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "course registration"
+  ],
+  "comfort_level": "prefers intro message"
+}

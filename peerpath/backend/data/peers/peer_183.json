@@ -1,0 +1,37 @@
+{
+  "id": "peer_183",
+  "name": "Parker",
+  "major": "Environmental Science",
+  "year": "Junior",
+  "tags": [
+    "housing",
+    "mental health",
+    "anxiety",
+    "course registration"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't know about subletting options or university-affiliated housing until my junior year. I overpaid for two years out of ignorance.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "anxious",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "I didn't sleep well for the first two months. Every small thing stressed me out. Joining a study group made a huge difference because I realized everyone else was struggling too.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "anxious",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "freshman adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

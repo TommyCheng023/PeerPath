@@ -1,0 +1,36 @@
+{
+  "id": "peer_088",
+  "name": "Remy",
+  "major": "Business Administration",
+  "year": "Freshman",
+  "tags": [
+    "transfer student",
+    "social anxiety",
+    "housing",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I transferred in sophomore and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through a part-time job.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "lost",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "When I transferred as a sophomore, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "stressed",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

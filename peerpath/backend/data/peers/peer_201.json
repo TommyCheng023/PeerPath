@@ -1,0 +1,27 @@
+{
+  "id": "peer_201",
+  "name": "Ira",
+  "major": "Electrical Engineering",
+  "year": "Junior",
+  "tags": [
+    "dating",
+    "anxiety",
+    "burnout",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Navigating dating while managing coursework and friendships was genuinely hard. I had to learn to communicate directly about what I wanted, which was uncomfortable at first.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "anxiety",
+        "emotional_signal": "lost",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

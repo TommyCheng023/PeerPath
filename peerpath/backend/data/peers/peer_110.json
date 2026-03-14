@@ -1,0 +1,25 @@
+{
+  "id": "peer_110",
+  "name": "Morgan",
+  "major": "Business Administration",
+  "year": "Junior",
+  "tags": [
+    "academic stress",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I used to think struggling academically meant I didn't belong here. Eventually a professor told me to talk to the academic support center and that changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lonely",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "peer_037",
+  "name": "Noel",
+  "major": "Biology",
+  "year": "Sophomore",
+  "tags": [
+    "transfer student",
+    "career planning",
+    "mental health",
+    "international student adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I transferred in junior and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through a part-time job.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "burnout",
+        "emotional_signal": "hopeful",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "anxious",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment",
+    "international student adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

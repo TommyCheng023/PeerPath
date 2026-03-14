@@ -1,0 +1,25 @@
+{
+  "id": "peer_158",
+  "name": "Morgan",
+  "major": "Communications",
+  "year": "Junior",
+  "tags": [
+    "academic stress",
+    "course registration"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Junior year almost broke me. I was taking 18 credits, interning part-time, and trying to maintain a social life. I burned out completely by November and had to drop a class.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "hopeful",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

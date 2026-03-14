@@ -1,0 +1,37 @@
+{
+  "id": "peer_122",
+  "name": "Cameron",
+  "major": "Mathematics",
+  "year": "Freshman",
+  "tags": [
+    "international student adjustment",
+    "course registration",
+    "burnout",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "frustrated",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "lack of information",
+        "emotional_signal": "lonely",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "changing majors"
+  ],
+  "comfort_level": "open to messages"
+}

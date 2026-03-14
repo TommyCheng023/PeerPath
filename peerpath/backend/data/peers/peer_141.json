@@ -1,0 +1,35 @@
+{
+  "id": "peer_141",
+  "name": "Wren",
+  "major": "Nursing",
+  "year": "Graduate",
+  "tags": [
+    "housing",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding roommates from scratch was stressful. Facebook groups and the housing board helped but it still took weeks of searching and a few sketchy tours.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "internship search"
+  ],
+  "comfort_level": "prefers intro message"
+}

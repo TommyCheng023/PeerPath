@@ -1,0 +1,25 @@
+{
+  "id": "peer_012",
+  "name": "Jordan",
+  "major": "Public Health",
+  "year": "Junior",
+  "tags": [
+    "transfer student",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I transferred in sophomore and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through a club.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "social isolation",
+        "emotional_signal": "confused",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

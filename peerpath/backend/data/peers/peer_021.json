@@ -1,0 +1,37 @@
+{
+  "id": "peer_021",
+  "name": "Drew",
+  "major": "Psychology",
+  "year": "Sophomore",
+  "tags": [
+    "changing majors",
+    "campus navigation",
+    "transfer student",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "My first semester was rough. I thought college would feel like the movies but instead I was overwhelmed by the independence and had no idea how to manage my time or talk to professors.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "freshman adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

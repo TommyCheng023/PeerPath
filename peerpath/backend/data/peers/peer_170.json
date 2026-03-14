@@ -1,0 +1,26 @@
+{
+  "id": "peer_170",
+  "name": "Cameron",
+  "major": "Psychology",
+  "year": "Junior",
+  "tags": [
+    "academic stress",
+    "internship search",
+    "mental health"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I used to think struggling academically meant I didn't belong here. Eventually a professor told me to talk to the academic support center and that changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "frustrated",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

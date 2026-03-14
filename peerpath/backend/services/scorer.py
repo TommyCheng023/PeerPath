@@ -17,6 +17,20 @@ _WEIGHTS = {
     "help_needed": 10,
 }
 
+_SCORE_ADJUSTMENT_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "properties": {
+        "adjustment": {
+            "type": "integer",
+            "minimum": -10,
+            "maximum": 10,
+        },
+        "reason": {"type": "string"},
+    },
+    "required": ["adjustment", "reason"],
+}
+
 
 def _score_challenge(student_parsed: dict, peer_challenge_parsed: dict) -> int:
     """Compute Layer 1 field-match score for one peer past_challenge."""
@@ -53,11 +67,21 @@ def _llm_adjustment(student_parsed: dict, best_challenge: dict, field_score: int
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         response = client.chat.completions.create(
             model=os.getenv("OPENAI_MODEL", "gpt-4o"),
-            max_tokens=256,
-            temperature=0,
+            max_completion_tokens=256,
+            response_format={
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "score_adjustment",
+                    "strict": True,
+                    "schema": _SCORE_ADJUSTMENT_SCHEMA,
+                },
+            },
             messages=[{"role": "user", "content": prompt}],
         )
-        raw_text = response.choices[0].message.content.strip()
+        raw_text = (response.choices[0].message.content or "").strip()
+
+        if not raw_text:
+            raise ValueError("LLM returned empty content when JSON was expected")
 
         result = json.loads(raw_text)
         adjustment = int(result["adjustment"])
@@ -69,14 +93,10 @@ def _llm_adjustment(student_parsed: dict, best_challenge: dict, field_score: int
         return 0, ""
 
 
-def score_peer(student_parsed: dict, peer: dict) -> dict:
-    """Score a single peer against a student's parsed challenge profile.
-
-    Returns a dict with peer_id, field_score, llm_adjustment, final_score, reason.
-    """
+def compute_field_score(student_parsed: dict, peer: dict) -> dict:
+    """Compute the best rule-based challenge match for a peer."""
     challenges = peer.get("past_challenges", [])
 
-    # Layer 1: pick the best-matching past_challenge
     best_score = 0
     best_challenge = None
     for challenge in challenges:
@@ -85,10 +105,24 @@ def score_peer(student_parsed: dict, peer: dict) -> dict:
             best_score = s
             best_challenge = challenge
 
-    field_score = best_score
+    return {
+        "peer_id": peer["id"],
+        "field_score": best_score,
+        "best_challenge": best_challenge,
+    }
+
+
+def score_peer(student_parsed: dict, peer: dict, use_llm: bool = True) -> dict:
+    """Score a single peer against a student's parsed challenge profile.
+
+    Returns a dict with peer_id, field_score, llm_adjustment, final_score, reason.
+    """
+    base_score = compute_field_score(student_parsed, peer)
+    field_score = base_score["field_score"]
+    best_challenge = base_score["best_challenge"]
 
     # Layer 2: semantic adjustment via Claude
-    if best_challenge is not None:
+    if use_llm and best_challenge is not None:
         adjustment, reason = _llm_adjustment(student_parsed, best_challenge, field_score)
     else:
         adjustment, reason = 0, ""

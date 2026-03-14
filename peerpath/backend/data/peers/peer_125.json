@@ -1,0 +1,37 @@
+{
+  "id": "peer_125",
+  "name": "Frankie",
+  "major": "Psychology",
+  "year": "Graduate",
+  "tags": [
+    "research decisions",
+    "study skills",
+    "career planning",
+    "campus navigation"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My advisor kept pushing grad school but I wasn't sure. I did informational interviews with people in industry and that helped me make a decision I actually felt good about.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "time management",
+        "emotional_signal": "lonely",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "Greek life dominated the social scene here and I had no interest in rushing. It felt isolating until I found the people who also wanted a quieter version of college social life.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

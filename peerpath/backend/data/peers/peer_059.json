@@ -1,0 +1,25 @@
+{
+  "id": "peer_059",
+  "name": "Alex",
+  "major": "Public Health",
+  "year": "Freshman",
+  "tags": [
+    "internship search",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had no idea how to network. LinkedIn felt fake and cold emails felt awkward. A career counselor helped me reframe networking as just having genuine conversations.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lonely",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search"
+  ],
+  "comfort_level": "prefers intro message"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "peer_171",
+  "name": "Dana",
+  "major": "Biology",
+  "year": "Graduate",
+  "tags": [
+    "internship search",
+    "changing majors",
+    "anxiety",
+    "time management"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had no idea how to network. LinkedIn felt fake and cold emails felt awkward. A career counselor helped me reframe networking as just having genuine conversations.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "hopeful",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

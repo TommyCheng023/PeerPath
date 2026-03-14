@@ -1,0 +1,27 @@
+{
+  "id": "peer_132",
+  "name": "Micah",
+  "major": "Mechanical Engineering",
+  "year": "Graduate",
+  "tags": [
+    "changing majors",
+    "financial stress",
+    "housing",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Switching majors sophomore year felt like admitting failure. But staying in a field I hated would have been worse. The switch cost me a summer of catch-up but I'm genuinely happier.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "burnout",
+        "emotional_signal": "anxious",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "peer_159",
+  "name": "Casey",
+  "major": "Mathematics",
+  "year": "Freshman",
+  "tags": [
+    "campus navigation",
+    "academic stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Nobody told me about the hidden study spots, the free printing in the library basement, or which dining halls have late hours. It all took months to discover by accident.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "uncertain",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "peer_128",
+  "name": "Indigo",
+  "major": "Philosophy",
+  "year": "Junior",
+  "tags": [
+    "changing majors",
+    "joining clubs",
+    "international student adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "anxiety",
+        "emotional_signal": "anxious",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I didn't know about subletting options or university-affiliated housing until my junior year. I overpaid for two years out of ignorance.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "time management",
+        "emotional_signal": "anxious",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "housing"
+  ],
+  "comfort_level": "prefers intro message"
+}

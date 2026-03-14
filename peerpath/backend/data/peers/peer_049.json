@@ -1,0 +1,36 @@
+{
+  "id": "peer_049",
+  "name": "Amari",
+  "major": "Political Science",
+  "year": "Junior",
+  "tags": [
+    "changing majors",
+    "time management",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "financial stress",
+        "emotional_signal": "hopeful",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "financial stress",
+        "emotional_signal": "lonely",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "peer_029",
+  "name": "Frankie",
+  "major": "Computer Science",
+  "year": "Graduate",
+  "tags": [
+    "academic stress",
+    "social life",
+    "mental health",
+    "housing"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Junior year almost broke me. I was taking 18 credits, interning part-time, and trying to maintain a social life. I burned out completely by November and had to drop a class.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "lack of information",
+        "emotional_signal": "hopeful",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

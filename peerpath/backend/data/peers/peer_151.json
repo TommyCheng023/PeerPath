@@ -1,0 +1,37 @@
+{
+  "id": "peer_151",
+  "name": "Gray",
+  "major": "Environmental Science",
+  "year": "Senior",
+  "tags": [
+    "course registration",
+    "making friends",
+    "joining clubs",
+    "research decisions"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Nobody told me that registration appointments open at 7am or that some popular courses fill in 3 minutes. I had to learn all of this the hard way in my first semester.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "anxiety",
+        "emotional_signal": "lost",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "Watching everyone else get internships while I was still working on my resume felt terrible. I applied to 40 places before I got my first interview. It's more of a numbers game than people admit.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "financial stress",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "course registration",
+    "internship search"
+  ],
+  "comfort_level": "prefers intro message"
+}

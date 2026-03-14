@@ -1,0 +1,26 @@
+{
+  "id": "peer_015",
+  "name": "Casey",
+  "major": "Chemistry",
+  "year": "Junior",
+  "tags": [
+    "campus navigation",
+    "career planning",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding campus resources took way longer than it should have. The counseling center, food pantry, tutoring — they exist but they're buried on the website.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

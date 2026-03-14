@@ -1,0 +1,26 @@
+{
+  "id": "peer_185",
+  "name": "Sage",
+  "major": "Biology",
+  "year": "Graduate",
+  "tags": [
+    "transfer student",
+    "changing majors",
+    "research decisions"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I transferred in sophomore and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through an org fair.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "burnout",
+        "emotional_signal": "confused",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

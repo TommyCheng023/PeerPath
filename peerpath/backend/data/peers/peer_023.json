@@ -1,0 +1,26 @@
+{
+  "id": "peer_023",
+  "name": "Finley",
+  "major": "Psychology",
+  "year": "Senior",
+  "tags": [
+    "internship search",
+    "making friends",
+    "freshman adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Watching everyone else get internships while I was still working on my resume felt terrible. I applied to 40 places before I got my first interview. It's more of a numbers game than people admit.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "stressed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search"
+  ],
+  "comfort_level": "prefers intro message"
+}

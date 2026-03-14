@@ -38,6 +38,18 @@ _ENUM_MAP = {
     "help_needed": VALID_HELP_NEEDED,
 }
 
+_PARSE_CHALLENGE_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "properties": {
+        "context": {"type": "string", "enum": VALID_CONTEXT},
+        "struggle_type": {"type": "string", "enum": VALID_STRUGGLE_TYPE},
+        "emotional_signal": {"type": "string", "enum": VALID_EMOTIONAL_SIGNAL},
+        "help_needed": {"type": "string", "enum": VALID_HELP_NEEDED},
+    },
+    "required": ["context", "struggle_type", "emotional_signal", "help_needed"],
+}
+
 _PROMPT_PATH = os.path.join(os.path.dirname(__file__), "..", "prompts", "parse_challenge.txt")
 
 
@@ -59,11 +71,21 @@ def parse_challenge(user_description: str) -> dict:
 
     response = client.chat.completions.create(
         model=os.getenv("OPENAI_MODEL", "gpt-4o"),
-        max_tokens=256,
-        temperature=0,
+        max_completion_tokens=256,
+        response_format={
+            "type": "json_schema",
+            "json_schema": {
+                "name": "challenge_profile",
+                "strict": True,
+                "schema": _PARSE_CHALLENGE_SCHEMA,
+            },
+        },
         messages=[{"role": "user", "content": prompt}],
     )
-    raw_text = response.choices[0].message.content.strip()
+    raw_text = (response.choices[0].message.content or "").strip()
+
+    if not raw_text:
+        raise ValueError("LLM returned empty content when JSON was expected")
 
     try:
         parsed = json.loads(raw_text)

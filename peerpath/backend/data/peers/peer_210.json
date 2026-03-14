@@ -1,0 +1,25 @@
+{
+  "id": "peer_210",
+  "name": "Quinn",
+  "major": "Computer Science",
+  "year": "Junior",
+  "tags": [
+    "research decisions",
+    "dating"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I joined a research lab sophomore year and quickly realized it wasn't what I expected. Knowing when to leave and what to do next took a lot of reflection and conversation.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "hopeful",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

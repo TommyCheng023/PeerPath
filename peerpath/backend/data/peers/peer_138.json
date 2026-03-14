@@ -1,0 +1,25 @@
+{
+  "id": "peer_138",
+  "name": "Tatum",
+  "major": "Psychology",
+  "year": "Junior",
+  "tags": [
+    "changing majors",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Switching majors sophomore year felt like admitting failure. But staying in a field I hated would have been worse. The switch cost me a summer of catch-up but I'm genuinely happier.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors"
+  ],
+  "comfort_level": "open to messages"
+}

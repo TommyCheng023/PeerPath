@@ -1,0 +1,35 @@
+{
+  "id": "peer_039",
+  "name": "Parker",
+  "major": "Mechanical Engineering",
+  "year": "Senior",
+  "tags": [
+    "changing majors",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "Dating in college is nothing like I imagined. Nobody defines relationships, everyone's casual about things, and I felt totally lost about what was even happening half the time.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "dating"
+  ],
+  "comfort_level": "prefers intro message"
+}

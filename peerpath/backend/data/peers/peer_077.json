@@ -1,0 +1,25 @@
+{
+  "id": "peer_077",
+  "name": "Frankie",
+  "major": "Chemistry",
+  "year": "Graduate",
+  "tags": [
+    "campus navigation",
+    "burnout"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding campus resources took way longer than it should have. The counseling center, food pantry, tutoring — they exist but they're buried on the website.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "lonely",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

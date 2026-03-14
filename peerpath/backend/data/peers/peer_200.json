@@ -1,0 +1,37 @@
+{
+  "id": "peer_200",
+  "name": "Haven",
+  "major": "Sociology",
+  "year": "Senior",
+  "tags": [
+    "dating",
+    "anxiety",
+    "making friends",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Dating in college is nothing like I imagined. Nobody defines relationships, everyone's casual about things, and I felt totally lost about what was even happening half the time.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "hopeful",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "When I transferred as a junior, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "financial stress",
+        "emotional_signal": "hopeful",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating",
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

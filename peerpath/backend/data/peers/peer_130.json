@@ -1,0 +1,25 @@
+{
+  "id": "peer_130",
+  "name": "Kendall",
+  "major": "Art History",
+  "year": "Sophomore",
+  "tags": [
+    "international student adjustment",
+    "transfer student"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Adjusting to a completely different academic culture was harder than the language barrier. Back home everything was lecture-based, so being asked for my opinion in seminars felt shocking.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "peer_076",
+  "name": "Emery",
+  "major": "Mechanical Engineering",
+  "year": "Graduate",
+  "tags": [
+    "social life",
+    "international student adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My social life in high school was very different. Here everything felt performative and exhausting at first. I learned to be more selective about where I spent my energy.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "anxiety",
+        "emotional_signal": "uncertain",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

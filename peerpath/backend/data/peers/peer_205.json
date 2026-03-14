@@ -1,0 +1,27 @@
+{
+  "id": "peer_205",
+  "name": "Taylor",
+  "major": "English Literature",
+  "year": "Junior",
+  "tags": [
+    "freshman adjustment",
+    "campus navigation",
+    "time management",
+    "international student adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't sleep well for the first two months. Every small thing stressed me out. Joining a study group made a huge difference because I realized everyone else was struggling too.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

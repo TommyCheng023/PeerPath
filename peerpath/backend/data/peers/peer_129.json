@@ -1,0 +1,27 @@
+{
+  "id": "peer_129",
+  "name": "Jesse",
+  "major": "Psychology",
+  "year": "Graduate",
+  "tags": [
+    "internship search",
+    "study skills",
+    "campus navigation",
+    "mental health"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "anxiety",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

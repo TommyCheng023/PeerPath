@@ -1,0 +1,27 @@
+{
+  "id": "peer_048",
+  "name": "Zion",
+  "major": "Data Science",
+  "year": "Senior",
+  "tags": [
+    "dating",
+    "housing",
+    "social anxiety",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I got into a situationship that left me confused for months. Talking to older students who had been through it helped me understand what I actually wanted.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "stressed",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

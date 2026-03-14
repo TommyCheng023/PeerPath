@@ -1,0 +1,36 @@
+{
+  "id": "peer_188",
+  "name": "Val",
+  "major": "Psychology",
+  "year": "Senior",
+  "tags": [
+    "research decisions",
+    "housing",
+    "international student adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Deciding whether to pursue research or go straight to industry was genuinely hard. I talked to grad students, professors, and alumni before I felt clear enough to commit to a direction.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "time management",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "Transferring mid-year was harder than I expected. The campus felt huge and unfamiliar, and I didn't know how to meet people who weren't in my immediate classes. I reached out to my academic advisor and that helped me find some student orgs.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "transfer adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

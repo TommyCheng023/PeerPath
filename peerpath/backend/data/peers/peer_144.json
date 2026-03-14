@@ -1,0 +1,25 @@
+{
+  "id": "peer_144",
+  "name": "Zion",
+  "major": "Business Administration",
+  "year": "Freshman",
+  "tags": [
+    "research decisions",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I joined a research lab sophomore year and quickly realized it wasn't what I expected. Knowing when to leave and what to do next took a lot of reflection and conversation.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "time management",
+        "emotional_signal": "lost",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions"
+  ],
+  "comfort_level": "prefers intro message"
+}

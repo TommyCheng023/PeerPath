@@ -1,0 +1,36 @@
+{
+  "id": "peer_066",
+  "name": "Quinn",
+  "major": "Finance",
+  "year": "Senior",
+  "tags": [
+    "international student adjustment",
+    "social anxiety",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Adjusting to a completely different academic culture was harder than the language barrier. Back home everything was lecture-based, so being asked for my opinion in seminars felt shocking.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "hopeful",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "Deciding whether to pursue research or go straight to industry was genuinely hard. I talked to grad students, professors, and alumni before I felt clear enough to commit to a direction.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "frustrated",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "research decisions"
+  ],
+  "comfort_level": "prefers intro message"
+}

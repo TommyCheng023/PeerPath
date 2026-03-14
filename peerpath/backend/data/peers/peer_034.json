@@ -1,0 +1,36 @@
+{
+  "id": "peer_034",
+  "name": "Kendall",
+  "major": "Computer Science",
+  "year": "Freshman",
+  "tags": [
+    "course registration",
+    "research decisions",
+    "financial stress",
+    "international student adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Nobody told me that registration appointments open at 7am or that some popular courses fill in 3 minutes. I had to learn all of this the hard way in my first semester.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "anxiety",
+        "emotional_signal": "lonely",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Nobody told me that registration appointments open at 7am or that some popular courses fill in 3 minutes. I had to learn all of this the hard way in my first semester.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "lost",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "course registration"
+  ],
+  "comfort_level": "open to messages"
+}

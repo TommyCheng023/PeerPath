@@ -1,0 +1,25 @@
+{
+  "id": "peer_210",
+  "name": "Lucy",
+  "major": "Data Science",
+  "year": "Senior",
+  "tags": [
+    "research decisions",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I am struggling looking for a job. I am now working on Leetcode Hot 100!",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "hopeful",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

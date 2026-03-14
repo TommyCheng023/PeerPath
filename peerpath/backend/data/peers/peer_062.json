@@ -1,0 +1,36 @@
+{
+  "id": "peer_062",
+  "name": "Morgan",
+  "major": "Finance",
+  "year": "Sophomore",
+  "tags": [
+    "international student adjustment",
+    "freshman adjustment",
+    "transfer student"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "time management",
+        "emotional_signal": "hopeful",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Watching everyone else get internships while I was still working on my resume felt terrible. I applied to 40 places before I got my first interview. It's more of a numbers game than people admit.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "social isolation",
+        "emotional_signal": "hopeful",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "internship search"
+  ],
+  "comfort_level": "prefers intro message"
+}

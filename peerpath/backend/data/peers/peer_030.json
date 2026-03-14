@@ -1,0 +1,27 @@
+{
+  "id": "peer_030",
+  "name": "Glen",
+  "major": "Sociology",
+  "year": "Graduate",
+  "tags": [
+    "international student adjustment",
+    "course registration",
+    "social life",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "anxious",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "peer_134",
+  "name": "Oakley",
+  "major": "Mathematics",
+  "year": "Graduate",
+  "tags": [
+    "international student adjustment",
+    "social anxiety",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "I hit a wall sophomore year where nothing felt meaningful anymore. I was grinding but not retaining anything. Taking a weekend completely offline helped me reset.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "stressed",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "academic stress"
+  ],
+  "comfort_level": "prefers intro message"
+}

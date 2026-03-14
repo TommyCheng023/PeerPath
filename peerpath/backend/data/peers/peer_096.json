@@ -1,0 +1,25 @@
+{
+  "id": "peer_096",
+  "name": "Zion",
+  "major": "Mathematics",
+  "year": "Sophomore",
+  "tags": [
+    "international student adjustment",
+    "burnout"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "confused",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

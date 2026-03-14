@@ -1,0 +1,35 @@
+{
+  "id": "peer_117",
+  "name": "Drew",
+  "major": "Psychology",
+  "year": "Graduate",
+  "tags": [
+    "campus navigation",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I wandered around for 20 minutes trying to find my first class. The campus map app was useless. I ended up just asking random students and everyone was surprisingly helpful.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "I used to think struggling academically meant I didn't belong here. Eventually a professor told me to talk to the academic support center and that changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "financial stress",
+        "emotional_signal": "lonely",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation",
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

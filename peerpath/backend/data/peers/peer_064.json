@@ -1,0 +1,36 @@
+{
+  "id": "peer_064",
+  "name": "Riley",
+  "major": "Sociology",
+  "year": "Freshman",
+  "tags": [
+    "campus navigation",
+    "international student adjustment",
+    "housing"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Nobody told me about the hidden study spots, the free printing in the library basement, or which dining halls have late hours. It all took months to discover by accident.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "time management",
+        "emotional_signal": "hopeful",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "Junior year almost broke me. I was taking 18 credits, interning part-time, and trying to maintain a social life. I burned out completely by November and had to drop a class.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "anxious",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation",
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

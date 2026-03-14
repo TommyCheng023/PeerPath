@@ -1,0 +1,27 @@
+{
+  "id": "peer_196",
+  "name": "Devon",
+  "major": "Mathematics",
+  "year": "Senior",
+  "tags": [
+    "freshman adjustment",
+    "burnout",
+    "campus navigation",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My first semester was rough. I thought college would feel like the movies but instead I was overwhelmed by the independence and had no idea how to manage my time or talk to professors.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "stressed",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "peer_098",
+  "name": "Briar",
+  "major": "Psychology",
+  "year": "Senior",
+  "tags": [
+    "international student adjustment",
+    "mental health",
+    "time management",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "frustrated",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

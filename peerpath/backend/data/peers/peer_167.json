@@ -1,0 +1,25 @@
+{
+  "id": "peer_167",
+  "name": "Finley",
+  "major": "English Literature",
+  "year": "Junior",
+  "tags": [
+    "dating",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Navigating dating while managing coursework and friendships was genuinely hard. I had to learn to communicate directly about what I wanted, which was uncomfortable at first.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

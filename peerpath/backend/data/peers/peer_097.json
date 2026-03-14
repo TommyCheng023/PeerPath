@@ -1,0 +1,25 @@
+{
+  "id": "peer_097",
+  "name": "Amari",
+  "major": "Art History",
+  "year": "Graduate",
+  "tags": [
+    "social life",
+    "housing"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "anxious",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "peer_038",
+  "name": "Oakley",
+  "major": "Communications",
+  "year": "Graduate",
+  "tags": [
+    "campus navigation",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I wandered around for 20 minutes trying to find my first class. The campus map app was useless. I ended up just asking random students and everyone was surprisingly helpful.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "anxiety",
+        "emotional_signal": "hopeful",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

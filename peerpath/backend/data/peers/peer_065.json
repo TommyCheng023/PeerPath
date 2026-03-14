@@ -1,0 +1,36 @@
+{
+  "id": "peer_065",
+  "name": "Avery",
+  "major": "Data Science",
+  "year": "Senior",
+  "tags": [
+    "changing majors",
+    "making friends",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Switching majors sophomore year felt like admitting failure. But staying in a field I hated would have been worse. The switch cost me a summer of catch-up but I'm genuinely happier.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "burnout",
+        "emotional_signal": "lost",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "I joined a research lab sophomore year and quickly realized it wasn't what I expected. Knowing when to leave and what to do next took a lot of reflection and conversation.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "stressed",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

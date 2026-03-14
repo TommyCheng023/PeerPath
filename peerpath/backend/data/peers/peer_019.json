@@ -1,0 +1,26 @@
+{
+  "id": "peer_019",
+  "name": "Skylar",
+  "major": "Chemistry",
+  "year": "Graduate",
+  "tags": [
+    "research decisions",
+    "campus navigation",
+    "making friends"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My advisor kept pushing grad school but I wasn't sure. I did informational interviews with people in industry and that helped me make a decision I actually felt good about.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "time management",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

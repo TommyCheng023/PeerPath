@@ -1,0 +1,37 @@
+{
+  "id": "peer_199",
+  "name": "Gray",
+  "major": "Computer Science",
+  "year": "Senior",
+  "tags": [
+    "social life",
+    "changing majors",
+    "research decisions",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "I hit a wall sophomore year where nothing felt meaningful anymore. I was grinding but not retaining anything. Taking a weekend completely offline helped me reset.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lonely",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life",
+    "academic stress"
+  ],
+  "comfort_level": "prefers intro message"
+}

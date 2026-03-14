@@ -1,0 +1,25 @@
+{
+  "id": "peer_197",
+  "name": "Ellis",
+  "major": "Business Administration",
+  "year": "Senior",
+  "tags": [
+    "freshman adjustment",
+    "social anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't sleep well for the first two months. Every small thing stressed me out. Joining a study group made a huge difference because I realized everyone else was struggling too.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lost",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

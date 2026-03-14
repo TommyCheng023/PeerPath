@@ -1,0 +1,26 @@
+{
+  "id": "peer_113",
+  "name": "Avery",
+  "major": "English Literature",
+  "year": "Junior",
+  "tags": [
+    "academic stress",
+    "social life",
+    "course registration"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I used to think struggling academically meant I didn't belong here. Eventually a professor told me to talk to the academic support center and that changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "confused",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "prefers intro message"
+}

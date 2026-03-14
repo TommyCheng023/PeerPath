@@ -1,0 +1,27 @@
+{
+  "id": "peer_046",
+  "name": "Xen",
+  "major": "Environmental Science",
+  "year": "Senior",
+  "tags": [
+    "campus navigation",
+    "transfer student",
+    "social life",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding campus resources took way longer than it should have. The counseling center, food pantry, tutoring — they exist but they're buried on the website.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "lack of information",
+        "emotional_signal": "anxious",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation"
+  ],
+  "comfort_level": "prefers intro message"
+}

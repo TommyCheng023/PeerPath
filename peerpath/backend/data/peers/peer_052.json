@@ -1,0 +1,26 @@
+{
+  "id": "peer_052",
+  "name": "Devon",
+  "major": "Mathematics",
+  "year": "Sophomore",
+  "tags": [
+    "freshman adjustment",
+    "academic stress",
+    "campus navigation"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My first semester was rough. I thought college would feel like the movies but instead I was overwhelmed by the independence and had no idea how to manage my time or talk to professors.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "time management",
+        "emotional_signal": "confused",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

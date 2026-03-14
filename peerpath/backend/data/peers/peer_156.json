@@ -1,0 +1,25 @@
+{
+  "id": "peer_156",
+  "name": "Jordan",
+  "major": "Communications",
+  "year": "Senior",
+  "tags": [
+    "freshman adjustment",
+    "course registration"
+  ],
+  "past_challenges": [
+    {
+      "raw": "As a freshman, I was so anxious about everything — classes, making friends, navigating the dining hall alone. I called home a lot. Slowly things got better as I found my routine.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

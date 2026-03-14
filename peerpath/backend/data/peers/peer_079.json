@@ -1,0 +1,36 @@
+{
+  "id": "peer_079",
+  "name": "Hayden",
+  "major": "Electrical Engineering",
+  "year": "Junior",
+  "tags": [
+    "internship search",
+    "burnout",
+    "mental health"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "financial stress",
+        "emotional_signal": "confused",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search",
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

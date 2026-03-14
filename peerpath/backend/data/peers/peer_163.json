@@ -1,0 +1,36 @@
+{
+  "id": "peer_163",
+  "name": "Skylar",
+  "major": "Mechanical Engineering",
+  "year": "Junior",
+  "tags": [
+    "housing",
+    "study skills",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't know about subletting options or university-affiliated housing until my junior year. I overpaid for two years out of ignorance.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "anxious",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "My advisor kept pushing grad school but I wasn't sure. I did informational interviews with people in industry and that helped me make a decision I actually felt good about.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "time management",
+        "emotional_signal": "lost",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

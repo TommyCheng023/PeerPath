@@ -1,0 +1,27 @@
+{
+  "id": "peer_087",
+  "name": "Parker",
+  "major": "Environmental Science",
+  "year": "Graduate",
+  "tags": [
+    "campus navigation",
+    "social life",
+    "making friends",
+    "social anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Nobody told me about the hidden study spots, the free printing in the library basement, or which dining halls have late hours. It all took months to discover by accident.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "anxiety",
+        "emotional_signal": "hopeful",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

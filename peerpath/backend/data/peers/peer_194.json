@@ -1,0 +1,27 @@
+{
+  "id": "peer_194",
+  "name": "Briar",
+  "major": "Biology",
+  "year": "Graduate",
+  "tags": [
+    "dating",
+    "changing majors",
+    "burnout",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Dating in college is nothing like I imagined. Nobody defines relationships, everyone's casual about things, and I felt totally lost about what was even happening half the time.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "lonely",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

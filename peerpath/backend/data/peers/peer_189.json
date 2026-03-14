@@ -1,0 +1,25 @@
+{
+  "id": "peer_189",
+  "name": "Wren",
+  "major": "Chemistry",
+  "year": "Freshman",
+  "tags": [
+    "academic stress",
+    "transfer student"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I hit a wall sophomore year where nothing felt meaningful anymore. I was grinding but not retaining anything. Taking a weekend completely offline helped me reset.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "lack of information",
+        "emotional_signal": "confused",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

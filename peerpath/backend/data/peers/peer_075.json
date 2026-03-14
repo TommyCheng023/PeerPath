@@ -1,0 +1,36 @@
+{
+  "id": "peer_075",
+  "name": "Dana",
+  "major": "Finance",
+  "year": "Freshman",
+  "tags": [
+    "social life",
+    "joining clubs",
+    "course registration"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Greek life dominated the social scene here and I had no interest in rushing. It felt isolating until I found the people who also wanted a quieter version of college social life.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "anxiety",
+        "emotional_signal": "lost",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "Adjusting to a completely different academic culture was harder than the language barrier. Back home everything was lecture-based, so being asked for my opinion in seminars felt shocking.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life",
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

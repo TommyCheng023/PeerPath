@@ -1,0 +1,36 @@
+{
+  "id": "peer_042",
+  "name": "Tatum",
+  "major": "Finance",
+  "year": "Sophomore",
+  "tags": [
+    "research decisions",
+    "financial stress",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Deciding whether to pursue research or go straight to industry was genuinely hard. I talked to grad students, professors, and alumni before I felt clear enough to commit to a direction.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "lonely",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "I didn't know about subletting options or university-affiliated housing until my junior year. I overpaid for two years out of ignorance.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "stressed",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "peer_206",
+  "name": "Morgan",
+  "major": "Nursing",
+  "year": "Junior",
+  "tags": [
+    "transfer student",
+    "research decisions",
+    "study skills",
+    "academic stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I transferred in mid-year and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through a part-time job.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "lost",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

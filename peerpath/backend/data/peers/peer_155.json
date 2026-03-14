@@ -1,0 +1,36 @@
+{
+  "id": "peer_155",
+  "name": "Alex",
+  "major": "Environmental Science",
+  "year": "Junior",
+  "tags": [
+    "internship search",
+    "career planning",
+    "academic stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "anxiety",
+        "emotional_signal": "stressed",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "Off-campus housing was way more expensive than I expected and the landlord market here is chaotic. I ended up in a bad living situation for a semester before finding something stable.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "burnout",
+        "emotional_signal": "anxious",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search",
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

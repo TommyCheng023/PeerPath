@@ -1,0 +1,36 @@
+{
+  "id": "peer_127",
+  "name": "Hayden",
+  "major": "Chemistry",
+  "year": "Junior",
+  "tags": [
+    "research decisions",
+    "financial stress",
+    "dating"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My advisor kept pushing grad school but I wasn't sure. I did informational interviews with people in industry and that helped me make a decision I actually felt good about.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "lack of information",
+        "emotional_signal": "hopeful",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "Greek life dominated the social scene here and I had no interest in rushing. It felt isolating until I found the people who also wanted a quieter version of college social life.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "time management",
+        "emotional_signal": "uncertain",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

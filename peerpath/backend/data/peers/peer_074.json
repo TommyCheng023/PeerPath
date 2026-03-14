@@ -1,0 +1,36 @@
+{
+  "id": "peer_074",
+  "name": "Cameron",
+  "major": "Sociology",
+  "year": "Freshman",
+  "tags": [
+    "transfer student",
+    "mental health",
+    "changing majors"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I transferred in sophomore and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through a study group.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "burnout",
+        "emotional_signal": "stressed",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "Greek life dominated the social scene here and I had no interest in rushing. It felt isolating until I found the people who also wanted a quieter version of college social life.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "time management",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment",
+    "social life"
+  ],
+  "comfort_level": "prefers intro message"
+}

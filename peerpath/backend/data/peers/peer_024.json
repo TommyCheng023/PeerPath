@@ -1,0 +1,26 @@
+{
+  "id": "peer_024",
+  "name": "Harley",
+  "major": "Biology",
+  "year": "Senior",
+  "tags": [
+    "social life",
+    "internship search",
+    "campus navigation"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "stressed",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life"
+  ],
+  "comfort_level": "prefers intro message"
+}

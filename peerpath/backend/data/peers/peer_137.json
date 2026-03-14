@@ -1,0 +1,36 @@
+{
+  "id": "peer_137",
+  "name": "Sage",
+  "major": "Environmental Science",
+  "year": "Junior",
+  "tags": [
+    "social life",
+    "dating",
+    "transfer student"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "time management",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "I had no idea how to network. LinkedIn felt fake and cold emails felt awkward. A career counselor helped me reframe networking as just having genuine conversations.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life",
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

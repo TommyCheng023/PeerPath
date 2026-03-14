@@ -9,17 +9,18 @@ load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 try:
     from services.tag_filter import filter_by_tags
     from services.llm_parser import parse_challenge
-    from services.scorer import score_peer
+    from services.scorer import compute_field_score, score_peer
     from services.data_loader import load_peer
 except ModuleNotFoundError:
     import sys
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
     from services.tag_filter import filter_by_tags
     from services.llm_parser import parse_challenge
-    from services.scorer import score_peer
+    from services.scorer import compute_field_score, score_peer
     from services.data_loader import load_peer
 
 _PROMPT_PATH = os.path.join(os.path.dirname(__file__), "..", "prompts", "conversation_starter.txt")
+_LLM_RERANK_LIMIT = 10
 
 
 def _generate_conversation_starter(user_description: str, peer_raw: str, reason: str) -> str:
@@ -37,8 +38,7 @@ def _generate_conversation_starter(user_description: str, peer_raw: str, reason:
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         response = client.chat.completions.create(
             model=os.getenv("OPENAI_MODEL", "gpt-4o"),
-            max_tokens=256,
-            temperature=0,
+            max_completion_tokens=256,
             messages=[{"role": "user", "content": prompt}],
         )
         raw_text = response.choices[0].message.content.strip()
@@ -80,14 +80,14 @@ def rank_peers(student_tags: list[str], student_description: str) -> list[dict]:
     # Step B — LLM Parse
     student_parsed = parse_challenge(student_description)
 
-    # Step C & D — Score each candidate and compute combined score
-    scored = []
+    # Step C & D — Cheap rule-based scoring for all candidates
+    preliminary = []
     for candidate in candidates:
         peer_id = candidate["id"]
         overlap_count = candidate["overlap_count"]
 
         peer = load_peer(peer_id)
-        score_result = score_peer(student_parsed, peer)
+        score_result = compute_field_score(student_parsed, peer)
 
         # tag_bonus: guard against empty student_tags (already filtered above, but defensive)
         if student_tags:
@@ -95,18 +95,33 @@ def rank_peers(student_tags: list[str], student_description: str) -> list[dict]:
         else:
             tag_bonus = 0
 
-        combined_score = round(score_result["final_score"] + tag_bonus, 2)
+        preliminary_score = round(score_result["field_score"] + tag_bonus, 2)
 
-        scored.append({
+        preliminary.append({
             "peer": peer,
             "tag_overlap": overlap_count,
             "field_score": score_result["field_score"],
+            "tag_bonus": tag_bonus,
+            "preliminary_score": preliminary_score,
+        })
+
+    preliminary.sort(key=lambda x: x["preliminary_score"], reverse=True)
+    rerank_pool = preliminary[:_LLM_RERANK_LIMIT]
+
+    # Step E — LLM rerank only the strongest candidates
+    scored = []
+    for item in rerank_pool:
+        score_result = score_peer(student_parsed, item["peer"], use_llm=True)
+        final_score = round(score_result["final_score"] + item["tag_bonus"], 2)
+        scored.append({
+            "peer": item["peer"],
+            "tag_overlap": item["tag_overlap"],
+            "field_score": score_result["field_score"],
             "llm_adjustment": score_result["llm_adjustment"],
-            "combined_score": combined_score,
+            "combined_score": final_score,
             "reason": score_result["reason"],
         })
 
-    # Step E — Sort descending, take top 3
     scored.sort(key=lambda x: x["combined_score"], reverse=True)
     top3 = scored[:3]
 

@@ -1,0 +1,35 @@
+{
+  "id": "peer_092",
+  "name": "Val",
+  "major": "Mathematics",
+  "year": "Freshman",
+  "tags": [
+    "social life",
+    "burnout"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "anxious",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "When I transferred as a junior, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "hopeful",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life",
+    "transfer adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

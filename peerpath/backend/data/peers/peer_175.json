@@ -1,0 +1,25 @@
+{
+  "id": "peer_175",
+  "name": "Hayden",
+  "major": "Chemistry",
+  "year": "Senior",
+  "tags": [
+    "international student adjustment",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "frustrated",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

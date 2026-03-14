@@ -1,0 +1,36 @@
+{
+  "id": "peer_035",
+  "name": "Lane",
+  "major": "Art History",
+  "year": "Sophomore",
+  "tags": [
+    "academic stress",
+    "transfer student",
+    "housing"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Junior year almost broke me. I was taking 18 credits, interning part-time, and trying to maintain a social life. I burned out completely by November and had to drop a class.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "financial stress",
+        "emotional_signal": "lost",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "Off-campus housing was way more expensive than I expected and the landlord market here is chaotic. I ended up in a bad living situation for a semester before finding something stable.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "time management",
+        "emotional_signal": "lonely",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress",
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

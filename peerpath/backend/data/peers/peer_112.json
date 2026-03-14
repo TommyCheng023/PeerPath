@@ -1,0 +1,26 @@
+{
+  "id": "peer_112",
+  "name": "Riley",
+  "major": "Mechanical Engineering",
+  "year": "Freshman",
+  "tags": [
+    "dating",
+    "course registration",
+    "freshman adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I got into a situationship that left me confused for months. Talking to older students who had been through it helped me understand what I actually wanted.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "time management",
+        "emotional_signal": "anxious",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

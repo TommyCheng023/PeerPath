@@ -1,0 +1,26 @@
+{
+  "id": "peer_085",
+  "name": "Noel",
+  "major": "Nursing",
+  "year": "Sophomore",
+  "tags": [
+    "housing",
+    "research decisions",
+    "changing majors"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Off-campus housing was way more expensive than I expected and the landlord market here is chaotic. I ended up in a bad living situation for a semester before finding something stable.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "confused",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

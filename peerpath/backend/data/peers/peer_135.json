@@ -1,0 +1,37 @@
+{
+  "id": "peer_135",
+  "name": "Parker",
+  "major": "Data Science",
+  "year": "Sophomore",
+  "tags": [
+    "housing",
+    "campus navigation",
+    "career planning",
+    "academic stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding roommates from scratch was stressful. Facebook groups and the housing board helped but it still took weeks of searching and a few sketchy tours.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "social isolation",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "Nobody told me about the hidden study spots, the free printing in the library basement, or which dining halls have late hours. It all took months to discover by accident.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "anxious",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

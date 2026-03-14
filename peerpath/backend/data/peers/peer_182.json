@@ -1,0 +1,27 @@
+{
+  "id": "peer_182",
+  "name": "Oakley",
+  "major": "Economics",
+  "year": "Sophomore",
+  "tags": [
+    "housing",
+    "changing majors",
+    "course registration",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't know about subletting options or university-affiliated housing until my junior year. I overpaid for two years out of ignorance.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "social isolation",
+        "emotional_signal": "stressed",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

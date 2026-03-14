@@ -1,0 +1,37 @@
+{
+  "id": "peer_136",
+  "name": "Remy",
+  "major": "Art History",
+  "year": "Sophomore",
+  "tags": [
+    "changing majors",
+    "housing",
+    "course registration",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "financial stress",
+        "emotional_signal": "uncertain",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Finding roommates from scratch was stressful. Facebook groups and the housing board helped but it still took weeks of searching and a few sketchy tours.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

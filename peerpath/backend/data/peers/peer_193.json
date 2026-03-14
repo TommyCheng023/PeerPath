@@ -1,0 +1,27 @@
+{
+  "id": "peer_193",
+  "name": "Amari",
+  "major": "Political Science",
+  "year": "Graduate",
+  "tags": [
+    "dating",
+    "research decisions",
+    "social life",
+    "freshman adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Navigating dating while managing coursework and friendships was genuinely hard. I had to learn to communicate directly about what I wanted, which was uncomfortable at first.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

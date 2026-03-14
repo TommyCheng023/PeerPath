@@ -1,0 +1,36 @@
+{
+  "id": "peer_176",
+  "name": "Indigo",
+  "major": "Biology",
+  "year": "Senior",
+  "tags": [
+    "academic stress",
+    "study skills",
+    "transfer student"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I used to think struggling academically meant I didn't belong here. Eventually a professor told me to talk to the academic support center and that changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "financial stress",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "I didn't sleep well for the first two months. Every small thing stressed me out. Joining a study group made a huge difference because I realized everyone else was struggling too.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "hopeful",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress",
+    "freshman adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

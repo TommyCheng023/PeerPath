@@ -1,0 +1,36 @@
+{
+  "id": "peer_099",
+  "name": "Cleo",
+  "major": "Communications",
+  "year": "Sophomore",
+  "tags": [
+    "international student adjustment",
+    "housing",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "I wandered around for 20 minutes trying to find my first class. The campus map app was useless. I ended up just asking random students and everyone was surprisingly helpful.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "anxious",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

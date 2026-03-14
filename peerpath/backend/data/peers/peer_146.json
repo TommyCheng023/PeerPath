@@ -1,0 +1,25 @@
+{
+  "id": "peer_146",
+  "name": "Briar",
+  "major": "Nursing",
+  "year": "Junior",
+  "tags": [
+    "transfer student",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "When I transferred as a sophomore, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "uncertain",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "peer_050",
+  "name": "Briar",
+  "major": "Mathematics",
+  "year": "Sophomore",
+  "tags": [
+    "social life",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My social life in high school was very different. Here everything felt performative and exhausting at first. I learned to be more selective about where I spent my energy.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "burnout",
+        "emotional_signal": "uncertain",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Navigating dating while managing coursework and friendships was genuinely hard. I had to learn to communicate directly about what I wanted, which was uncomfortable at first.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life",
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

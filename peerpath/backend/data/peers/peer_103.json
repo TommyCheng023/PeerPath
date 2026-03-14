@@ -1,0 +1,35 @@
+{
+  "id": "peer_103",
+  "name": "Gray",
+  "major": "Computer Science",
+  "year": "Graduate",
+  "tags": [
+    "course registration",
+    "mental health",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Registration was a nightmare. I had no idea about prerequisite chains or how to get a permission code. I ended up in totally the wrong sequence and had to retake a prereq.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I wasted a semester in a class I didn't need because I misread the major requirements. The registrar's office actually has office hours — I wish I had gone sooner.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "course registration"
+  ],
+  "comfort_level": "prefers intro message"
+}

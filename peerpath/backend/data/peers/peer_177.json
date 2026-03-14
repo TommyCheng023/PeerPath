@@ -1,0 +1,26 @@
+{
+  "id": "peer_177",
+  "name": "Jesse",
+  "major": "Nursing",
+  "year": "Graduate",
+  "tags": [
+    "international student adjustment",
+    "social life",
+    "dating"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "uncertain",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

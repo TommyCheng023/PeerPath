@@ -1,0 +1,25 @@
+{
+  "id": "peer_081",
+  "name": "Jesse",
+  "major": "Psychology",
+  "year": "Graduate",
+  "tags": [
+    "internship search",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Watching everyone else get internships while I was still working on my resume felt terrible. I applied to 40 places before I got my first interview. It's more of a numbers game than people admit.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lost",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search"
+  ],
+  "comfort_level": "prefers intro message"
+}

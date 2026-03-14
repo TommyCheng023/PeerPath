@@ -1,0 +1,26 @@
+{
+  "id": "peer_086",
+  "name": "Oakley",
+  "major": "Finance",
+  "year": "Senior",
+  "tags": [
+    "campus navigation",
+    "changing majors",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I wandered around for 20 minutes trying to find my first class. The campus map app was useless. I ended up just asking random students and everyone was surprisingly helpful.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "lack of information",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

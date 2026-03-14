@@ -1,0 +1,35 @@
+{
+  "id": "peer_173",
+  "name": "Frankie",
+  "major": "Economics",
+  "year": "Sophomore",
+  "tags": [
+    "campus navigation",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding campus resources took way longer than it should have. The counseling center, food pantry, tutoring — they exist but they're buried on the website.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "time management",
+        "emotional_signal": "stressed",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "anxiety",
+        "emotional_signal": "lost",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation",
+    "changing majors"
+  ],
+  "comfort_level": "open to messages"
+}

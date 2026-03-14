@@ -1,0 +1,27 @@
+{
+  "id": "peer_192",
+  "name": "Zion",
+  "major": "Chemistry",
+  "year": "Sophomore",
+  "tags": [
+    "transfer student",
+    "anxiety",
+    "campus navigation",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Transferring mid-year was harder than I expected. The campus felt huge and unfamiliar, and I didn't know how to meet people who weren't in my immediate classes. I reached out to my academic advisor and that helped me find some student orgs.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "hopeful",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

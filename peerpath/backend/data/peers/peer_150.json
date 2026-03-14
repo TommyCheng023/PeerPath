@@ -1,0 +1,37 @@
+{
+  "id": "peer_150",
+  "name": "Fern",
+  "major": "Economics",
+  "year": "Graduate",
+  "tags": [
+    "social life",
+    "changing majors",
+    "time management",
+    "freshman adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My social life in high school was very different. Here everything felt performative and exhausting at first. I learned to be more selective about where I spent my energy.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "social isolation",
+        "emotional_signal": "confused",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "Dating in college is nothing like I imagined. Nobody defines relationships, everyone's casual about things, and I felt totally lost about what was even happening half the time.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life",
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

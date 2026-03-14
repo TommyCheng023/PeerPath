@@ -1,0 +1,25 @@
+{
+  "id": "peer_063",
+  "name": "Casey",
+  "major": "Mechanical Engineering",
+  "year": "Senior",
+  "tags": [
+    "academic stress",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I used to think struggling academically meant I didn't belong here. Eventually a professor told me to talk to the academic support center and that changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "burnout",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "prefers intro message"
+}

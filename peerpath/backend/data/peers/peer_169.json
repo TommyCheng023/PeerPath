@@ -1,0 +1,36 @@
+{
+  "id": "peer_169",
+  "name": "Blake",
+  "major": "Public Health",
+  "year": "Senior",
+  "tags": [
+    "housing",
+    "mental health",
+    "academic stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding roommates from scratch was stressful. Facebook groups and the housing board helped but it still took weeks of searching and a few sketchy tours.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "lost",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "Registration was a nightmare. I had no idea about prerequisite chains or how to get a permission code. I ended up in totally the wrong sequence and had to retake a prereq.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "burnout",
+        "emotional_signal": "confused",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "course registration"
+  ],
+  "comfort_level": "open to messages"
+}

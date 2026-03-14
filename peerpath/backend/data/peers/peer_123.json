@@ -1,0 +1,37 @@
+{
+  "id": "peer_123",
+  "name": "Dana",
+  "major": "Mechanical Engineering",
+  "year": "Junior",
+  "tags": [
+    "research decisions",
+    "making friends",
+    "career planning",
+    "mental health"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My advisor kept pushing grad school but I wasn't sure. I did informational interviews with people in industry and that helped me make a decision I actually felt good about.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "My social life in high school was very different. Here everything felt performative and exhausting at first. I learned to be more selective about where I spent my energy.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "lack of information",
+        "emotional_signal": "confused",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

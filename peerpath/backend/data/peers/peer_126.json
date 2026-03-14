@@ -1,0 +1,37 @@
+{
+  "id": "peer_126",
+  "name": "Glen",
+  "major": "Mechanical Engineering",
+  "year": "Graduate",
+  "tags": [
+    "academic stress",
+    "mental health",
+    "anxiety",
+    "making friends"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Junior year almost broke me. I was taking 18 credits, interning part-time, and trying to maintain a social life. I burned out completely by November and had to drop a class.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "time management",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "Transferring mid-year was harder than I expected. The campus felt huge and unfamiliar, and I didn't know how to meet people who weren't in my immediate classes. I reached out to my academic advisor and that helped me find some student orgs.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "uncertain",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress",
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

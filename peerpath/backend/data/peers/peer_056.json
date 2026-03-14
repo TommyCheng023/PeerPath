@@ -1,0 +1,25 @@
+{
+  "id": "peer_056",
+  "name": "Haven",
+  "major": "Mathematics",
+  "year": "Junior",
+  "tags": [
+    "academic stress",
+    "social anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Junior year almost broke me. I was taking 18 credits, interning part-time, and trying to maintain a social life. I burned out completely by November and had to drop a class.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "time management",
+        "emotional_signal": "hopeful",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "prefers intro message"
+}

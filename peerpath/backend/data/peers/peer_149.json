@@ -1,0 +1,35 @@
+{
+  "id": "peer_149",
+  "name": "Ellis",
+  "major": "Political Science",
+  "year": "Graduate",
+  "tags": [
+    "changing majors",
+    "transfer student"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Switching majors sophomore year felt like admitting failure. But staying in a field I hated would have been worse. The switch cost me a summer of catch-up but I'm genuinely happier.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "time management",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "Adjusting to a completely different academic culture was harder than the language barrier. Back home everything was lecture-based, so being asked for my opinion in seminars felt shocking.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "social isolation",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

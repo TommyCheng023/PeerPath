@@ -1,0 +1,26 @@
+{
+  "id": "peer_191",
+  "name": "Yael",
+  "major": "Biology",
+  "year": "Graduate",
+  "tags": [
+    "freshman adjustment",
+    "social life",
+    "international student adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My first semester was rough. I thought college would feel like the movies but instead I was overwhelmed by the independence and had no idea how to manage my time or talk to professors.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "time management",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

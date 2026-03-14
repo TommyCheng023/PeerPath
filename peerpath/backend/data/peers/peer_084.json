@@ -1,0 +1,27 @@
+{
+  "id": "peer_084",
+  "name": "Micah",
+  "major": "Computer Science",
+  "year": "Sophomore",
+  "tags": [
+    "international student adjustment",
+    "dating",
+    "social life",
+    "burnout"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "time management",
+        "emotional_signal": "frustrated",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

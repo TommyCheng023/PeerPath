@@ -1,0 +1,36 @@
+{
+  "id": "peer_139",
+  "name": "Uma",
+  "major": "Chemistry",
+  "year": "Freshman",
+  "tags": [
+    "academic stress",
+    "housing",
+    "time management"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I hit a wall sophomore year where nothing felt meaningful anymore. I was grinding but not retaining anything. Taking a weekend completely offline helped me reset.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "stressed",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "Adjusting to a completely different academic culture was harder than the language barrier. Back home everything was lecture-based, so being asked for my opinion in seminars felt shocking.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "time management",
+        "emotional_signal": "frustrated",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress",
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

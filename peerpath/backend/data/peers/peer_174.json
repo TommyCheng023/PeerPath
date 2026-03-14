@@ -1,0 +1,36 @@
+{
+  "id": "peer_174",
+  "name": "Glen",
+  "major": "Public Health",
+  "year": "Junior",
+  "tags": [
+    "changing majors",
+    "dating",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I spent a year in a major my parents chose before admitting I was miserable. The conversation with my family was hard but necessary. I found a double-major path that worked for both of us.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "financial stress",
+        "emotional_signal": "frustrated",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "Registration was a nightmare. I had no idea about prerequisite chains or how to get a permission code. I ended up in totally the wrong sequence and had to retake a prereq.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "course registration"
+  ],
+  "comfort_level": "prefers intro message"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "peer_093",
+  "name": "Wren",
+  "major": "English Literature",
+  "year": "Freshman",
+  "tags": [
+    "freshman adjustment",
+    "joining clubs",
+    "housing"
+  ],
+  "past_challenges": [
+    {
+      "raw": "As a freshman, I was so anxious about everything — classes, making friends, navigating the dining hall alone. I called home a lot. Slowly things got better as I found my routine.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "financial stress",
+        "emotional_signal": "uncertain",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "Finding roommates from scratch was stressful. Facebook groups and the housing board helped but it still took weeks of searching and a few sketchy tours.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment",
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

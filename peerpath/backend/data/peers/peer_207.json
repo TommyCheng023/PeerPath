@@ -1,0 +1,37 @@
+{
+  "id": "peer_207",
+  "name": "Casey",
+  "major": "Computer Science",
+  "year": "Graduate",
+  "tags": [
+    "academic stress",
+    "social life",
+    "time management",
+    "course registration"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I used to think struggling academically meant I didn't belong here. Eventually a professor told me to talk to the academic support center and that changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "confused",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Off-campus housing was way more expensive than I expected and the landlord market here is chaotic. I ended up in a bad living situation for a semester before finding something stable.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "lack of information",
+        "emotional_signal": "anxious",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress",
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

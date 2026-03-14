@@ -1,0 +1,25 @@
+{
+  "id": "peer_022",
+  "name": "Reese",
+  "major": "Public Health",
+  "year": "Senior",
+  "tags": [
+    "transfer student",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "When I transferred as a junior, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "uncertain",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

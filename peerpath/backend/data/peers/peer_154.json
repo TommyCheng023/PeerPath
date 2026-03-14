@@ -1,0 +1,37 @@
+{
+  "id": "peer_154",
+  "name": "Jules",
+  "major": "Computer Science",
+  "year": "Junior",
+  "tags": [
+    "housing",
+    "mental health",
+    "burnout",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't know about subletting options or university-affiliated housing until my junior year. I overpaid for two years out of ignorance.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "confused",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "I'm naturally introverted so the party-heavy social scene felt totally wrong for me. It took me a while to accept that my social style was valid and to find low-key communities that fit.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lost",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

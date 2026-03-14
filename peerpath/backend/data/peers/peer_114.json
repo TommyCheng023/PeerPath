@@ -1,0 +1,27 @@
+{
+  "id": "peer_114",
+  "name": "Quinn",
+  "major": "Mechanical Engineering",
+  "year": "Graduate",
+  "tags": [
+    "course registration",
+    "burnout",
+    "internship search",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Registration was a nightmare. I had no idea about prerequisite chains or how to get a permission code. I ended up in totally the wrong sequence and had to retake a prereq.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lost",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "course registration"
+  ],
+  "comfort_level": "open to messages"
+}

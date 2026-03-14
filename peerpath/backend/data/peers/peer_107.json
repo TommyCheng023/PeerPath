@@ -1,0 +1,36 @@
+{
+  "id": "peer_107",
+  "name": "Alex",
+  "major": "English Literature",
+  "year": "Senior",
+  "tags": [
+    "research decisions",
+    "burnout",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I joined a research lab sophomore year and quickly realized it wasn't what I expected. Knowing when to leave and what to do next took a lot of reflection and conversation.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "lost",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "Transferring mid-year was harder than I expected. The campus felt huge and unfamiliar, and I didn't know how to meet people who weren't in my immediate classes. I reached out to my academic advisor and that helped me find some student orgs.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "stressed",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "transfer adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

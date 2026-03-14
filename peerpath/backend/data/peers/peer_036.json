@@ -1,0 +1,37 @@
+{
+  "id": "peer_036",
+  "name": "Micah",
+  "major": "Mathematics",
+  "year": "Senior",
+  "tags": [
+    "dating",
+    "research decisions",
+    "time management",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Navigating dating while managing coursework and friendships was genuinely hard. I had to learn to communicate directly about what I wanted, which was uncomfortable at first.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "confused",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "uncertain",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating",
+    "international student adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

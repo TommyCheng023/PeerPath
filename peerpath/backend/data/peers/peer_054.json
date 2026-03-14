@@ -1,0 +1,35 @@
+{
+  "id": "peer_054",
+  "name": "Fern",
+  "major": "Mathematics",
+  "year": "Freshman",
+  "tags": [
+    "campus navigation",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Nobody told me about the hidden study spots, the free printing in the library basement, or which dining halls have late hours. It all took months to discover by accident.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "anxious",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "Watching everyone else get internships while I was still working on my resume felt terrible. I applied to 40 places before I got my first interview. It's more of a numbers game than people admit.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lonely",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation",
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

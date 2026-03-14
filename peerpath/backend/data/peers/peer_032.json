@@ -1,0 +1,36 @@
+{
+  "id": "peer_032",
+  "name": "Indigo",
+  "major": "Business Administration",
+  "year": "Sophomore",
+  "tags": [
+    "internship search",
+    "international student adjustment",
+    "making friends"
+  ],
+  "past_challenges": [
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "time management",
+        "emotional_signal": "frustrated",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "When I transferred as a junior, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "frustrated",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search",
+    "transfer adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

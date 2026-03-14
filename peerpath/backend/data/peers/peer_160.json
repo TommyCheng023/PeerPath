@@ -1,0 +1,35 @@
+{
+  "id": "peer_160",
+  "name": "Riley",
+  "major": "Public Health",
+  "year": "Sophomore",
+  "tags": [
+    "social life",
+    "dating",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Greek life dominated the social scene here and I had no interest in rushing. It felt isolating until I found the people who also wanted a quieter version of college social life.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "financial stress",
+        "emotional_signal": "frustrated",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "My social life in high school was very different. Here everything felt performative and exhausting at first. I learned to be more selective about where I spent my energy.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "financial stress",
+        "emotional_signal": "frustrated",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

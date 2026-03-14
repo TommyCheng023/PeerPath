@@ -1,0 +1,36 @@
+{
+  "id": "peer_073",
+  "name": "Blake",
+  "major": "Economics",
+  "year": "Sophomore",
+  "tags": [
+    "freshman adjustment",
+    "social life",
+    "changing majors"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't sleep well for the first two months. Every small thing stressed me out. Joining a study group made a huge difference because I realized everyone else was struggling too.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "lost",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment",
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

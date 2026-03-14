@@ -1,0 +1,37 @@
+{
+  "id": "peer_143",
+  "name": "Yael",
+  "major": "Art History",
+  "year": "Senior",
+  "tags": [
+    "international student adjustment",
+    "academic stress",
+    "internship search",
+    "making friends"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Adjusting to a completely different academic culture was harder than the language barrier. Back home everything was lecture-based, so being asked for my opinion in seminars felt shocking.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "stressed",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "I hit a wall sophomore year where nothing felt meaningful anymore. I was grinding but not retaining anything. Taking a weekend completely offline helped me reset.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "burnout",
+        "emotional_signal": "uncertain",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "peer_028",
+  "name": "Emery",
+  "major": "Political Science",
+  "year": "Graduate",
+  "tags": [
+    "freshman adjustment",
+    "academic stress",
+    "joining clubs",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "As a freshman, I was so anxious about everything — classes, making friends, navigating the dining hall alone. I called home a lot. Slowly things got better as I found my routine.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "anxious",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "I hit a wall sophomore year where nothing felt meaningful anymore. I was grinding but not retaining anything. Taking a weekend completely offline helped me reset.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "burnout",
+        "emotional_signal": "hopeful",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment",
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

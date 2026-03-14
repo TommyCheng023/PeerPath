@@ -1,0 +1,36 @@
+{
+  "id": "peer_040",
+  "name": "Remy",
+  "major": "Chemistry",
+  "year": "Junior",
+  "tags": [
+    "research decisions",
+    "joining clubs",
+    "dating"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I joined a research lab sophomore year and quickly realized it wasn't what I expected. Knowing when to leave and what to do next took a lot of reflection and conversation.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "time management",
+        "emotional_signal": "frustrated",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "I had no idea how to network. LinkedIn felt fake and cold emails felt awkward. A career counselor helped me reframe networking as just having genuine conversations.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "uncertain",
+        "resolution_type": "peer experience"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

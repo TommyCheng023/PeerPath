@@ -1,0 +1,35 @@
+{
+  "id": "peer_178",
+  "name": "Kendall",
+  "major": "Mathematics",
+  "year": "Sophomore",
+  "tags": [
+    "academic stress",
+    "time management"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I hit a wall sophomore year where nothing felt meaningful anymore. I was grinding but not retaining anything. Taking a weekend completely offline helped me reset.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "financial stress",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Watching everyone else get internships while I was still working on my resume felt terrible. I applied to 40 places before I got my first interview. It's more of a numbers game than people admit.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress",
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

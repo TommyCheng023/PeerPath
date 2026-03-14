@@ -1,0 +1,35 @@
+{
+  "id": "peer_045",
+  "name": "Wren",
+  "major": "Political Science",
+  "year": "Senior",
+  "tags": [
+    "research decisions",
+    "study skills"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Deciding whether to pursue research or go straight to industry was genuinely hard. I talked to grad students, professors, and alumni before I felt clear enough to commit to a direction.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "I wasted a semester in a class I didn't need because I misread the major requirements. The registrar's office actually has office hours — I wish I had gone sooner.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "social isolation",
+        "emotional_signal": "hopeful",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "course registration"
+  ],
+  "comfort_level": "prefers intro message"
+}

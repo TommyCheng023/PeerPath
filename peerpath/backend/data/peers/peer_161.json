@@ -1,0 +1,36 @@
+{
+  "id": "peer_161",
+  "name": "Avery",
+  "major": "Mathematics",
+  "year": "Sophomore",
+  "tags": [
+    "dating",
+    "anxiety",
+    "academic stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I got into a situationship that left me confused for months. Talking to older students who had been through it helped me understand what I actually wanted.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "burnout",
+        "emotional_signal": "confused",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I spent a year in a major my parents chose before admitting I was miserable. The conversation with my family was hard but necessary. I found a double-major path that worked for both of us.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating",
+    "changing majors"
+  ],
+  "comfort_level": "open to messages"
+}

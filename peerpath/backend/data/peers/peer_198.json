@@ -1,0 +1,35 @@
+{
+  "id": "peer_198",
+  "name": "Fern",
+  "major": "Mechanical Engineering",
+  "year": "Sophomore",
+  "tags": [
+    "transfer student",
+    "social anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I transferred in sophomore and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through an org fair.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "burnout",
+        "emotional_signal": "confused",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Deciding whether to pursue research or go straight to industry was genuinely hard. I talked to grad students, professors, and alumni before I felt clear enough to commit to a direction.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "anxiety",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment",
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

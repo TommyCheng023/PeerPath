@@ -1,0 +1,36 @@
+{
+  "id": "peer_118",
+  "name": "Reese",
+  "major": "Communications",
+  "year": "Senior",
+  "tags": [
+    "international student adjustment",
+    "making friends",
+    "time management",
+    "internship search"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "anxiety",
+        "emotional_signal": "confused",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "burnout",
+        "emotional_signal": "hopeful",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

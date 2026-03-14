@@ -1,0 +1,36 @@
+{
+  "id": "peer_069",
+  "name": "Drew",
+  "major": "Political Science",
+  "year": "Senior",
+  "tags": [
+    "course registration",
+    "internship search",
+    "social life"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Nobody told me that registration appointments open at 7am or that some popular courses fill in 3 minutes. I had to learn all of this the hard way in my first semester.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "anxious",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "Deciding whether to pursue research or go straight to industry was genuinely hard. I talked to grad students, professors, and alumni before I felt clear enough to commit to a direction.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "stressed",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "course registration",
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

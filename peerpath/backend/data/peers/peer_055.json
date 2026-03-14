@@ -1,0 +1,35 @@
+{
+  "id": "peer_055",
+  "name": "Gray",
+  "major": "Biology",
+  "year": "Sophomore",
+  "tags": [
+    "freshman adjustment",
+    "dating"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't sleep well for the first two months. Every small thing stressed me out. Joining a study group made a huge difference because I realized everyone else was struggling too.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "time management",
+        "emotional_signal": "hopeful",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "Nobody told me about the hidden study spots, the free printing in the library basement, or which dining halls have late hours. It all took months to discover by accident.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "financial stress",
+        "emotional_signal": "uncertain",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment",
+    "campus navigation"
+  ],
+  "comfort_level": "open to messages"
+}

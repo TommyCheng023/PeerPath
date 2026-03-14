@@ -1,0 +1,25 @@
+{
+  "id": "peer_057",
+  "name": "Ira",
+  "major": "Mechanical Engineering",
+  "year": "Junior",
+  "tags": [
+    "internship search",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had no idea how to network. LinkedIn felt fake and cold emails felt awkward. A career counselor helped me reframe networking as just having genuine conversations.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

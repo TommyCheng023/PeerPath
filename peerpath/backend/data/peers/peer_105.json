@@ -1,0 +1,26 @@
+{
+  "id": "peer_105",
+  "name": "Ira",
+  "major": "English Literature",
+  "year": "Senior",
+  "tags": [
+    "transfer student",
+    "financial stress",
+    "international student adjustment"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Transferring mid-year was harder than I expected. The campus felt huge and unfamiliar, and I didn't know how to meet people who weren't in my immediate classes. I reached out to my academic advisor and that helped me find some student orgs.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "frustrated",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

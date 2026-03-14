@@ -1,0 +1,25 @@
+{
+  "id": "peer_106",
+  "name": "Jules",
+  "major": "Psychology",
+  "year": "Junior",
+  "tags": [
+    "internship search",
+    "course registration"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Watching everyone else get internships while I was still working on my resume felt terrible. I applied to 40 places before I got my first interview. It's more of a numbers game than people admit.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "anxious",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

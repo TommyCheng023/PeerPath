@@ -1,0 +1,25 @@
+{
+  "id": "peer_181",
+  "name": "Noel",
+  "major": "Mechanical Engineering",
+  "year": "Freshman",
+  "tags": [
+    "freshman adjustment",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "As a freshman, I was so anxious about everything — classes, making friends, navigating the dining hall alone. I called home a lot. Slowly things got better as I found my routine.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "stressed",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "freshman adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

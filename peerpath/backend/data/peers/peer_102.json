@@ -1,0 +1,27 @@
+{
+  "id": "peer_102",
+  "name": "Fern",
+  "major": "Biology",
+  "year": "Freshman",
+  "tags": [
+    "international student adjustment",
+    "anxiety",
+    "internship search",
+    "transfer student"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Adjusting to a completely different academic culture was harder than the language barrier. Back home everything was lecture-based, so being asked for my opinion in seminars felt shocking.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "frustrated",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

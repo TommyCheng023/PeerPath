@@ -1,0 +1,35 @@
+{
+  "id": "peer_131",
+  "name": "Lane",
+  "major": "Environmental Science",
+  "year": "Senior",
+  "tags": [
+    "international student adjustment",
+    "making friends"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Simple things like grocery shopping, banking, and healthcare were confusing at first. The international student office was helpful but I wish I had connected with other international students sooner.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "anxious",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "When I transferred as a sophomore, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "frustrated",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "transfer adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

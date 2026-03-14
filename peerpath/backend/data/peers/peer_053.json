@@ -1,0 +1,27 @@
+{
+  "id": "peer_053",
+  "name": "Ellis",
+  "major": "Economics",
+  "year": "Freshman",
+  "tags": [
+    "academic stress",
+    "social life",
+    "time management",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I used to think struggling academically meant I didn't belong here. Eventually a professor told me to talk to the academic support center and that changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "burnout",
+        "emotional_signal": "lonely",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress"
+  ],
+  "comfort_level": "prefers intro message"
+}

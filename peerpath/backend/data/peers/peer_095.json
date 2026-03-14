@@ -1,0 +1,27 @@
+{
+  "id": "peer_095",
+  "name": "Yael",
+  "major": "Mathematics",
+  "year": "Graduate",
+  "tags": [
+    "changing majors",
+    "burnout",
+    "academic stress",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I changed my major three times before landing somewhere that felt right. Every advisor I talked to made me feel judged for it, but my peers were way more understanding.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "financial stress",
+        "emotional_signal": "anxious",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors"
+  ],
+  "comfort_level": "open to messages"
+}

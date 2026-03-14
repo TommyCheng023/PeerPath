@@ -1,0 +1,26 @@
+{
+  "id": "peer_204",
+  "name": "Jordan",
+  "major": "English Literature",
+  "year": "Senior",
+  "tags": [
+    "changing majors",
+    "financial stress",
+    "dating"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I spent a year in a major my parents chose before admitting I was miserable. The conversation with my family was hard but necessary. I found a double-major path that worked for both of us.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "lack of information",
+        "emotional_signal": "uncertain",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors"
+  ],
+  "comfort_level": "open to messages"
+}

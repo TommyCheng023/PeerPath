@@ -1,0 +1,35 @@
+{
+  "id": "peer_013",
+  "name": "Taylor",
+  "major": "Biology",
+  "year": "Graduate",
+  "tags": [
+    "academic stress",
+    "research decisions"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I hit a wall sophomore year where nothing felt meaningful anymore. I was grinding but not retaining anything. Taking a weekend completely offline helped me reset.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I got into a situationship that left me confused for months. Talking to older students who had been through it helped me understand what I actually wanted.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "academic stress",
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

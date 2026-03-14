@@ -1,0 +1,26 @@
+{
+  "id": "peer_208",
+  "name": "Riley",
+  "major": "Business Administration",
+  "year": "Junior",
+  "tags": [
+    "housing",
+    "joining clubs",
+    "campus navigation"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding roommates from scratch was stressful. Facebook groups and the housing board helped but it still took weeks of searching and a few sketchy tours.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "social isolation",
+        "emotional_signal": "hopeful",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing"
+  ],
+  "comfort_level": "open to messages"
+}

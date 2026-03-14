@@ -1,0 +1,36 @@
+{
+  "id": "peer_017",
+  "name": "Avery",
+  "major": "Electrical Engineering",
+  "year": "Junior",
+  "tags": [
+    "housing",
+    "mental health",
+    "changing majors"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I didn't know about subletting options or university-affiliated housing until my junior year. I overpaid for two years out of ignorance.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    },
+    {
+      "raw": "I transferred in mid-year and felt completely disconnected. Everyone already had their friend groups and I spent the first few weeks eating lunch alone. It took time but I eventually found my community through a study group.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "transfer adjustment"
+  ],
+  "comfort_level": "prefers intro message"
+}

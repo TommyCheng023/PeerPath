@@ -1,0 +1,37 @@
+{
+  "id": "peer_148",
+  "name": "Devon",
+  "major": "Business Administration",
+  "year": "Sophomore",
+  "tags": [
+    "housing",
+    "internship search",
+    "changing majors",
+    "time management"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Off-campus housing was way more expensive than I expected and the landlord market here is chaotic. I ended up in a bad living situation for a semester before finding something stable.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "stressed",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "I wasted a semester in a class I didn't need because I misread the major requirements. The registrar's office actually has office hours — I wish I had gone sooner.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "course registration"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "peer_209",
+  "name": "Avery",
+  "major": "Data Science",
+  "year": "Senior",
+  "tags": [
+    "international student adjustment",
+    "changing majors",
+    "time management",
+    "career planning"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "uncertain",
+        "resolution_type": "introductions to people"
+      }
+    },
+    {
+      "raw": "As a freshman, I was so anxious about everything — classes, making friends, navigating the dining hall alone. I called home a lot. Slowly things got better as I found my routine.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "lack of information",
+        "emotional_signal": "stressed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "freshman adjustment"
+  ],
+  "comfort_level": "open to messages"
+}

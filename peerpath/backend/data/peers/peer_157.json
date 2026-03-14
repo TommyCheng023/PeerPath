@@ -1,0 +1,35 @@
+{
+  "id": "peer_157",
+  "name": "Taylor",
+  "major": "Chemistry",
+  "year": "Graduate",
+  "tags": [
+    "research decisions",
+    "financial stress"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Deciding whether to pursue research or go straight to industry was genuinely hard. I talked to grad students, professors, and alumni before I felt clear enough to commit to a direction.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "time management",
+        "emotional_signal": "confused",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I didn't know about subletting options or university-affiliated housing until my junior year. I overpaid for two years out of ignorance.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "financial stress",
+        "emotional_signal": "stressed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "research decisions",
+    "housing"
+  ],
+  "comfort_level": "prefers intro message"
+}

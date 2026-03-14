@@ -1,0 +1,35 @@
+{
+  "id": "peer_120",
+  "name": "Harley",
+  "major": "Electrical Engineering",
+  "year": "Senior",
+  "tags": [
+    "internship search",
+    "anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had no idea how to network. LinkedIn felt fake and cold emails felt awkward. A career counselor helped me reframe networking as just having genuine conversations.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "lonely",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "I got into a situationship that left me confused for months. Talking to older students who had been through it helped me understand what I actually wanted.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "financial stress",
+        "emotional_signal": "lost",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "internship search",
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

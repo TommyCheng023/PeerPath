@@ -1,0 +1,35 @@
+{
+  "id": "peer_162",
+  "name": "Quinn",
+  "major": "English Literature",
+  "year": "Graduate",
+  "tags": [
+    "international student adjustment",
+    "burnout"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I had to rebuild my entire social framework from scratch. My home culture had very different norms around friendship and it took me a while to understand what was normal here.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "stressed",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "My advisor kept pushing grad school but I wasn't sure. I did informational interviews with people in industry and that helped me make a decision I actually felt good about.",
+      "parsed": {
+        "context": "research decisions",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "international student adjustment",
+    "research decisions"
+  ],
+  "comfort_level": "open to messages"
+}

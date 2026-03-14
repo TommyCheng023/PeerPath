@@ -1,0 +1,37 @@
+{
+  "id": "peer_018",
+  "name": "Quinn",
+  "major": "Mechanical Engineering",
+  "year": "Junior",
+  "tags": [
+    "transfer student",
+    "social life",
+    "housing",
+    "campus navigation"
+  ],
+  "past_challenges": [
+    {
+      "raw": "When I transferred as a junior, I felt like an outsider at every event. I kept comparing myself to people who had been here since freshman year. Eventually I stopped comparing and just focused on finding one or two genuine connections.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "stressed",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "My first internship rejection came with no feedback. I spiraled for a week. Eventually I found a peer mentor in my major who walked me through what interviewers actually look for.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "social isolation",
+        "emotional_signal": "confused",
+        "resolution_type": "reassurance"
+      }
+    }
+  ],
+  "help_topics": [
+    "transfer adjustment",
+    "internship search"
+  ],
+  "comfort_level": "open to messages"
+}

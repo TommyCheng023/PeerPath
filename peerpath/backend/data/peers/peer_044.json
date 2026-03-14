@@ -1,0 +1,26 @@
+{
+  "id": "peer_044",
+  "name": "Val",
+  "major": "Data Science",
+  "year": "Freshman",
+  "tags": [
+    "dating",
+    "social anxiety",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "I got into a situationship that left me confused for months. Talking to older students who had been through it helped me understand what I actually wanted.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "lack of information",
+        "emotional_signal": "anxious",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": [
+    "dating"
+  ],
+  "comfort_level": "prefers intro message"
+}

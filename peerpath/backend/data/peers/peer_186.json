@@ -1,0 +1,35 @@
+{
+  "id": "peer_186",
+  "name": "Tatum",
+  "major": "Chemistry",
+  "year": "Freshman",
+  "tags": [
+    "housing",
+    "making friends"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Off-campus housing was way more expensive than I expected and the landlord market here is chaotic. I ended up in a bad living situation for a semester before finding something stable.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "frustrated",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "My social life in high school was very different. Here everything felt performative and exhausting at first. I learned to be more selective about where I spent my energy.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "stressed",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "social life"
+  ],
+  "comfort_level": "open to messages"
+}

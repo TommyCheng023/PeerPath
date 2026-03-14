@@ -1,0 +1,35 @@
+{
+  "id": "peer_140",
+  "name": "Val",
+  "major": "Political Science",
+  "year": "Freshman",
+  "tags": [
+    "campus navigation",
+    "social anxiety"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Finding campus resources took way longer than it should have. The counseling center, food pantry, tutoring — they exist but they're buried on the website.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "hopeful",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "Junior year almost broke me. I was taking 18 credits, interning part-time, and trying to maintain a social life. I burned out completely by November and had to drop a class.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "burnout",
+        "emotional_signal": "stressed",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": [
+    "campus navigation",
+    "academic stress"
+  ],
+  "comfort_level": "open to messages"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "peer_089",
+  "name": "Sage",
+  "major": "Communications",
+  "year": "Freshman",
+  "tags": [
+    "changing majors",
+    "internship search",
+    "international student adjustment",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Switching majors sophomore year felt like admitting failure. But staying in a field I hated would have been worse. The switch cost me a summer of catch-up but I'm genuinely happier.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "social isolation",
+        "emotional_signal": "stressed",
+        "resolution_type": "emotional support"
+      }
+    },
+    {
+      "raw": "I got into a situationship that left me confused for months. Talking to older students who had been through it helped me understand what I actually wanted.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "lost",
+        "resolution_type": "step-by-step advice"
+      }
+    }
+  ],
+  "help_topics": [
+    "changing majors",
+    "dating"
+  ],
+  "comfort_level": "open to messages"
+}

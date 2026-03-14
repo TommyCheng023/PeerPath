@@ -1,0 +1,37 @@
+{
+  "id": "peer_100",
+  "name": "Devon",
+  "major": "Chemistry",
+  "year": "Senior",
+  "tags": [
+    "housing",
+    "academic stress",
+    "research decisions",
+    "joining clubs"
+  ],
+  "past_challenges": [
+    {
+      "raw": "Off-campus housing was way more expensive than I expected and the landlord market here is chaotic. I ended up in a bad living situation for a semester before finding something stable.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "confused",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "Switching majors sophomore year felt like admitting failure. But staying in a field I hated would have been worse. The switch cost me a summer of catch-up but I'm genuinely happier.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "time management",
+        "emotional_signal": "anxious",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": [
+    "housing",
+    "changing majors"
+  ],
+  "comfort_level": "open to messages"
+}
