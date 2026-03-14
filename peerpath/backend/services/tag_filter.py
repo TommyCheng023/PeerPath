@@ -34,10 +34,25 @@ def filter_by_tags(student_tags: list[str]) -> list[dict]:
                 FROM unnest(tags) AS tag
                 WHERE lower(tag) = ANY(%s)
             )
+            UNION ALL
+            SELECT
+                user_id AS id,
+                ARRAY(
+                    SELECT tag
+                    FROM unnest(tags) AS tag
+                    WHERE lower(tag) = ANY(%s)
+                ) AS overlap_tags
+            FROM user_profiles
+            WHERE searchable = TRUE
+              AND EXISTS (
+                  SELECT 1
+                  FROM unnest(tags) AS tag
+                  WHERE lower(tag) = ANY(%s)
+              )
         """
         with get_connection() as conn:
             with conn.cursor() as cur:
-                cur.execute(query, (normalized, normalized))
+                cur.execute(query, (normalized, normalized, normalized, normalized))
                 rows = cur.fetchall()
 
         results = []

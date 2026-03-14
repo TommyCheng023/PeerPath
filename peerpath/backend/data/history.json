@@ -1,6 +1,77 @@
 {
   "394dd1ab-806a-477d-97c5-3884bf0b9548": [
     {
+      "id": "20260314210319430446",
+      "timestamp": "2026-03-14T21:03:19.430446+00:00",
+      "tags": [
+        "academic stress"
+      ],
+      "description": "I'm failing my courses and don't know who to ask for help",
+      "total_candidates": 36,
+      "matches": [
+        {
+          "rank": 1,
+          "peer_id": "peer_008",
+          "name": "Priya",
+          "major": "Data Science",
+          "year": "Junior",
+          "contact_phone": "+1-312-200-6109",
+          "contact_email": "priya@umich.edu",
+          "tags": [
+            "changing majors",
+            "academic stress"
+          ],
+          "tag_overlap": 1,
+          "field_score": 90,
+          "llm_adjustment": 5,
+          "final_score": 105.0,
+          "reason": "While both the student and peer are experiencing stress related to academic difficulties, the peer's focus on emotional support rather than practical resources may limit their ability to provide the specific help the student needs.",
+          "conversation_starter": "I came across your story about switching from pre-med to Data Science, and it really resonated with me. I’m feeling pretty lost in my courses right now and could really use someone who understands the pressure to figure things out. Would you be open to chatting?"
+        },
+        {
+          "rank": 2,
+          "peer_id": "peer_139",
+          "name": "Uma",
+          "major": "Chemistry",
+          "year": "Freshman",
+          "contact_phone": "+1-714-527-9742",
+          "contact_email": "uma3@umich.edu",
+          "tags": [
+            "academic stress",
+            "housing",
+            "time management"
+          ],
+          "tag_overlap": 1,
+          "field_score": 90,
+          "llm_adjustment": 5,
+          "final_score": 105.0,
+          "reason": "The peer's experience of hitting a wall and needing reassurance aligns well with the student’s stress, though the focus on offline reset may not provide direct resources.",
+          "conversation_starter": "I felt really inspired when I heard you took a weekend offline to reset during a tough time. I’m in a similar spot now, feeling lost with my courses and not sure where to turn for help. Would you be open to chatting about how you got through it?"
+        },
+        {
+          "rank": 3,
+          "peer_id": "peer_207",
+          "name": "Casey",
+          "major": "Computer Science",
+          "year": "Graduate",
+          "contact_phone": "+1-818-553-0764",
+          "contact_email": "casey5@umich.edu",
+          "tags": [
+            "academic stress",
+            "social life",
+            "time management",
+            "course registration"
+          ],
+          "tag_overlap": 1,
+          "field_score": 75,
+          "llm_adjustment": 5,
+          "final_score": 90.0,
+          "reason": "The peer's experience with academic support is relevant and provides a positive resource suggestion, aligning well with the student's need for support, despite the difference in emotional tone.",
+          "conversation_starter": "I saw that you had a tough time academically too and that talking to the academic support center really helped you. I'm feeling pretty overwhelmed right now and could use some guidance—any chance you could share how that experience went for you?"
+        }
+      ]
+    },
+    {
       "id": "20260314195831721483",
       "timestamp": "2026-03-14T19:58:31.721483+00:00",
       "tags": [

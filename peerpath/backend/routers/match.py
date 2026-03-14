@@ -30,6 +30,8 @@ class PeerResult(BaseModel):
     name: str
     major: str
     year: str
+    contact_phone: str = ""
+    contact_email: str = ""
     tags: list[str]
     tag_overlap: int
     field_score: int
@@ -69,6 +71,8 @@ def match(request: MatchRequest):
             name=r["peer"]["name"],
             major=r["peer"]["major"],
             year=r["peer"]["year"],
+            contact_phone=r["peer"].get("contact_phone", ""),
+            contact_email=r["peer"].get("contact_email", ""),
             tags=r["peer"]["tags"],
             tag_overlap=r["tag_overlap"],
             field_score=r["field_score"],

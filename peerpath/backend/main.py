@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import auth, match, history
+from routers import auth, match, history, profile
 from services.db import init_database, is_database_configured
 
 app = FastAPI(title="PeerPath API")
@@ -20,6 +20,7 @@ def startup():
 
 
 app.include_router(auth.router, prefix="/api")
+app.include_router(profile.router, prefix="/api")
 app.include_router(match.router, prefix="/api")
 app.include_router(history.router, prefix="/api")
 
