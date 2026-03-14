@@ -36,3 +36,10 @@ dist/
 
 # OS
 Thumbs.db
+
+# frontend
+node_modules/
+dist/
+.venv/
+__pycache__/
+peerpath/backend/.env
