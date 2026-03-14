@@ -1,7 +1,7 @@
 import json
 import os
 
-from openai import AzureOpenAI
+from openai import OpenAI
 from dotenv import load_dotenv
 
 # Load .env from backend root (one level up from services/)
@@ -53,19 +53,15 @@ def parse_challenge(user_description: str) -> dict:
     Returns a dict with keys: context, struggle_type, emotional_signal, help_needed.
     Raises ValueError if the API response cannot be parsed as JSON.
     """
-    client = AzureOpenAI(
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-    api_version="2024-02-01",
-    )
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     prompt = _load_prompt(user_description)
 
     response = client.chat.completions.create(
-    model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    max_tokens=256,
-    temperature=0,
-    messages=[{"role": "user", "content": prompt}],
+        model=os.getenv("OPENAI_MODEL", "gpt-4o"),
+        max_tokens=256,
+        temperature=0,
+        messages=[{"role": "user", "content": prompt}],
     )
     raw_text = response.choices[0].message.content.strip()
 

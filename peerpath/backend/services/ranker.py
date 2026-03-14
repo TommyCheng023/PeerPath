@@ -1,7 +1,7 @@
 import json
 import os
 
-from openai import AzureOpenAI
+from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
@@ -34,13 +34,9 @@ def _generate_conversation_starter(user_description: str, peer_raw: str, reason:
             reason=reason,
         )
 
-        client = AzureOpenAI(
-            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-            api_version="2024-02-01",
-        )
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         response = client.chat.completions.create(
-            model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
+            model=os.getenv("OPENAI_MODEL", "gpt-4o"),
             max_tokens=256,
             temperature=0,
             messages=[{"role": "user", "content": prompt}],
