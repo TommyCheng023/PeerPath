@@ -5,10 +5,11 @@ import type { ApiPeerResult, MatchCard } from "./types";
 
 type Phase = "form" | "loading" | "results";
 
-const LOADING_STEPS = [
-  "Filtering peers by shared tags",
-  "Running semantic similarity analysis",
-  "Generating personalized explanations",
+const LOADING_MICRO_MESSAGES = [
+  "Checking who has actually been through something close to this.",
+  "Comparing emotional tone, not just topic overlap.",
+  "Trying to avoid generic matches and surface the most helpful people.",
+  "Writing intros that feel like one student talking to another.",
 ];
 
 function classNames(...values: Array<string | false | null | undefined>) {
@@ -139,23 +140,22 @@ export default function App() {
   const [phase, setPhase] = useState<Phase>("form");
   const [error, setError] = useState("");
   const [showApiBanner, setShowApiBanner] = useState(false);
-  const [loadingStepIndex, setLoadingStepIndex] = useState(0);
+  const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
   const [candidateCount, setCandidateCount] = useState<number | null>(null);
   const [cards, setCards] = useState<MatchCard[]>([]);
 
   useEffect(() => {
     if (phase !== "loading") {
-      setLoadingStepIndex(0);
+      setLoadingMessageIndex(0);
       return;
     }
 
-    const timers = [
-      window.setTimeout(() => setLoadingStepIndex(1), 700),
-      window.setTimeout(() => setLoadingStepIndex(2), 1600),
-    ];
+    const interval = window.setInterval(() => {
+      setLoadingMessageIndex((current) => (current + 1) % LOADING_MICRO_MESSAGES.length);
+    }, 1800);
 
     return () => {
-      timers.forEach((timer) => window.clearTimeout(timer));
+      window.clearInterval(interval);
     };
   }, [phase]);
 
@@ -400,20 +400,8 @@ export default function App() {
           {phase === "loading" && (
             <section className="py-14 text-center">
               <div className="mx-auto mb-5 h-10 w-10 animate-spin rounded-full border-2 border-maize/20 border-t-maize" />
-              <div className="text-base text-parchment/55">Analyzing your situation...</div>
-              <div className="mx-auto mt-6 flex max-w-md flex-col gap-3 text-left">
-                {LOADING_STEPS.map((step, index) => (
-                  <div
-                    key={step}
-                    className={classNames(
-                      "flex items-center gap-3 text-sm transition",
-                      index <= loadingStepIndex ? "opacity-100" : "opacity-25"
-                    )}
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-maize" />
-                    <span className="text-parchment/50">{step}</span>
-                  </div>
-                ))}
+              <div className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-parchment/50 md:text-base">
+                {LOADING_MICRO_MESSAGES[loadingMessageIndex]}
               </div>
             </section>
           )}
