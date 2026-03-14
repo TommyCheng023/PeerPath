@@ -1,0 +1,18 @@
+A university student is reaching out to a peer for the first time.
+
+Student's situation (in their own words):
+"{user_description}"
+
+Peer's past experience:
+"{peer_raw}"
+
+Why they were matched:
+"{reason}"
+
+Write a warm, natural opening message (2-3 sentences) the student could send to this peer.
+- Do not be overly formal
+- Make it feel like one student talking to another
+- Reference something specific from the peer's experience
+- Do not start with "Hi" or "Hey" every time, vary the opening
+
+Return ONLY the message text, no explanation, no quotes around it.
