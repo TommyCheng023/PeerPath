@@ -7,17 +7,237 @@
     "peer_year": "Junior",
     "created_from_match": true,
     "match_score": 95.0,
-    "match_reason": "The peer's experience of academic stress and catching up in classes aligns well with the student's situation, though their focus on emotional support may not directly provide the information about resources that the student needs.",
+    "match_reason": "The peer's experience of academic stress and catching up in classes aligns well with the student's situation.",
     "created_at": "2026-03-14T21:29:00.007647+00:00",
-    "last_message_at": "2026-03-14T21:29:00.008581+00:00",
+    "last_message_at": "2026-03-14T22:18:44.000000+00:00",
     "unread_count": 0,
     "messages": [
       {
         "message_id": "389d3369-89d1-4182-8099-c9eb7b07888e",
         "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
-        "content": "I noticed you switched from pre-med to Data Science, which must have been a big change! I’m in a tough spot with my courses right now and could really use someone to talk to about handling all this stress. Would you be open to chatting?",
+        "content": "I noticed you switched from pre-med to Data Science, which must have been a big change! I'm in a tough spot with my courses right now and could really use someone to talk to about handling all this stress. Would you be open to chatting?",
         "timestamp": "2026-03-14T21:29:00.008581+00:00",
         "is_opener": true
+      },
+      {
+        "message_id": "aa000001-0001-0001-0001-000000000001",
+        "sender_id": "peer_008",
+        "content": "Hey! Yes, switching from pre-med was honestly one of the hardest decisions I've made, but also one of the best. I totally get that overwhelmed feeling - it's real and it's valid. What's going on with your courses right now?",
+        "timestamp": "2026-03-14T21:44:12.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "aa000001-0001-0001-0001-000000000002",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "Basically I'm failing two classes right now and I feel like I can't keep up with the readings or the problem sets. I don't even know where to start. Did you ever feel this stuck?",
+        "timestamp": "2026-03-14T21:51:30.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "aa000001-0001-0001-0001-000000000003",
+        "sender_id": "peer_008",
+        "content": "Oh absolutely. Sophomore year I was failing two classes simultaneously and genuinely thought about dropping out. What helped me most was going to office hours even when I had nothing specific to ask - just showing up and listening to other students' questions helped a lot.",
+        "timestamp": "2026-03-14T21:58:05.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "aa000001-0001-0001-0001-000000000004",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "That's a good idea but honestly I've been avoiding office hours because I feel embarrassed that I don't understand things other students seem to get easily.",
+        "timestamp": "2026-03-14T22:04:50.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "aa000001-0001-0001-0001-000000000005",
+        "sender_id": "peer_008",
+        "content": "I promise every single person in that room feels the same way. The ones who look like they get it are just better at hiding it. Professors and GSIs actually love when students come in - it's literally their job. Also, have you tried forming a small study group? Even just one other person to work through problem sets with changes everything.",
+        "timestamp": "2026-03-14T22:09:22.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "aa000001-0001-0001-0001-000000000006",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "I'll try both this week. Going to EECS office hours on Thursday. Thank you so much - this was genuinely really helpful, I feel a lot less alone about it.",
+        "timestamp": "2026-03-14T22:18:44.000000+00:00",
+        "is_opener": false
+      }
+    ]
+  },
+  {
+    "thread_id": "c7d8e9f0-1111-4111-9111-111111111111",
+    "peer_id": "peer_139",
+    "peer_name": "Uma",
+    "peer_major": "Chemistry",
+    "peer_year": "Freshman",
+    "created_from_match": true,
+    "match_score": 88.0,
+    "match_reason": "Uma's experience of hitting a wall sophomore year and finding her way back through tutoring resources closely mirrors the student's current struggle.",
+    "created_at": "2026-03-14T21:35:00.000000+00:00",
+    "last_message_at": "2026-03-14T23:02:17.000000+00:00",
+    "unread_count": 1,
+    "messages": [
+      {
+        "message_id": "bb000002-0002-0002-0002-000000000001",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "I came across your story about hitting a wall sophomore year and it really resonated with me. I'm going through something similar right now - struggling to keep up and not sure who to ask for help. Would you be open to sharing what worked for you?",
+        "timestamp": "2026-03-14T21:35:00.000000+00:00",
+        "is_opener": true
+      },
+      {
+        "message_id": "bb000002-0002-0002-0002-000000000002",
+        "sender_id": "peer_139",
+        "content": "Hi! Yes, I totally remember that feeling. For me the turning point was going to the Chemistry tutoring center in the Undergraduate Science Building - I didn't even know it existed until a friend mentioned it. Are there tutoring centers specific to your department?",
+        "timestamp": "2026-03-14T22:05:30.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "bb000002-0002-0002-0002-000000000003",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "I'm in EECS so I think there's a tutoring room in the engineering building but I've never gone. I always feel like I should be able to figure things out on my own.",
+        "timestamp": "2026-03-14T22:22:14.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "bb000002-0002-0002-0002-000000000004",
+        "sender_id": "peer_139",
+        "content": "That's exactly the trap I fell into! Asking for help is not a sign of weakness - it's literally how the best engineers learn. Also, don't sleep on your GSI's office hours. My GSI for Orgo was incredibly patient and basically rewrote my understanding of the entire first half of the semester in one session.",
+        "timestamp": "2026-03-14T22:38:50.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "bb000002-0002-0002-0002-000000000005",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "That's actually really encouraging. I'm going to look up the EECS tutoring hours tonight. Do you have any other tips for managing the stress alongside the actual studying?",
+        "timestamp": "2026-03-14T22:51:03.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "bb000002-0002-0002-0002-000000000006",
+        "sender_id": "peer_139",
+        "content": "Yes! Honestly the biggest thing for me was taking one full hour completely offline every evening - no phone, no laptop. Sounds simple but it resets your brain in a way nothing else does. Also are you sleeping enough? When I started actually sleeping 7 hours my grades went up noticeably.",
+        "timestamp": "2026-03-14T23:02:17.000000+00:00",
+        "is_opener": false
+      }
+    ]
+  },
+  {
+    "thread_id": "d4e5f6a7-2222-4222-9222-222222222222",
+    "peer_id": "peer_207",
+    "peer_name": "Casey",
+    "peer_major": "Computer Science",
+    "peer_year": "Graduate",
+    "created_from_match": true,
+    "match_score": 82.0,
+    "match_reason": "Casey's graduate-level perspective on academic recovery and impostor syndrome in CS provides insight that complements the student's undergraduate struggle.",
+    "created_at": "2026-03-14T21:40:00.000000+00:00",
+    "last_message_at": "2026-03-14T22:47:30.000000+00:00",
+    "unread_count": 0,
+    "messages": [
+      {
+        "message_id": "cc000003-0003-0003-0003-000000000001",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "I saw that you had a tough time academically too and that talking to the academic support center really helped you. I'm failing two classes right now and feel like I don't belong here. Did you ever feel that way?",
+        "timestamp": "2026-03-14T21:40:00.000000+00:00",
+        "is_opener": true
+      },
+      {
+        "message_id": "cc000003-0003-0003-0003-000000000002",
+        "sender_id": "peer_207",
+        "content": "Hey, yes - impostor syndrome in CS is incredibly common and almost nobody talks about it openly. I failed my first upper-level algorithms class and genuinely thought I had made a mistake choosing this field. What year are you and which classes are giving you trouble?",
+        "timestamp": "2026-03-14T22:01:45.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "cc000003-0003-0003-0003-000000000003",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "I'm a sophomore. Struggling with EECS 376 (Theory of Computation) and EECS 281 (Data Structures). Everyone around me seems to get it immediately and I feel like I'm the only one who's lost.",
+        "timestamp": "2026-03-14T22:15:22.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "cc000003-0003-0003-0003-000000000004",
+        "sender_id": "peer_207",
+        "content": "Those two together sophomore year is genuinely brutal - they have some of the highest drop rates in the department. 376 especially requires a completely different way of thinking. The key for me was working through every single practice problem in the textbook, not just the assigned ones. Slow down and internalize the proofs instead of memorizing them.",
+        "timestamp": "2026-03-14T22:33:08.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "cc000003-0003-0003-0003-000000000005",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "That actually makes me feel better knowing those classes are notoriously hard. I've been thinking it was just me. Did you end up talking to the academic support center you mentioned?",
+        "timestamp": "2026-03-14T22:40:17.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "cc000003-0003-0003-0003-000000000006",
+        "sender_id": "peer_207",
+        "content": "Yes - I went to the Dean of Students office and they connected me with an academic advisor who helped me map out a realistic recovery plan. They also have peer tutors specifically for 281 and 376. Highly recommend just walking in. They're genuinely non-judgmental and I wish I had gone sooner.",
+        "timestamp": "2026-03-14T22:47:30.000000+00:00",
+        "is_opener": false
+      }
+    ]
+  },
+  {
+    "thread_id": "e5f6a7b8-3333-4333-9333-333333333333",
+    "peer_id": "peer_005",
+    "peer_name": "Alex",
+    "peer_major": "Communication",
+    "peer_year": "Senior",
+    "created_from_match": true,
+    "match_score": 79.0,
+    "match_reason": "Alex's experience navigating the college social scene as someone who initially found it hard to connect romantically provides relatable and practical perspective.",
+    "created_at": "2026-03-14T20:15:00.000000+00:00",
+    "last_message_at": "2026-03-14T21:10:55.000000+00:00",
+    "unread_count": 0,
+    "messages": [
+      {
+        "message_id": "dd000004-0004-0004-0004-000000000001",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "I noticed you mentioned feeling confused about dating in college, and I can totally relate - I've never really dated before and being at a big school makes it feel even more overwhelming. How did you figure out how to navigate it?",
+        "timestamp": "2026-03-14T20:15:00.000000+00:00",
+        "is_opener": true
+      },
+      {
+        "message_id": "dd000004-0004-0004-0004-000000000002",
+        "sender_id": "peer_005",
+        "content": "Honestly I felt the exact same way freshman year - everyone else seemed to already know how this worked and I was completely lost. The biggest shift for me was stopping trying to find someone directly and just focusing on getting into situations where I was meeting new people. What social stuff have you tried so far?",
+        "timestamp": "2026-03-14T20:28:40.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "dd000004-0004-0004-0004-000000000003",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "Honestly not much beyond class and my dorm. I feel like everyone already has their friend groups and there's no space for me to enter. How did you actually meet people?",
+        "timestamp": "2026-03-14T20:38:15.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "dd000004-0004-0004-0004-000000000004",
+        "sender_id": "peer_005",
+        "content": "Clubs were everything for me. I joined the campus debate team junior year just on a whim and ended up meeting my closest friends there - and later someone I dated for a year. The key is picking something based on genuine interest, not based on where you think you'll meet people, because then the connection happens naturally.",
+        "timestamp": "2026-03-14T20:49:30.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "dd000004-0004-0004-0004-000000000005",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "That's a good way to think about it. I've been avoiding clubs because I'm worried I won't fit in or people will already know each other. Is that actually how it feels when you join?",
+        "timestamp": "2026-03-14T20:59:05.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "dd000004-0004-0004-0004-000000000006",
+        "sender_id": "peer_005",
+        "content": "It definitely feels that way for the first meeting, I won't lie. But clubs at Michigan are very used to new people showing up. People remember how it felt to be new. After two or three meetings you'll be part of that too.",
+        "timestamp": "2026-03-14T21:05:20.000000+00:00",
+        "is_opener": false
+      },
+      {
+        "message_id": "dd000004-0004-0004-0004-000000000007",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "Ok I'm actually going to look up some clubs this weekend. Thank you for being real about this - most people just say 'put yourself out there' without explaining what that actually means.",
+        "timestamp": "2026-03-14T21:10:55.000000+00:00",
+        "is_opener": false
       }
     ]
   }
