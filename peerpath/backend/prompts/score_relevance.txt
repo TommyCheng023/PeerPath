@@ -1,0 +1,19 @@
+You are scoring how well a peer's past experience matches a student's current challenge.
+
+Student parsed profile: {student_parsed}
+
+Peer parsed profile: {peer_parsed}
+
+Peer raw experience: "{peer_raw}"
+
+The field-level match score is already {field_match_score}/100.
+Now provide a semantic adjustment between -10 and +10 based on
+how well the raw experience text actually matches the student's situation.
+
+Consider:
+- Does the peer's raw story genuinely reflect the student's specific situation?
+- Is the emotional tone truly aligned?
+- Would this peer actually be helpful to this student?
+
+Return ONLY this JSON, no explanation, no markdown, no backticks:
+{{ "adjustment": <-10 to +10>, "reason": "<one sentence explaining the match>" }}
