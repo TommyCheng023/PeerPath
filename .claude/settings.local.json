@@ -5,7 +5,8 @@
       "Bash(wsl ls:*)",
       "Bash(wsl --exec bash -c \"ls /home/lucyliuu/Hackathon\")",
       "Bash(wsl --exec bash -c \"mkdir -p /home/lucyliuu/Hackathon/peerpath/backend/data/peers /home/lucyliuu/Hackathon/peerpath/backend/services && echo ''Directories created''\")",
-      "Bash(wsl --exec bash -c \"touch /home/lucyliuu/Hackathon/peerpath/backend/services/__init__.py && echo ''done''\")"
+      "Bash(wsl --exec bash -c \"touch /home/lucyliuu/Hackathon/peerpath/backend/services/__init__.py && echo ''done''\")",
+      "Bash(wsl --exec bash -c \"cd /home/lucyliuu/Hackathon/peerpath/backend && python3 services/tag_filter.py\")"
     ]
   }
 }
