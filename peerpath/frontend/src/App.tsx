@@ -607,11 +607,90 @@ export default function App() {
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-maize/20 bg-white/5">
               <svg viewBox="0 0 32 32" fill="none" className="h-8 w-8">
-                <circle cx="16" cy="16" r="2.8" fill="#FFCB05" />
-                <line x1="16" y1="2" x2="16" y2="9" stroke="#FFCB05" strokeWidth="1.2" strokeLinecap="round" opacity="0.55" />
-                <line x1="16" y1="23" x2="16" y2="30" stroke="#FFCB05" strokeWidth="1.2" strokeLinecap="round" opacity="0.55" />
-                <line x1="2" y1="16" x2="9" y2="16" stroke="#FFCB05" strokeWidth="1.2" strokeLinecap="round" opacity="0.55" />
-                <line x1="23" y1="16" x2="30" y2="16" stroke="#FFCB05" strokeWidth="1.2" strokeLinecap="round" opacity="0.55" />
+                <path
+                  d="M16 11.1C16.86 13.78 18.22 15.14 20.9 16C18.22 16.86 16.86 18.22 16 20.9C15.14 18.22 13.78 16.86 11.1 16C13.78 15.14 15.14 13.78 16 11.1Z"
+                  fill="#FFCB05"
+                />
+                <line
+                  x1="16"
+                  y1="3.8"
+                  x2="16"
+                  y2="9"
+                  stroke="#FFCB05"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  opacity="0.55"
+                />
+                <line
+                  x1="16"
+                  y1="23"
+                  x2="16"
+                  y2="28.2"
+                  stroke="#FFCB05"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  opacity="0.55"
+                />
+                <line
+                  x1="3.8"
+                  y1="16"
+                  x2="9"
+                  y2="16"
+                  stroke="#FFCB05"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  opacity="0.55"
+                />
+                <line
+                  x1="23"
+                  y1="16"
+                  x2="28.2"
+                  y2="16"
+                  stroke="#FFCB05"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  opacity="0.55"
+                />
+                <line
+                  x1="7.2"
+                  y1="7.2"
+                  x2="10.8"
+                  y2="10.8"
+                  stroke="#FFCB05"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  opacity="0.3"
+                />
+                <line
+                  x1="21.2"
+                  y1="21.2"
+                  x2="24.8"
+                  y2="24.8"
+                  stroke="#FFCB05"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  opacity="0.3"
+                />
+                <line
+                  x1="24.8"
+                  y1="7.2"
+                  x2="21.2"
+                  y2="10.8"
+                  stroke="#FFCB05"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  opacity="0.3"
+                />
+                <line
+                  x1="10.8"
+                  y1="21.2"
+                  x2="7.2"
+                  y2="24.8"
+                  stroke="#FFCB05"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  opacity="0.3"
+                />
               </svg>
             </div>
             <div>

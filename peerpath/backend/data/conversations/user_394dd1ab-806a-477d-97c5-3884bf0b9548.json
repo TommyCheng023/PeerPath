@@ -1,0 +1,24 @@
+[
+  {
+    "thread_id": "b918ae86-0eee-4ed7-88ca-8baa8e89eb34",
+    "peer_id": "peer_008",
+    "peer_name": "Priya",
+    "peer_major": "Data Science",
+    "peer_year": "Junior",
+    "created_from_match": true,
+    "match_score": 95.0,
+    "match_reason": "The peer's experience of academic stress and catching up in classes aligns well with the student's situation, though their focus on emotional support may not directly provide the information about resources that the student needs.",
+    "created_at": "2026-03-14T21:29:00.007647+00:00",
+    "last_message_at": "2026-03-14T21:29:00.008581+00:00",
+    "unread_count": 0,
+    "messages": [
+      {
+        "message_id": "389d3369-89d1-4182-8099-c9eb7b07888e",
+        "sender_id": "394dd1ab-806a-477d-97c5-3884bf0b9548",
+        "content": "I noticed you switched from pre-med to Data Science, which must have been a big change! I’m in a tough spot with my courses right now and could really use someone to talk to about handling all this stress. Would you be open to chatting?",
+        "timestamp": "2026-03-14T21:29:00.008581+00:00",
+        "is_opener": true
+      }
+    ]
+  }
+]
