@@ -9,6 +9,7 @@ from pydantic import BaseModel
 
 from services.ranker import rank_peers
 from services.tag_filter import filter_by_tags
+from services.history_store import append_entry
 
 router = APIRouter()
 
@@ -20,6 +21,7 @@ router = APIRouter()
 class MatchRequest(BaseModel):
     tags: list[str] = []
     description: str
+    user_id: str = ""          # optional — omit to skip history saving
 
 
 class PeerResult(BaseModel):
@@ -78,6 +80,17 @@ def match(request: MatchRequest):
         for r in raw_results
     ]
 
+    # Persist to history if a user_id was provided
+    uid = request.user_id.strip().lower()
+    if uid:
+        append_entry(
+            user_id=uid,
+            tags=request.tags,
+            description=request.description,
+            total_candidates=total_candidates,
+            matches=[m.model_dump() for m in matches],
+        )
+
     return MatchResponse(total_candidates=total_candidates, matches=matches)
 
 
@@ -87,9 +100,9 @@ def match(request: MatchRequest):
 # Test 1 — transfer student with tags:
 #   curl -X POST http://localhost:8000/api/match \
 #        -H "Content-Type: application/json" \
-#        -d '{"tags": ["transfer student", "making friends"], "description": "I just transferred and don'\''t know anyone"}'
+#        -d '{"tags": ["transfer student", "making friends"], "description": "I just transferred and don'\''t know anyone", "user_id": "alice"}'
 #
-# Test 2 — dating confusion, no tags:
+# Test 2 — dating confusion, no tags, no history:
 #   curl -X POST http://localhost:8000/api/match \
 #        -H "Content-Type: application/json" \
 #        -d '{"tags": [], "description": "Dating in college is really confusing"}'

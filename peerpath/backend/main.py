@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import match
+from routers import match, history
 
 app = FastAPI(title="PeerPath API")
 
@@ -13,6 +13,7 @@ app.add_middleware(
 )
 
 app.include_router(match.router, prefix="/api")
+app.include_router(history.router, prefix="/api")
 
 
 @app.get("/")
