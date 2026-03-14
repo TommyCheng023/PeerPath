@@ -1,0 +1,29 @@
+{
+  "id": "peer_010",
+  "name": "Chloe",
+  "major": "Sociology",
+  "year": "Sophomore",
+  "tags": ["housing", "social life", "social anxiety"],
+  "past_challenges": [
+    {
+      "raw": "My freshman roommate and I had completely opposite schedules and lifestyles — she'd have people over at midnight while I had 8am classes. I was too afraid to say anything for months and just suffered through it until things finally boiled over.",
+      "parsed": {
+        "context": "housing",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "frustrated",
+        "resolution_type": "practical tips"
+      }
+    },
+    {
+      "raw": "The roommate conflict spilled into my social life because she was friends with people on our floor and I didn't want to seem like the difficult one. I felt isolated in my own room and anxious every time I came back to the dorm.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "social isolation",
+        "emotional_signal": "anxious",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": ["housing conflicts", "roommate communication", "dorm social dynamics"],
+  "comfort_level": "open to messages"
+}

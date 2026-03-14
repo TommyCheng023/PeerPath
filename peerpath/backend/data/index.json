@@ -1,0 +1,12 @@
+[
+  { "id": "peer_001", "tags": ["transfer student", "making friends", "joining clubs"] },
+  { "id": "peer_002", "tags": ["freshman adjustment", "academic stress", "time management"] },
+  { "id": "peer_003", "tags": ["course registration", "campus navigation"] },
+  { "id": "peer_004", "tags": ["social anxiety", "joining clubs", "making friends"] },
+  { "id": "peer_005", "tags": ["dating", "social life"] },
+  { "id": "peer_006", "tags": ["international student adjustment", "making friends", "campus navigation"] },
+  { "id": "peer_007", "tags": ["academic stress", "burnout", "research decisions"] },
+  { "id": "peer_008", "tags": ["changing majors", "academic stress"] },
+  { "id": "peer_009", "tags": ["internship search", "anxiety"] },
+  { "id": "peer_010", "tags": ["housing", "social life", "social anxiety"] }
+]

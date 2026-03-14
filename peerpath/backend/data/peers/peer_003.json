@@ -1,0 +1,29 @@
+{
+  "id": "peer_003",
+  "name": "Tyler",
+  "major": "Political Science",
+  "year": "Junior",
+  "tags": ["course registration", "campus navigation"],
+  "past_challenges": [
+    {
+      "raw": "Course registration freshman year was an absolute nightmare — I had no idea what prerequisite chains meant or how the registration system even worked. I accidentally enrolled in an upper-division class I couldn't handle and had to drop it two weeks in.",
+      "parsed": {
+        "context": "course registration",
+        "struggle_type": "procedural confusion",
+        "emotional_signal": "confused",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "I spent the first two weeks of school completely lost, both literally and figuratively. I couldn't find half my classrooms and didn't even know where the advising office was until a friend walked me there.",
+      "parsed": {
+        "context": "campus navigation",
+        "struggle_type": "lack of information",
+        "emotional_signal": "lost",
+        "resolution_type": "information about resources"
+      }
+    }
+  ],
+  "help_topics": ["course registration", "academic advising", "campus resources"],
+  "comfort_level": "open to messages"
+}

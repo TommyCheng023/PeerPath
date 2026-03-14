@@ -1,0 +1,29 @@
+{
+  "id": "peer_004",
+  "name": "Sofia",
+  "major": "Psychology",
+  "year": "Junior",
+  "tags": ["social anxiety", "joining clubs", "making friends"],
+  "past_challenges": [
+    {
+      "raw": "Walking into a club meeting for the first time as someone with social anxiety felt paralyzing. My heart was racing and I almost turned around at the door. I ended up standing awkwardly in the corner for most of the first meeting.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "anxiety",
+        "emotional_signal": "anxious",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "Making friends felt impossible to me because I was so afraid of saying the wrong thing or coming across as weird. I had to consciously push myself to start small conversations and remind myself that most people are also nervous meeting new people.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": ["social anxiety", "making friends", "club involvement"],
+  "comfort_level": "open to messages"
+}

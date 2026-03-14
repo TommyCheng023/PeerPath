@@ -1,0 +1,29 @@
+{
+  "id": "peer_001",
+  "name": "Jordan",
+  "major": "Computer Science",
+  "year": "Senior",
+  "tags": ["transfer student", "making friends", "joining clubs"],
+  "past_challenges": [
+    {
+      "raw": "I transferred in sophomore year and felt completely disconnected from everyone around me. Everyone already had their friend groups and I had no idea how to break in. It took me a whole semester before I finally found my people through a coding club.",
+      "parsed": {
+        "context": "transfer adjustment",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "Joining clubs felt really intimidating at first because I was older than most of the freshmen and younger than the upperclassmen who already knew each other. I almost gave up after the first meeting but I'm glad I stuck around.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "anxious",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": ["transfer adjustment", "campus social life", "joining clubs"],
+  "comfort_level": "open to messages"
+}

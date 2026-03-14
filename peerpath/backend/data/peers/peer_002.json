@@ -1,0 +1,29 @@
+{
+  "id": "peer_002",
+  "name": "Maya",
+  "major": "Biology",
+  "year": "Sophomore",
+  "tags": ["freshman adjustment", "academic stress", "time management"],
+  "past_challenges": [
+    {
+      "raw": "My first semester I completely underestimated how much harder college coursework would be compared to high school. I was juggling five classes, barely sleeping, and failing to keep up with readings. I had to completely rebuild my study habits from scratch.",
+      "parsed": {
+        "context": "freshman adjustment",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "overwhelmed",
+        "resolution_type": "step-by-step advice"
+      }
+    },
+    {
+      "raw": "I had zero time management skills freshman year and kept procrastinating until deadlines were right on top of me. I started using a planner and time-blocking my calendar halfway through the semester and it honestly changed everything.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "time management",
+        "emotional_signal": "stressed",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": ["freshman adjustment", "study skills", "time management"],
+  "comfort_level": "open to messages"
+}

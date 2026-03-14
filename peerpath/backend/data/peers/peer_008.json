@@ -1,0 +1,29 @@
+{
+  "id": "peer_008",
+  "name": "Priya",
+  "major": "Data Science",
+  "year": "Junior",
+  "tags": ["changing majors", "academic stress"],
+  "past_challenges": [
+    {
+      "raw": "I spent my first two years as a pre-med student before realizing I didn't actually want to be a doctor — I just thought I should. Switching to Data Science felt terrifying because I worried about what my parents would think and whether I had wasted two years.",
+      "parsed": {
+        "context": "changing majors",
+        "struggle_type": "anxiety",
+        "emotional_signal": "uncertain",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "After switching majors I had to take a bunch of catch-up classes while my friends were already in upper-division coursework. I felt behind and stressed all the time, but I kept reminding myself that I was finally studying something I actually cared about.",
+      "parsed": {
+        "context": "academic stress",
+        "struggle_type": "academic difficulty",
+        "emotional_signal": "stressed",
+        "resolution_type": "emotional support"
+      }
+    }
+  ],
+  "help_topics": ["changing majors", "academic planning", "managing expectations"],
+  "comfort_level": "open to messages"
+}

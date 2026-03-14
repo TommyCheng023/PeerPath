@@ -1,0 +1,29 @@
+{
+  "id": "peer_005",
+  "name": "Alex",
+  "major": "Communication",
+  "year": "Senior",
+  "tags": ["dating", "social life"],
+  "past_challenges": [
+    {
+      "raw": "Dating in college felt so different from high school and I genuinely didn't know how to navigate it. I had no idea what was casual versus serious, and I ended up really confused after a few situationships that went nowhere.",
+      "parsed": {
+        "context": "dating",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "confused",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "I struggled with the social dynamics of college relationships because everyone seemed so casual about everything. I had to learn to communicate more clearly about what I actually wanted instead of just going along with whatever the other person expected.",
+      "parsed": {
+        "context": "social life",
+        "struggle_type": "relationship confusion",
+        "emotional_signal": "uncertain",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": ["dating", "campus relationships", "communication"],
+  "comfort_level": "open to messages"
+}

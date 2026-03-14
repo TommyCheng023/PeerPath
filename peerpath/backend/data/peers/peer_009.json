@@ -1,0 +1,29 @@
+{
+  "id": "peer_009",
+  "name": "Ethan",
+  "major": "Finance",
+  "year": "Senior",
+  "tags": ["internship search", "anxiety"],
+  "past_challenges": [
+    {
+      "raw": "Junior year recruiting season was one of the most stressful periods of my life. I applied to over 60 internships, got rejected from most without even a response, and started questioning whether I was good enough for any of this.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "anxiety",
+        "emotional_signal": "anxious",
+        "resolution_type": "reassurance"
+      }
+    },
+    {
+      "raw": "I had no idea how to prepare for finance internship interviews — I didn't know about technical questions, case studies, or how much networking actually matters. I felt completely lost compared to people who had older siblings or alumni connections guiding them.",
+      "parsed": {
+        "context": "internship search",
+        "struggle_type": "lack of information",
+        "emotional_signal": "lost",
+        "resolution_type": "practical tips"
+      }
+    }
+  ],
+  "help_topics": ["internship search", "interview prep", "networking"],
+  "comfort_level": "open to messages"
+}

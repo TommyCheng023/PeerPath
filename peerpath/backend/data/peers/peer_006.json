@@ -1,0 +1,29 @@
+{
+  "id": "peer_006",
+  "name": "Yuna",
+  "major": "Economics",
+  "year": "Junior",
+  "tags": ["international student adjustment", "making friends", "campus navigation"],
+  "past_challenges": [
+    {
+      "raw": "Coming from South Korea, I underestimated how different the classroom culture would be here. Professors expected me to speak up and participate, but back home we never challenged instructors or shared personal opinions in class. I felt lost for weeks.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "difficulty adapting",
+        "emotional_signal": "lost",
+        "resolution_type": "peer experience"
+      }
+    },
+    {
+      "raw": "Making friends as an international student was really hard because the social norms were so different. I didn't get a lot of the cultural references and felt like an outsider even in group conversations. Finding other international students first helped me build confidence.",
+      "parsed": {
+        "context": "international student adjustment",
+        "struggle_type": "social isolation",
+        "emotional_signal": "lonely",
+        "resolution_type": "introductions to people"
+      }
+    }
+  ],
+  "help_topics": ["international student adjustment", "cultural adaptation", "making friends"],
+  "comfort_level": "open to messages"
+}
