@@ -23,7 +23,7 @@ _PROMPT_PATH = os.path.join(os.path.dirname(__file__), "..", "prompts", "convers
 
 
 def _generate_conversation_starter(user_description: str, peer_raw: str, reason: str) -> str:
-    """Call Claude API to generate a conversation starter message."""
+    """Call Azure API to generate a conversation starter message."""
     try:
         with open(_PROMPT_PATH, "r", encoding="utf-8") as f:
             template = f.read()

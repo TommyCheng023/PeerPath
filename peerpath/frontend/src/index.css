@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f0ece0;
+  background: #00274c;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(255, 203, 5, 0.08), transparent 28%),
+    linear-gradient(180deg, #001933 0%, #00274c 38%, #001c37 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+textarea {
+  font: inherit;
+}
