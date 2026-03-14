@@ -3,7 +3,11 @@
   "name": "Marcus",
   "major": "Mechanical Engineering",
   "year": "Senior",
-  "tags": ["academic stress", "burnout", "research decisions"],
+  "tags": [
+    "academic stress",
+    "burnout",
+    "research decisions"
+  ],
   "past_challenges": [
     {
       "raw": "Junior year I hit a wall completely. I was doing research, taking five upper-division classes, and trying to maintain my GPA for grad school apps. I stopped enjoying anything I used to love and just felt like I was going through the motions.",
@@ -24,6 +28,12 @@
       }
     }
   ],
-  "help_topics": ["burnout recovery", "research decisions", "grad school vs industry"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "burnout recovery",
+    "research decisions",
+    "grad school vs industry"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-714-988-2918",
+  "contact_email": "marcus@umich.edu"
 }

@@ -3,7 +3,11 @@
   "name": "Jordan",
   "major": "Computer Science",
   "year": "Senior",
-  "tags": ["transfer student", "making friends", "joining clubs"],
+  "tags": [
+    "transfer student",
+    "making friends",
+    "joining clubs"
+  ],
   "past_challenges": [
     {
       "raw": "I transferred in sophomore year and felt completely disconnected from everyone around me. Everyone already had their friend groups and I had no idea how to break in. It took me a whole semester before I finally found my people through a coding club.",
@@ -24,6 +28,12 @@
       }
     }
   ],
-  "help_topics": ["transfer adjustment", "campus social life", "joining clubs"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "transfer adjustment",
+    "campus social life",
+    "joining clubs"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-734-976-7202",
+  "contact_email": "jordan@umich.edu"
 }

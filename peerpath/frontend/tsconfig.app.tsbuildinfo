@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/data.ts","./src/main.tsx","./src/types.ts","./src/api/matchapi.ts"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/data.ts","./src/main.tsx","./src/types.ts","./src/api/authapi.ts","./src/api/historyapi.ts","./src/api/matchapi.ts"],"version":"5.9.3"}

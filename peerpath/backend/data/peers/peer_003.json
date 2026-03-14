@@ -3,7 +3,10 @@
   "name": "Tyler",
   "major": "Political Science",
   "year": "Junior",
-  "tags": ["course registration", "campus navigation"],
+  "tags": [
+    "course registration",
+    "campus navigation"
+  ],
   "past_challenges": [
     {
       "raw": "Course registration freshman year was an absolute nightmare — I had no idea what prerequisite chains meant or how the registration system even worked. I accidentally enrolled in an upper-division class I couldn't handle and had to drop it two weeks in.",
@@ -24,6 +27,12 @@
       }
     }
   ],
-  "help_topics": ["course registration", "academic advising", "campus resources"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "course registration",
+    "academic advising",
+    "campus resources"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-646-991-5921",
+  "contact_email": "tyler@umich.edu"
 }

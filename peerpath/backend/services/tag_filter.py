@@ -1,9 +1,11 @@
 try:
     from services.data_loader import load_index
+    from services.db import get_connection, is_database_configured
 except ModuleNotFoundError:
     import sys, os
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
     from services.data_loader import load_index
+    from services.db import get_connection, is_database_configured
 
 
 def filter_by_tags(student_tags: list[str]) -> list[dict]:
@@ -15,6 +17,40 @@ def filter_by_tags(student_tags: list[str]) -> list[dict]:
     """
     if not student_tags:
         return []
+
+    if is_database_configured():
+        normalized = [t.lower() for t in student_tags]
+        query = """
+            SELECT
+                id,
+                ARRAY(
+                    SELECT tag
+                    FROM unnest(tags) AS tag
+                    WHERE lower(tag) = ANY(%s)
+                ) AS overlap_tags
+            FROM peers
+            WHERE EXISTS (
+                SELECT 1
+                FROM unnest(tags) AS tag
+                WHERE lower(tag) = ANY(%s)
+            )
+        """
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(query, (normalized, normalized))
+                rows = cur.fetchall()
+
+        results = []
+        for row in rows:
+            overlap_tags = row["overlap_tags"] or []
+            results.append({
+                "id": row["id"],
+                "overlap_count": len(overlap_tags),
+                "overlap_tags": overlap_tags,
+            })
+
+        results.sort(key=lambda x: x["overlap_count"], reverse=True)
+        return results
 
     normalized = {t.lower() for t in student_tags}
     index = load_index()

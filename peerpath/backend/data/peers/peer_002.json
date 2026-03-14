@@ -3,7 +3,11 @@
   "name": "Maya",
   "major": "Biology",
   "year": "Sophomore",
-  "tags": ["freshman adjustment", "academic stress", "time management"],
+  "tags": [
+    "freshman adjustment",
+    "academic stress",
+    "time management"
+  ],
   "past_challenges": [
     {
       "raw": "My first semester I completely underestimated how much harder college coursework would be compared to high school. I was juggling five classes, barely sleeping, and failing to keep up with readings. I had to completely rebuild my study habits from scratch.",
@@ -24,6 +28,12 @@
       }
     }
   ],
-  "help_topics": ["freshman adjustment", "study skills", "time management"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "freshman adjustment",
+    "study skills",
+    "time management"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-650-635-0214",
+  "contact_email": "maya@umich.edu"
 }

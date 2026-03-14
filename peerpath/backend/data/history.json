@@ -1,0 +1,136 @@
+{
+  "394dd1ab-806a-477d-97c5-3884bf0b9548": [
+    {
+      "id": "20260314195831721483",
+      "timestamp": "2026-03-14T19:58:31.721483+00:00",
+      "tags": [
+        "dating"
+      ],
+      "description": "I am single since I was born.",
+      "total_candidates": 27,
+      "matches": [
+        {
+          "rank": 1,
+          "peer_id": "peer_137",
+          "name": "Sage",
+          "major": "Environmental Science",
+          "year": "Junior",
+          "tags": [
+            "social life",
+            "dating",
+            "transfer student"
+          ],
+          "tag_overlap": 1,
+          "field_score": 50,
+          "llm_adjustment": 5,
+          "final_score": 65.0,
+          "reason": "The peer's experience with social isolation and seeking genuine connections aligns well with the student's need for introductions, providing relevant emotional support.",
+          "conversation_starter": "I came across your experience with finding low-key communities, and it really resonated with me. As someone who’s been single my whole life, I’m still figuring out how to connect with others in more genuine ways. I’d love to hear more about how you navigated that!"
+        },
+        {
+          "rank": 2,
+          "peer_id": "peer_193",
+          "name": "Amari",
+          "major": "Political Science",
+          "year": "Graduate",
+          "tags": [
+            "dating",
+            "research decisions",
+            "social life",
+            "freshman adjustment"
+          ],
+          "tag_overlap": 1,
+          "field_score": 50,
+          "llm_adjustment": 0,
+          "final_score": 60.0,
+          "reason": "While both experiences involve social isolation and feelings of loneliness, the peer's focus on dating rather than general social introductions may not provide relevant help for the student.",
+          "conversation_starter": "I came across your experience with navigating dating while balancing coursework and friendships, and it really resonated with me. I've been feeling a bit isolated myself, and I’d love to hear more about how you found the courage to communicate what you wanted. Looking forward to connecting!"
+        },
+        {
+          "rank": 3,
+          "peer_id": "peer_090",
+          "name": "Tatum",
+          "major": "Economics",
+          "year": "Sophomore",
+          "tags": [
+            "dating",
+            "career planning",
+            "academic stress",
+            "campus navigation"
+          ],
+          "tag_overlap": 1,
+          "field_score": 40,
+          "llm_adjustment": 5,
+          "final_score": 55.0,
+          "reason": "The peer's experience with feeling out of place in a social setting resonates with the student's loneliness, suggesting potential understanding and supportive advice on finding fitting social avenues.",
+          "conversation_starter": "I saw that you mentioned navigating dating and friendships was a bit tough for you, and honestly, I can relate. Being single my whole life has left me feeling a bit out of place too. I’d love to hear about how you learned to communicate what you wanted—it sounds like valuable advice!"
+        }
+      ]
+    },
+    {
+      "id": "20260314194627044913",
+      "timestamp": "2026-03-14T19:46:27.044913+00:00",
+      "tags": [
+        "academic stress"
+      ],
+      "description": "I'm failing my courses and don't know who to ask for help",
+      "total_candidates": 36,
+      "matches": [
+        {
+          "rank": 1,
+          "peer_id": "peer_008",
+          "name": "Priya",
+          "major": "Data Science",
+          "year": "Junior",
+          "tags": [
+            "changing majors",
+            "academic stress"
+          ],
+          "tag_overlap": 1,
+          "field_score": 90,
+          "llm_adjustment": 3,
+          "final_score": 103.0,
+          "reason": "The peer's experience with academic stress and feeling behind resonates with the student’s struggle, but the lack of direct resource information limits the helpfulness.",
+          "conversation_starter": "I noticed you switched from pre-med to Data Science, and honestly, that really spoke to me. I’m feeling pretty lost in my courses right now and could use some advice on figuring out what to do next. Would love to chat if you have a moment!"
+        },
+        {
+          "rank": 2,
+          "peer_id": "peer_139",
+          "name": "Uma",
+          "major": "Chemistry",
+          "year": "Freshman",
+          "tags": [
+            "academic stress",
+            "housing",
+            "time management"
+          ],
+          "tag_overlap": 1,
+          "field_score": 90,
+          "llm_adjustment": 3,
+          "final_score": 103.0,
+          "reason": "While the peer's experience of feeling stressed and overwhelmed is similar, their resolution of taking time offline does not directly align with the student's need for specific resources.",
+          "conversation_starter": "I came across your story about hitting a wall sophomore year, and it really resonated with me. Right now, I’m feeling overwhelmed and could use some guidance on where to find help. Would you be open to chatting about your experience?"
+        },
+        {
+          "rank": 3,
+          "peer_id": "peer_207",
+          "name": "Casey",
+          "major": "Computer Science",
+          "year": "Graduate",
+          "tags": [
+            "academic stress",
+            "social life",
+            "time management",
+            "course registration"
+          ],
+          "tag_overlap": 1,
+          "field_score": 75,
+          "llm_adjustment": 5,
+          "final_score": 90.0,
+          "reason": "The peer's experience of finding help through the academic support center is directly applicable to the student's need for information about resources, despite the different emotional signals.",
+          "conversation_starter": "I really appreciated you sharing your experience about feeling like you didn't belong at first. I'm in a bit of a tough spot with my courses right now and was wondering if you could tell me more about how the academic support center helped you."
+        }
+      ]
+    }
+  ]
+}

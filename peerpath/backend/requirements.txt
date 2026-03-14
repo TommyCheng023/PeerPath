@@ -3,3 +3,7 @@ uvicorn
 openai
 python-dotenv
 pydantic
+psycopg[binary]
+passlib[bcrypt]
+python-jose[cryptography]
+email-validator

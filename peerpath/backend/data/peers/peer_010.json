@@ -3,7 +3,11 @@
   "name": "Chloe",
   "major": "Sociology",
   "year": "Sophomore",
-  "tags": ["housing", "social life", "social anxiety"],
+  "tags": [
+    "housing",
+    "social life",
+    "social anxiety"
+  ],
   "past_challenges": [
     {
       "raw": "My freshman roommate and I had completely opposite schedules and lifestyles — she'd have people over at midnight while I had 8am classes. I was too afraid to say anything for months and just suffered through it until things finally boiled over.",
@@ -24,6 +28,12 @@
       }
     }
   ],
-  "help_topics": ["housing conflicts", "roommate communication", "dorm social dynamics"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "housing conflicts",
+    "roommate communication",
+    "dorm social dynamics"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-310-610-5227",
+  "contact_email": "chloe@umich.edu"
 }

@@ -3,7 +3,10 @@
   "name": "Alex",
   "major": "Communication",
   "year": "Senior",
-  "tags": ["dating", "social life"],
+  "tags": [
+    "dating",
+    "social life"
+  ],
   "past_challenges": [
     {
       "raw": "Dating in college felt so different from high school and I genuinely didn't know how to navigate it. I had no idea what was casual versus serious, and I ended up really confused after a few situationships that went nowhere.",
@@ -24,6 +27,12 @@
       }
     }
   ],
-  "help_topics": ["dating", "campus relationships", "communication"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "dating",
+    "campus relationships",
+    "communication"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-801-746-2003",
+  "contact_email": "alex@umich.edu"
 }

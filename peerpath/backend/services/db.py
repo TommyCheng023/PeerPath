@@ -1,0 +1,79 @@
+import os
+from contextlib import contextmanager
+
+from dotenv import load_dotenv
+import psycopg
+from psycopg.rows import dict_row
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+
+def get_database_url() -> str | None:
+    return os.getenv("DATABASE_URL")
+
+
+def is_database_configured() -> bool:
+    return bool(get_database_url())
+
+
+@contextmanager
+def get_connection():
+    database_url = get_database_url()
+    if not database_url:
+        raise ValueError("Missing DATABASE_URL in backend/.env")
+
+    conn = psycopg.connect(database_url, row_factory=dict_row)
+    try:
+        yield conn
+    finally:
+        conn.close()
+
+
+def init_peer_tables() -> None:
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                CREATE TABLE IF NOT EXISTS peers (
+                    id TEXT PRIMARY KEY,
+                    name TEXT NOT NULL,
+                    major TEXT NOT NULL,
+                    year TEXT NOT NULL,
+                    tags TEXT[] NOT NULL,
+                    help_topics TEXT[] NOT NULL,
+                    comfort_level TEXT NOT NULL,
+                    past_challenges JSONB NOT NULL,
+                    profile JSONB NOT NULL
+                );
+                """
+            )
+            cur.execute(
+                """
+                CREATE INDEX IF NOT EXISTS idx_peers_tags_gin
+                ON peers
+                USING GIN (tags);
+                """
+            )
+        conn.commit()
+
+
+def init_auth_tables() -> None:
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                CREATE TABLE IF NOT EXISTS users (
+                    id TEXT PRIMARY KEY,
+                    email TEXT NOT NULL UNIQUE,
+                    full_name TEXT NOT NULL,
+                    password_hash TEXT NOT NULL,
+                    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+                );
+                """
+            )
+        conn.commit()
+
+
+def init_database() -> None:
+    init_peer_tables()
+    init_auth_tables()

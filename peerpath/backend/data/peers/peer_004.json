@@ -3,7 +3,11 @@
   "name": "Sofia",
   "major": "Psychology",
   "year": "Junior",
-  "tags": ["social anxiety", "joining clubs", "making friends"],
+  "tags": [
+    "social anxiety",
+    "joining clubs",
+    "making friends"
+  ],
   "past_challenges": [
     {
       "raw": "Walking into a club meeting for the first time as someone with social anxiety felt paralyzing. My heart was racing and I almost turned around at the door. I ended up standing awkwardly in the corner for most of the first meeting.",
@@ -24,6 +28,12 @@
       }
     }
   ],
-  "help_topics": ["social anxiety", "making friends", "club involvement"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "social anxiety",
+    "making friends",
+    "club involvement"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-703-669-6554",
+  "contact_email": "sofia@umich.edu"
 }

@@ -3,7 +3,10 @@
   "name": "Priya",
   "major": "Data Science",
   "year": "Junior",
-  "tags": ["changing majors", "academic stress"],
+  "tags": [
+    "changing majors",
+    "academic stress"
+  ],
   "past_challenges": [
     {
       "raw": "I spent my first two years as a pre-med student before realizing I didn't actually want to be a doctor — I just thought I should. Switching to Data Science felt terrifying because I worried about what my parents would think and whether I had wasted two years.",
@@ -24,6 +27,12 @@
       }
     }
   ],
-  "help_topics": ["changing majors", "academic planning", "managing expectations"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "changing majors",
+    "academic planning",
+    "managing expectations"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-312-200-6109",
+  "contact_email": "priya@umich.edu"
 }

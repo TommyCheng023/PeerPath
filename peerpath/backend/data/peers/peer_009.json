@@ -3,7 +3,10 @@
   "name": "Ethan",
   "major": "Finance",
   "year": "Senior",
-  "tags": ["internship search", "anxiety"],
+  "tags": [
+    "internship search",
+    "anxiety"
+  ],
   "past_challenges": [
     {
       "raw": "Junior year recruiting season was one of the most stressful periods of my life. I applied to over 60 internships, got rejected from most without even a response, and started questioning whether I was good enough for any of this.",
@@ -24,6 +27,12 @@
       }
     }
   ],
-  "help_topics": ["internship search", "interview prep", "networking"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "internship search",
+    "interview prep",
+    "networking"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-312-657-7578",
+  "contact_email": "ethan@umich.edu"
 }

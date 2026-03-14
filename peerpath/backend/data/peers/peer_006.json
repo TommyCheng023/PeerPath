@@ -3,7 +3,11 @@
   "name": "Yuna",
   "major": "Economics",
   "year": "Junior",
-  "tags": ["international student adjustment", "making friends", "campus navigation"],
+  "tags": [
+    "international student adjustment",
+    "making friends",
+    "campus navigation"
+  ],
   "past_challenges": [
     {
       "raw": "Coming from South Korea, I underestimated how different the classroom culture would be here. Professors expected me to speak up and participate, but back home we never challenged instructors or shared personal opinions in class. I felt lost for weeks.",
@@ -24,6 +28,12 @@
       }
     }
   ],
-  "help_topics": ["international student adjustment", "cultural adaptation", "making friends"],
-  "comfort_level": "open to messages"
+  "help_topics": [
+    "international student adjustment",
+    "cultural adaptation",
+    "making friends"
+  ],
+  "comfort_level": "open to messages",
+  "contact_phone": "+1-415-465-1887",
+  "contact_email": "yuna@umich.edu"
 }
