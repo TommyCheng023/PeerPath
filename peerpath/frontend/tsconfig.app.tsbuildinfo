@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/data.ts","./src/main.tsx","./src/types.ts","./src/api/authapi.ts","./src/api/chatapi.ts","./src/api/historyapi.ts","./src/api/matchapi.ts","./src/api/profileapi.ts"],"version":"5.9.3"}
+{"root":["./src/App.tsx","./src/data.ts","./src/main.tsx","./src/types.ts","./src/api/authApi.ts","./src/api/chatApi.ts","./src/api/historyApi.ts","./src/api/matchApi.ts","./src/api/profileApi.ts"],"version":"5.9.3"}

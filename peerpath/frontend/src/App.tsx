@@ -604,7 +604,12 @@ export default function App() {
 
       <div className="relative z-10">
         <nav className="flex items-center justify-between border-b border-maize/10 px-5 py-5 md:px-12">
-          <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={handleReset}
+            className="flex items-center gap-3 rounded-full transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-maize/40"
+            aria-label="Go to PeerPath home"
+          >
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-maize/20 bg-white/5">
               <svg viewBox="0 0 32 32" fill="none" className="h-8 w-8">
                 <path
@@ -699,7 +704,7 @@ export default function App() {
                 UMich
               </div>
             </div>
-          </div>
+          </button>
 
           <div className="hidden items-center gap-7 text-sm text-parchment/45 md:flex">
             {NAV_PAGES.map((page) => (
