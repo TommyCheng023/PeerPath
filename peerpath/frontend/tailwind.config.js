@@ -10,7 +10,7 @@ export default {
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],
-        serif: ["Instrument Serif", "serif"],
+        serif: ["Crimson Text", "serif"],
       },
       boxShadow: {
         glow: "0 12px 40px rgba(255, 203, 5, 0.2)",
