@@ -420,5 +420,77 @@
         }
       ]
     }
+  ],
+  "9a05359d-6449-444f-b324-dc87b351fe4e": [
+    {
+      "id": "20260315011658693926",
+      "timestamp": "2026-03-15T01:16:58.693926+00:00",
+      "tags": [
+        "dating",
+        "social life"
+      ],
+      "description": "Dating on campus feels confusing and overwhelming",
+      "total_candidates": 62,
+      "matches": [
+        {
+          "rank": 1,
+          "peer_id": "peer_005",
+          "name": "Alex",
+          "major": "Communication",
+          "year": "Senior",
+          "contact_phone": "+1-801-746-2003",
+          "contact_email": "alex@umich.edu",
+          "tags": [
+            "dating",
+            "social life"
+          ],
+          "tag_overlap": 2,
+          "field_score": 75,
+          "llm_adjustment": 3,
+          "final_score": 88.0,
+          "reason": "The peer's experience with relationship confusion aligns well with the student's struggle, though the peer's focus on practical tips might not fully meet the student's need for emotional support.",
+          "conversation_starter": "I totally relate to what you said about feeling lost with dating in college. The whole casual versus serious thing can be really confusing! I'd love to hear about your experiences and any tips you found helpful."
+        },
+        {
+          "rank": 2,
+          "peer_id": "peer_097",
+          "name": "Amari",
+          "major": "Art History",
+          "year": "Graduate",
+          "contact_phone": "+1-646-542-3016",
+          "contact_email": "amari2@umich.edu",
+          "tags": [
+            "social life",
+            "housing"
+          ],
+          "tag_overlap": 1,
+          "field_score": 75,
+          "llm_adjustment": 5,
+          "final_score": 85.0,
+          "reason": "The peer's experience with finding a suitable social environment aligns well with the student's relationship confusion and emotional overwhelm, indicating potential for empathetic support despite their different emotional tones.",
+          "conversation_starter": "I totally relate to what you mentioned about feeling out of place in a party-heavy scene. It can be really tough navigating dating when it feels so overwhelming. I’d love to hear more about how you found those low-key communities that worked for you!"
+        },
+        {
+          "rank": 3,
+          "peer_id": "peer_164",
+          "name": "Peyton",
+          "major": "Biology",
+          "year": "Junior",
+          "contact_phone": "+1-818-715-2355",
+          "contact_email": "peyton4@umich.edu",
+          "tags": [
+            "internship search",
+            "changing majors",
+            "social life"
+          ],
+          "tag_overlap": 1,
+          "field_score": 75,
+          "llm_adjustment": 5,
+          "final_score": 85.0,
+          "reason": "The peer's experience of finding their social style and communities could provide useful reassurance and perspective for the student's feelings of confusion.",
+          "conversation_starter": "I came across your experience with networking and found it really relatable—I definitely feel like dating on campus is a bit like navigating cold emails! It’s confusing, and I could use some of that perspective you got from your career counselor. Would love to hear how you found your groove!"
+        }
+      ]
+    }
   ]
 }

@@ -1,0 +1,16 @@
+[
+  {
+    "thread_id": "52afe664-1b4c-4a9a-9d88-e2b0275c021a",
+    "peer_id": "peer_005",
+    "peer_name": "Alex",
+    "peer_major": "Communication",
+    "peer_year": "Senior",
+    "created_from_match": true,
+    "match_score": 80.0,
+    "match_reason": "The peer's experience with relationship confusion aligns well with the student's struggle, though the peer's focus on practical tips might not fully meet the student's need for emotional support.",
+    "created_at": "2026-03-15T01:17:15.134997+00:00",
+    "last_message_at": "2026-03-15T01:17:15.134997+00:00",
+    "unread_count": 0,
+    "messages": []
+  }
+]

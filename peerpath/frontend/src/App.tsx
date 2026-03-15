@@ -1955,6 +1955,33 @@ export default function App() {
                               </span>
                             </div>
                           </div>
+                          <div className="mt-3">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setHistoryOpen(false);
+                                void openChatWithPeer({
+                                  id: match.peer_id,
+                                  rank: match.rank,
+                                  name: match.name,
+                                  major: match.major,
+                                  year: match.year,
+                                  contactPhone: match.contact_phone,
+                                  contactEmail: match.contact_email,
+                                  tags: match.tags,
+                                  matchedTags: [],
+                                  scorePercent: scoreToPercent(match.final_score),
+                                  tagScorePercent: 0,
+                                  experienceScorePercent: 0,
+                                  explanation: match.reason || "This peer has navigated a similar situation.",
+                                  conversationStarter: match.conversation_starter || "",
+                                });
+                              }}
+                              className="rounded-full bg-maize px-4 py-2 text-xs font-medium text-navy transition hover:opacity-90"
+                            >
+                              Message {match.name} →
+                            </button>
+                          </div>
                         </div>
                       ))}
                     </div>
