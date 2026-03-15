@@ -1201,7 +1201,7 @@ export default function App() {
 
                 <div className="rounded-[2rem] border border-maize/15 bg-white/5 p-6">
                   <div className="rounded-[1.5rem] border border-white/10 bg-[#07203c]/85 p-5">
-                    <div className="mb-4 flex items-center justify-between">
+                    <div className="mb-4">
                       <div>
                         <div className="text-xs uppercase tracking-[0.2em] text-parchment/35">
                           Demo Preview
@@ -1209,9 +1209,6 @@ export default function App() {
                         <div className="mt-2 font-serif text-3xl text-parchment">
                           A calmer path to connection
                         </div>
-                      </div>
-                      <div className="rounded-full border border-maize/20 bg-maize/10 px-3 py-1 text-xs text-maize">
-                        Student-first
                       </div>
                     </div>
                     <div className="space-y-3">
