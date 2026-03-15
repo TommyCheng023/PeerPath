@@ -52,7 +52,7 @@ def _score_challenge(student_parsed: dict, peer_challenge_parsed: dict) -> int:
 
 
 def _llm_adjustment(student_parsed: dict, best_challenge: dict, field_score: int) -> tuple[int, str]:
-    """Call Claude API for semantic adjustment. Returns (adjustment, reason)."""
+    """Call OpenAI API for semantic adjustment. Returns (adjustment, reason)."""
     try:
         with open(_PROMPT_PATH, "r", encoding="utf-8") as f:
             template = f.read()
@@ -121,7 +121,7 @@ def score_peer(student_parsed: dict, peer: dict, use_llm: bool = True) -> dict:
     field_score = base_score["field_score"]
     best_challenge = base_score["best_challenge"]
 
-    # Layer 2: semantic adjustment via Claude
+    # Layer 2: semantic adjustment via OpenAI
     if use_llm and best_challenge is not None:
         adjustment, reason = _llm_adjustment(student_parsed, best_challenge, field_score)
     else:
