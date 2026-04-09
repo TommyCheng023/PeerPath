@@ -492,5 +492,154 @@
         }
       ]
     }
+  ],
+  "5546fa8a-20a3-46a6-b65b-348212cc8bf8": [
+    {
+      "id": "20260409163725275343",
+      "timestamp": "2026-04-09T16:37:25.275343+00:00",
+      "tags": [
+        "making friends",
+        "social life",
+        "dating"
+      ],
+      "description": "学生在校园交友方面遇到困难，感到孤单和担忧，希望能找到同伴支持。",
+      "total_candidates": 79,
+      "matches": [
+        {
+          "rank": 1,
+          "peer_id": "peer_004",
+          "name": "Sofia",
+          "major": "Psychology",
+          "year": "Junior",
+          "contact_phone": "+1-703-669-6554",
+          "contact_email": "sofia@umich.edu",
+          "tags": [
+            "social anxiety",
+            "joining clubs",
+            "making friends"
+          ],
+          "tag_overlap": 1,
+          "field_score": 90,
+          "llm_adjustment": 5,
+          "final_score": 98.33,
+          "reason": "The peer's experience with overcoming fear in social situations offers relatable insight that can provide encouragement for the student.",
+          "conversation_starter": "I noticed that you also felt anxious walking into that first club meeting—it's such a tough situation! I'm going through something similar at the moment and would love to hear how you managed to push through that initial fear."
+        },
+        {
+          "rank": 2,
+          "peer_id": "peer_010",
+          "name": "Chloe",
+          "major": "Sociology",
+          "year": "Sophomore",
+          "contact_phone": "+1-310-610-5227",
+          "contact_email": "chloe@umich.edu",
+          "tags": [
+            "housing",
+            "social life",
+            "social anxiety"
+          ],
+          "tag_overlap": 1,
+          "field_score": 75,
+          "llm_adjustment": 5,
+          "final_score": 83.33,
+          "reason": "The peer's experience of feeling isolated and anxious in a social context aligns well with the student's struggle with social isolation, suggesting that they could provide relevant emotional support.",
+          "conversation_starter": "I noticed that you had a tough time with your freshman roommate, and I can relate to feeling isolated and anxious in social situations. It’s great to connect with someone who’s been through similar challenges. I’d love to chat and see how you managed to navigate those feelings!"
+        },
+        {
+          "rank": 3,
+          "peer_id": "peer_068",
+          "name": "Peyton",
+          "major": "Data Science",
+          "year": "Graduate",
+          "contact_phone": "+1-734-668-8874",
+          "contact_email": "peyton2@umich.edu",
+          "tags": [
+            "social life",
+            "mental health",
+            "campus navigation"
+          ],
+          "tag_overlap": 1,
+          "field_score": 75,
+          "llm_adjustment": 5,
+          "final_score": 83.33,
+          "reason": "The peer's experience of feeling isolated due to differing social interests aligns well with the student's struggle, and their eventual success in finding a supportive community offers relevant emotional support.",
+          "conversation_starter": "I noticed you mentioned feeling isolated when Greek life dominated the scene. I can relate to that since I'm having a tough time connecting with people here. I'd love to hear more about how you found your community!"
+        }
+      ],
+      "source": "agent"
+    },
+    {
+      "id": "20260409160329540841",
+      "timestamp": "2026-04-09T16:03:29.540841+00:00",
+      "tags": [
+        "campus navigation",
+        "international student adjustment",
+        "transfer student",
+        "making friends"
+      ],
+      "description": "I'm an international student struggling to connect",
+      "total_candidates": 102,
+      "matches": [
+        {
+          "rank": 1,
+          "peer_id": "peer_006",
+          "name": "Yuna",
+          "major": "Economics",
+          "year": "Junior",
+          "contact_phone": "+1-415-465-1887",
+          "contact_email": "yuna@umich.edu",
+          "tags": [
+            "international student adjustment",
+            "making friends",
+            "campus navigation"
+          ],
+          "tag_overlap": 3,
+          "field_score": 100,
+          "llm_adjustment": 8,
+          "final_score": 115.5,
+          "reason": "The peer's experience with social isolation and cultural differences aligns well with the student's struggle, and their successful approach of making introductions could provide valuable guidance.",
+          "conversation_starter": "I came across your experience of adjusting to classroom culture here, and I can really relate to feeling lost in a new environment. It sounds like you've navigated it all so well, and I'd love to hear any tips you have for connecting with classmates and feeling more comfortable in discussions."
+        },
+        {
+          "rank": 2,
+          "peer_id": "peer_149",
+          "name": "Ellis",
+          "major": "Political Science",
+          "year": "Graduate",
+          "contact_phone": "+1-310-649-0088",
+          "contact_email": "ellis3@umich.edu",
+          "tags": [
+            "changing majors",
+            "transfer student"
+          ],
+          "tag_overlap": 1,
+          "field_score": 85,
+          "llm_adjustment": 0,
+          "final_score": 87.5,
+          "reason": "While the peer shares a similar context of international student adjustment and social isolation, their emotional experience of feeling overwhelmed does not align closely enough with the student's feeling of loneliness to indicate high relevance.",
+          "conversation_starter": "I was really inspired by your decision to switch majors; it must have been tough but also a relief to follow your passion. As an international student, I’m finding it hard to connect here, and I’d love to hear more about your experience and how you navigated that kind of change."
+        },
+        {
+          "rank": 3,
+          "peer_id": "peer_001",
+          "name": "Jordan",
+          "major": "Computer Science",
+          "year": "Senior",
+          "contact_phone": "+1-734-976-7202",
+          "contact_email": "jordan@umich.edu",
+          "tags": [
+            "transfer student",
+            "making friends",
+            "joining clubs"
+          ],
+          "tag_overlap": 2,
+          "field_score": 50,
+          "llm_adjustment": 8,
+          "final_score": 63.0,
+          "reason": "The peer's experience of social isolation and eventual success in forming connections through a club resonates well with the student's need for social introductions, making them a potentially useful resource.",
+          "conversation_starter": "I noticed you mentioned feeling disconnected when you transferred, and I can totally relate to that. I'm an international student and finding my place has been a bit tough, but hearing about how you found your people in that coding club gives me hope! Would love to chat more about your experience and any tips you might have."
+        }
+      ]
+    }
   ]
 }

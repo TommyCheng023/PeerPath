@@ -16,6 +16,9 @@ import {
 import { fetchHistory } from "./api/historyApi";
 import { fetchMatches } from "./api/matchApi";
 import { fetchProfile, updateProfile } from "./api/profileApi";
+import OnboardingFlow from "./components/OnboardingFlow";
+import AgentChatOverlay from "./components/AgentChatOverlay";
+import MatchResultCard from "./components/MatchResultCard";
 import {
   PROFILE_COMFORT_LEVEL_OPTIONS,
   PROFILE_HELP_TOPIC_OPTIONS,
@@ -34,6 +37,7 @@ import type {
 type Phase = "form" | "loading" | "results";
 type AuthMode = "login" | "register";
 type Page = "home" | "how-it-works" | "our-story";
+type AppView = "landing" | "onboarding" | "form";
 
 const LOADING_MICRO_MESSAGES = [
   "Checking who has actually been through something close to this.",
@@ -209,6 +213,7 @@ export default function App() {
   const [candidateCount, setCandidateCount] = useState<number | null>(null);
   const [cards, setCards] = useState<MatchCard[]>([]);
   const [currentUser, setCurrentUser] = useState<AuthUser | null>(null);
+  const [appView, setAppView] = useState<AppView>("landing");
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<AuthMode>("login");
   const [authError, setAuthError] = useState("");
@@ -247,15 +252,28 @@ export default function App() {
   const [chatSending, setChatSending] = useState(false);
   const [chatLoading, setChatLoading] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
-  // openerCardId tracks which match card has the "use opener" section expanded
-  const [openerCardId, setOpenerCardId] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchCurrentUser()
-      .then((user) => setCurrentUser(user))
+      .then(async (user) => {
+        setCurrentUser(user);
+        if (user) {
+          try {
+            const { profile } = await fetchProfile();
+            if (!profile || !profile.profile_complete) {
+              setAppView("onboarding");
+            } else {
+              setAppView("form");
+            }
+          } catch {
+            setAppView("landing");
+          }
+        }
+      })
       .catch(() => {
         setCurrentUser(null);
+        setAppView("landing");
       });
   }, []);
 
@@ -422,7 +440,6 @@ export default function App() {
     isOpener?: boolean,
   ) => {
     if (!currentUser) return;
-    setOpenerCardId(null);
     const result = await createOrGetThread({
       peer_id: card.id,
       peer_name: card.name,
@@ -481,6 +498,16 @@ export default function App() {
       setCurrentUser(payload.user);
       setAuthOpen(false);
       setAuthForm({ fullName: "", email: "", password: "" });
+      try {
+        const { profile } = await fetchProfile();
+        if (!profile || !profile.profile_complete) {
+          setAppView("onboarding");
+        } else {
+          setAppView("form");
+        }
+      } catch {
+        setAppView("onboarding");
+      }
     } catch (authRequestError) {
       setAuthError(
         authRequestError instanceof Error
@@ -495,6 +522,7 @@ export default function App() {
   const handleLogout = async () => {
     await logoutUser();
     setActivePage("home");
+    setAppView("landing");
     setCurrentUser(null);
     setHistoryEntries([]);
     setHistoryOpen(false);
@@ -769,6 +797,16 @@ export default function App() {
           </div>
         </nav>
 
+        {/* ── AppView routing ── */}
+        {appView === "onboarding" && currentUser && (
+          <OnboardingFlow
+            onComplete={(profile) => {
+              setCurrentProfile(profile);
+              setAppView("form");
+            }}
+          />
+        )}
+
         {activePage === "how-it-works" ? (
           <StaticPage
             eyebrow="How PeerPath Works"
@@ -986,175 +1024,14 @@ export default function App() {
                     </div>
                   ) : (
                     <div className="space-y-4">
-                      {cards.map((card) => {
-                        const otherTags = card.tags.filter(
-                          (tag) => !card.matchedTags.includes(tag)
-                        );
-                        return (
-                          <article
-                            key={card.id}
-                            className={classNames(
-                              "rounded-3xl border bg-white/5 p-6 md:p-7",
-                              card.rank === 1
-                                ? "border-maize/40 bg-maize/5"
-                                : "border-maize/15"
-                            )}
-                          >
-                            <div className="flex flex-col gap-5 md:flex-row md:items-start">
-                              <div className="flex min-w-0 flex-1 items-start gap-4">
-                                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-maize/85 font-serif text-xl text-navy">
-                                  {card.name.charAt(0)}
-                                </div>
-                                <div className="min-w-0">
-                                  <div className="font-serif text-3xl leading-none text-parchment">
-                                    {card.name}
-                                  </div>
-                                  <div className="mt-2 text-sm text-parchment/40">
-                                    {card.major} · {card.year}
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="text-left md:text-right">
-                                <div className="font-serif text-4xl leading-none text-maize">
-                                  {card.scorePercent}%
-                                </div>
-                                <div className="mt-1 text-[11px] uppercase tracking-[0.18em] text-parchment/35">
-                                  Match
-                                </div>
-                              </div>
-                            </div>
-
-                            <div className="mt-5 flex flex-wrap gap-2">
-                              {card.matchedTags.map((tag) => (
-                                <span
-                                  key={`matched-${card.id}-${tag}`}
-                                  className="rounded-full border border-maize/35 px-3 py-1 text-xs text-maize"
-                                >
-                                  ✓ {tag}
-                                </span>
-                              ))}
-                              {otherTags.map((tag) => (
-                                <span
-                                  key={`other-${card.id}-${tag}`}
-                                  className="rounded-full border border-white/10 px-3 py-1 text-xs text-parchment/45"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-
-                            <div className="mt-5 grid gap-4 md:grid-cols-2">
-                              {[
-                                ["Tag overlap", card.tagScorePercent],
-                                ["Experience match", card.experienceScorePercent],
-                              ].map(([label, percent]) => (
-                                <div key={label}>
-                                  <div className="mb-2 flex items-center justify-between text-xs text-parchment/40">
-                                    <span>{label}</span>
-                                    <span>{percent}%</span>
-                                  </div>
-                                  <div className="h-1 rounded-full bg-white/10">
-                                    <div
-                                      className="h-full rounded-full bg-maize transition-[width] duration-1000"
-                                      style={{ width: `${percent}%` }}
-                                    />
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-
-                            <div className="my-6 border-t border-white/10" />
-
-                            <div className="mb-3 text-[11px] uppercase tracking-[0.18em] text-parchment/35">
-                              Why they&apos;re a great match
-                            </div>
-                            <p className="text-sm leading-7 text-parchment/80">{card.explanation}</p>
-
-                            <div className="my-6 border-t border-white/10" />
-
-                            <div className="mb-3 text-[11px] uppercase tracking-[0.18em] text-parchment/35">
-                              Contact
-                            </div>
-                            <div className="grid gap-3 text-sm text-parchment/75 md:grid-cols-2">
-                              <div className="rounded-2xl border border-white/10 bg-[#0b2745] px-4 py-3">
-                                <div className="text-[11px] uppercase tracking-[0.18em] text-parchment/35">
-                                  Phone
-                                </div>
-                                <div className="mt-2 break-all">
-                                  {card.contactPhone || "Not provided"}
-                                </div>
-                              </div>
-                              <div className="rounded-2xl border border-white/10 bg-[#0b2745] px-4 py-3">
-                                <div className="text-[11px] uppercase tracking-[0.18em] text-parchment/35">
-                                  Email
-                                </div>
-                                <div className="mt-2 break-all">
-                                  {card.contactEmail || "Not provided"}
-                                </div>
-                              </div>
-                            </div>
-
-                            <div className="my-6 border-t border-white/10" />
-
-                            <div className="mb-3 text-[11px] uppercase tracking-[0.18em] text-parchment/35">
-                              Suggested opening message
-                            </div>
-                            <div className="relative rounded-2xl border border-maize/20 border-l-2 border-l-maize bg-white/5 px-5 py-4">
-                              <CopyButton text={card.conversationStarter} />
-                              <p className="pr-16 text-sm leading-7 text-parchment/80">
-                                {card.conversationStarter}
-                              </p>
-                            </div>
-
-                            <div className="mt-5 flex flex-wrap gap-3">
-                              <button
-                                type="button"
-                                onClick={() => void openChatWithPeer(card, card.conversationStarter, true)}
-                                className="rounded-full bg-maize px-5 py-2.5 text-sm font-medium text-navy transition hover:-translate-y-0.5 hover:shadow-glow"
-                              >
-                                Send opener to {card.name} →
-                              </button>
-                              <button
-                                type="button"
-                                onClick={() =>
-                                  setOpenerCardId(openerCardId === card.id ? null : card.id)
-                                }
-                                className="rounded-full border border-white/10 px-5 py-2.5 text-sm text-parchment/70 transition hover:border-maize/25 hover:text-parchment"
-                              >
-                                Write my own message
-                              </button>
-                            </div>
-
-                            {openerCardId === card.id && (
-                              <div className="mt-4 flex gap-2">
-                                <input
-                                  type="text"
-                                  autoFocus
-                                  placeholder={`Message ${card.name}…`}
-                                  className="flex-1 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-parchment outline-none focus:border-maize/40"
-                                  onKeyDown={(e) => {
-                                    if (e.key === "Enter" && e.currentTarget.value.trim()) {
-                                      void openChatWithPeer(card, e.currentTarget.value.trim(), false);
-                                    }
-                                  }}
-                                />
-                                <button
-                                  type="button"
-                                  onClick={(e) => {
-                                    const input = (e.currentTarget.previousElementSibling as HTMLInputElement);
-                                    if (input.value.trim()) {
-                                      void openChatWithPeer(card, input.value.trim(), false);
-                                    }
-                                  }}
-                                  className="rounded-2xl bg-maize px-4 py-3 text-sm font-medium text-navy transition hover:opacity-90"
-                                >
-                                  Send
-                                </button>
-                              </div>
-                            )}
-                          </article>
-                        );
-                      })}
+                      {cards.map((card) => (
+                        <MatchResultCard
+                          key={card.id}
+                          card={card}
+                          highlightTopMatch={card.rank === 1}
+                          onSendMessage={openChatWithPeer}
+                        />
+                      ))}
                     </div>
                   )}
                 </section>
@@ -1305,6 +1182,10 @@ export default function App() {
               </section>
             </main>
           </>
+        )}
+
+        {currentUser && appView === "form" && (
+          <AgentChatOverlay onSendMessage={openChatWithPeer} />
         )}
 
         <footer className="border-t border-maize/10 px-6 py-8 text-center text-xs text-parchment/25">
@@ -1503,7 +1384,7 @@ export default function App() {
                     </select>
                   </Field>
 
-                  <Field label="Phone">
+                  <Field label="Phone (optional)">
                     <input
                       value={profileForm.contactPhone}
                       onChange={(event) =>
@@ -1897,6 +1778,7 @@ export default function App() {
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <div className="text-xs uppercase tracking-[0.18em] text-maize/75">
+                          {entry.source === "agent" ? "AI conversation" : "Search history"} ·{" "}
                           {formatTimestamp(entry.timestamp)}
                         </div>
                         <p className="mt-3 text-sm leading-7 text-parchment/75">
@@ -1993,26 +1875,6 @@ export default function App() {
         </div>
       )}
     </div>
-  );
-}
-
-function CopyButton({ text }: { text: string }) {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <button
-      type="button"
-      onClick={handleCopy}
-      className="absolute right-3 top-3 rounded-md border border-maize/25 bg-maize/10 px-3 py-1 text-xs text-maize transition hover:bg-maize/20"
-    >
-      {copied ? "✓ Copied!" : "Copy"}
-    </button>
   );
 }
 

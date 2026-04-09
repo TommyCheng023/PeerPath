@@ -32,6 +32,7 @@ def append_entry(
     description: str,
     total_candidates: int,
     matches: list,
+    source: str = "form",
 ) -> None:
     """Prepend a new search result to this user's history (max MAX_PER_USER entries)."""
     now = datetime.now(timezone.utc)
@@ -42,6 +43,7 @@ def append_entry(
         "description": description,
         "total_candidates": total_candidates,
         "matches": matches,
+        "source": source,
     }
     with _LOCK:
         data = _load()

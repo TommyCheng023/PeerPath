@@ -79,6 +79,7 @@ export interface HistoryEntry {
   description: string;
   total_candidates: number;
   matches: HistoryMatch[];
+  source?: "form" | "agent";
 }
 
 export interface HistoryResponse {
@@ -163,4 +164,6 @@ export interface AgentChatResponse {
   reply: string;
   done: boolean;
   matches: AgentMatchResult[] | null;
+  query_tags?: string[] | null;
+  query_description?: string | null;
 }

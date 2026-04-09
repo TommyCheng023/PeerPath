@@ -93,6 +93,7 @@ def match(request: MatchRequest):
             description=request.description,
             total_candidates=total_candidates,
             matches=[m.model_dump() for m in matches],
+            source="form",
         )
 
     return MatchResponse(total_candidates=total_candidates, matches=matches)

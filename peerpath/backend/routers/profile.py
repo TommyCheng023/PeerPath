@@ -24,7 +24,7 @@ class ProfileRequest(BaseModel):
     tags: list[str] = Field(min_length=1)
     help_topics: list[str] = Field(min_length=1)
     comfort_level: str
-    contact_phone: str = Field(min_length=7, max_length=30)
+    contact_phone: str = Field(default="", max_length=30)
     contact_email: EmailStr
     past_challenge: str = Field(min_length=20, max_length=2000)
     searchable: bool = True
@@ -42,6 +42,14 @@ class ProfileRequest(BaseModel):
         if value not in ALLOWED_COMFORT_LEVELS:
             raise ValueError("Invalid comfort level selection.")
         return value
+
+    @field_validator("contact_phone")
+    @classmethod
+    def validate_contact_phone(cls, value: str) -> str:
+        normalized = value.strip()
+        if normalized and len(normalized) < 7:
+            raise ValueError("Phone number should have at least 7 characters.")
+        return normalized
 
     @field_validator("tags")
     @classmethod
