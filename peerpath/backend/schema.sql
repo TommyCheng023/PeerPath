@@ -35,7 +35,9 @@ CREATE TABLE IF NOT EXISTS user_profiles (
     past_challenges JSONB NOT NULL,
     searchable BOOLEAN NOT NULL DEFAULT FALSE,
     profile JSONB NOT NULL,
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    profile_complete BOOLEAN NOT NULL DEFAULT FALSE,
+    onboarding_completed_at TIMESTAMPTZ
 );
 
 CREATE INDEX IF NOT EXISTS idx_user_profiles_tags_gin

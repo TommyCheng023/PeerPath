@@ -86,7 +86,9 @@ def init_auth_tables() -> None:
                     past_challenges JSONB NOT NULL,
                     searchable BOOLEAN NOT NULL DEFAULT FALSE,
                     profile JSONB NOT NULL,
-                    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+                    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+                    profile_complete BOOLEAN NOT NULL DEFAULT FALSE,
+                    onboarding_completed_at TIMESTAMPTZ
                 );
                 """
             )
@@ -95,6 +97,13 @@ def init_auth_tables() -> None:
                 CREATE INDEX IF NOT EXISTS idx_user_profiles_tags_gin
                 ON user_profiles
                 USING GIN (tags);
+                """
+            )
+            cur.execute(
+                """
+                ALTER TABLE user_profiles
+                    ADD COLUMN IF NOT EXISTS profile_complete BOOLEAN NOT NULL DEFAULT FALSE,
+                    ADD COLUMN IF NOT EXISTS onboarding_completed_at TIMESTAMPTZ;
                 """
             )
         conn.commit()

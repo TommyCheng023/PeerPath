@@ -13,7 +13,7 @@ from services.profile_options import (
     ALLOWED_TAGS,
     ALLOWED_YEARS,
 )
-from services.profile import get_profile, upsert_profile
+from services.profile import get_profile, upsert_profile, complete_onboarding
 
 router = APIRouter(prefix="/profile", tags=["profile"])
 
@@ -60,6 +60,45 @@ class ProfileRequest(BaseModel):
         return values
 
 
+class OnboardingRequest(BaseModel):
+    major: str = Field(min_length=2, max_length=80)
+    year: str
+    tags: list[str] = Field(min_length=1)
+    past_challenge: str = Field(min_length=20, max_length=2000)
+    help_topics: list[str] = Field(min_length=1)
+    comfort_level: str
+
+    @field_validator("year")
+    @classmethod
+    def validate_year(cls, value: str) -> str:
+        if value not in ALLOWED_YEARS:
+            raise ValueError("Invalid year selection.")
+        return value
+
+    @field_validator("comfort_level")
+    @classmethod
+    def validate_comfort_level(cls, value: str) -> str:
+        if value not in ALLOWED_COMFORT_LEVELS:
+            raise ValueError("Invalid comfort level selection.")
+        return value
+
+    @field_validator("tags")
+    @classmethod
+    def validate_tags(cls, values: list[str]) -> list[str]:
+        invalid = [v for v in values if v not in ALLOWED_TAGS]
+        if invalid:
+            raise ValueError(f"Invalid tags: {', '.join(invalid)}")
+        return values
+
+    @field_validator("help_topics")
+    @classmethod
+    def validate_help_topics(cls, values: list[str]) -> list[str]:
+        invalid = [v for v in values if v not in ALLOWED_HELP_TOPICS]
+        if invalid:
+            raise ValueError(f"Invalid help topics: {', '.join(invalid)}")
+        return values
+
+
 @router.get("/me")
 def profile_me(current_user: dict = Depends(get_current_user)):
     profile = get_profile(current_user["id"])
@@ -69,4 +108,10 @@ def profile_me(current_user: dict = Depends(get_current_user)):
 @router.put("/me")
 def update_profile(request: ProfileRequest, current_user: dict = Depends(get_current_user)):
     profile = upsert_profile(current_user["id"], request.model_dump())
+    return {"profile": profile}
+
+
+@router.put("/onboarding")
+def onboarding(request: OnboardingRequest, current_user: dict = Depends(get_current_user)):
+    profile = complete_onboarding(current_user["id"], request.model_dump())
     return {"profile": profile}

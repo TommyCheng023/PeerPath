@@ -133,4 +133,34 @@ export interface UserProfile {
   contact_phone: string;
   contact_email: string;
   searchable: boolean;
+  profile_complete: boolean;
+}
+
+export interface AgentMessage {
+  role: "agent" | "user";
+  content: string;
+}
+
+export interface AgentMatchResult {
+  rank: number;
+  peer_id: string;
+  name: string;
+  major: string;
+  year: string;
+  contact_phone: string;
+  contact_email: string;
+  tags: string[];
+  tag_overlap: number;
+  field_score: number;
+  llm_adjustment: number;
+  final_score: number;
+  reason: string;
+  conversation_starter: string;
+}
+
+export interface AgentChatResponse {
+  session_id: string;
+  reply: string;
+  done: boolean;
+  matches: AgentMatchResult[] | null;
 }
