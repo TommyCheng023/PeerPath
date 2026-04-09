@@ -20,7 +20,7 @@ except ModuleNotFoundError:
     from services.data_loader import load_peer
 
 _PROMPT_PATH = os.path.join(os.path.dirname(__file__), "..", "prompts", "conversation_starter.txt")
-_LLM_RERANK_LIMIT = 10
+_LLM_RERANK_LIMIT = 3
 
 
 def _generate_conversation_starter(user_description: str, peer_raw: str, reason: str) -> str:
@@ -38,7 +38,7 @@ def _generate_conversation_starter(user_description: str, peer_raw: str, reason:
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         response = client.chat.completions.create(
             model=os.getenv("OPENAI_MODEL", "gpt-4o"),
-            max_completion_tokens=256,
+            max_tokens=256,
             messages=[{"role": "user", "content": prompt}],
         )
         raw_text = response.choices[0].message.content.strip()

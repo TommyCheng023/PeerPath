@@ -1,4 +1,5 @@
 import os
+import sqlite3
 from contextlib import contextmanager
 
 from dotenv import load_dotenv
@@ -6,6 +7,49 @@ import psycopg
 from psycopg.rows import dict_row
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+_SQLITE_PATH = os.path.join(os.path.dirname(__file__), "..", "peerpath_local.db")
+
+
+@contextmanager
+def get_sqlite_connection():
+    conn = sqlite3.connect(_SQLITE_PATH)
+    conn.row_factory = sqlite3.Row
+    try:
+        yield conn
+    finally:
+        conn.close()
+
+
+def init_auth_tables_sqlite() -> None:
+    with get_sqlite_connection() as conn:
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS users (
+                id TEXT PRIMARY KEY,
+                email TEXT NOT NULL UNIQUE,
+                full_name TEXT NOT NULL,
+                password_hash TEXT NOT NULL,
+                created_at TEXT NOT NULL DEFAULT (datetime('now'))
+            )
+        """)
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS user_profiles (
+                user_id TEXT PRIMARY KEY,
+                name TEXT NOT NULL DEFAULT '',
+                major TEXT NOT NULL DEFAULT '',
+                year TEXT NOT NULL DEFAULT '',
+                tags TEXT NOT NULL DEFAULT '[]',
+                help_topics TEXT NOT NULL DEFAULT '[]',
+                comfort_level TEXT NOT NULL DEFAULT '',
+                contact_phone TEXT NOT NULL DEFAULT '',
+                contact_email TEXT NOT NULL DEFAULT '',
+                past_challenges TEXT NOT NULL DEFAULT '[]',
+                searchable INTEGER NOT NULL DEFAULT 0,
+                profile TEXT NOT NULL DEFAULT '{}',
+                profile_complete INTEGER NOT NULL DEFAULT 0
+            )
+        """)
+        conn.commit()
 
 
 def get_database_url() -> str | None:

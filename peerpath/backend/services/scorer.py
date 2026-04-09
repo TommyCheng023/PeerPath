@@ -67,7 +67,7 @@ def _llm_adjustment(student_parsed: dict, best_challenge: dict, field_score: int
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         response = client.chat.completions.create(
             model=os.getenv("OPENAI_MODEL", "gpt-4o"),
-            max_completion_tokens=256,
+            max_tokens=256,
             response_format={
                 "type": "json_schema",
                 "json_schema": {

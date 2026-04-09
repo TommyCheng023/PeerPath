@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import auth, chat, match, history, profile
-from services.db import init_database, is_database_configured
+from routers import auth, chat, match, history, profile, agent
+from services.db import init_database, init_auth_tables_sqlite, is_database_configured
 
 app = FastAPI(title="PeerPath API")
 
@@ -17,6 +17,8 @@ app.add_middleware(
 def startup():
     if is_database_configured():
         init_database()
+    else:
+        init_auth_tables_sqlite()
 
 
 app.include_router(auth.router, prefix="/api")
@@ -24,6 +26,7 @@ app.include_router(profile.router, prefix="/api")
 app.include_router(match.router, prefix="/api")
 app.include_router(history.router, prefix="/api")
 app.include_router(chat.router, prefix="/api")
+app.include_router(agent.router, prefix="/api")
 
 
 @app.get("/")

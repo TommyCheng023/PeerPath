@@ -8,7 +8,7 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 
-from services.db import get_connection
+from services.db import get_connection, get_sqlite_connection, is_database_configured
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 
@@ -44,53 +44,74 @@ def create_user(email: str, full_name: str, password: str) -> dict:
         "password_hash": hash_password(password),
     }
 
-    with get_connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute("SELECT id FROM users WHERE email = %s", (user["email"],))
-            if cur.fetchone():
+    if is_database_configured():
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT id FROM users WHERE email = %s", (user["email"],))
+                if cur.fetchone():
+                    raise HTTPException(
+                        status_code=status.HTTP_409_CONFLICT,
+                        detail="An account with this email already exists.",
+                    )
+                cur.execute(
+                    """
+                    INSERT INTO users (id, email, full_name, password_hash)
+                    VALUES (%(id)s, %(email)s, %(full_name)s, %(password_hash)s)
+                    """,
+                    user,
+                )
+            conn.commit()
+    else:
+        with get_sqlite_connection() as conn:
+            row = conn.execute("SELECT id FROM users WHERE email = ?", (user["email"],)).fetchone()
+            if row:
                 raise HTTPException(
                     status_code=status.HTTP_409_CONFLICT,
                     detail="An account with this email already exists.",
                 )
-
-            cur.execute(
-                """
-                INSERT INTO users (id, email, full_name, password_hash)
-                VALUES (%(id)s, %(email)s, %(full_name)s, %(password_hash)s)
-                """,
-                user,
+            conn.execute(
+                "INSERT INTO users (id, email, full_name, password_hash) VALUES (?, ?, ?, ?)",
+                (user["id"], user["email"], user["full_name"], user["password_hash"]),
             )
-        conn.commit()
+            conn.commit()
 
     return {"id": user["id"], "email": user["email"], "full_name": user["full_name"]}
 
 
 def get_user_by_email(email: str) -> dict | None:
-    with get_connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT id, email, full_name, password_hash, created_at
-                FROM users
-                WHERE email = %s
-                """,
+    if is_database_configured():
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT id, email, full_name, password_hash, created_at FROM users WHERE email = %s",
+                    (email.strip().lower(),),
+                )
+                return cur.fetchone()
+    else:
+        with get_sqlite_connection() as conn:
+            row = conn.execute(
+                "SELECT id, email, full_name, password_hash, created_at FROM users WHERE email = ?",
                 (email.strip().lower(),),
-            )
-            return cur.fetchone()
+            ).fetchone()
+            return dict(row) if row else None
 
 
 def get_user_by_id(user_id: str) -> dict | None:
-    with get_connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT id, email, full_name, created_at
-                FROM users
-                WHERE id = %s
-                """,
+    if is_database_configured():
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT id, email, full_name, created_at FROM users WHERE id = %s",
+                    (user_id,),
+                )
+                return cur.fetchone()
+    else:
+        with get_sqlite_connection() as conn:
+            row = conn.execute(
+                "SELECT id, email, full_name, created_at FROM users WHERE id = ?",
                 (user_id,),
-            )
-            return cur.fetchone()
+            ).fetchone()
+            return dict(row) if row else None
 
 
 def authenticate_user(email: str, password: str) -> dict:
